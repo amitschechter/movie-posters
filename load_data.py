@@ -60,7 +60,6 @@ data = pd.read_csv(file_path, header=0, usecols=cols)
 
 print('Finished reading CSV. Start fetching images')
 
-
 poster_movies=[]
 counter=0
 movies_no_poster=[]
@@ -92,4 +91,3 @@ print(movies_no_poster)
 
 with open('posters', 'w') as fp:
     pickle.dump((poster_movies, movies_no_poster), fp)
-
