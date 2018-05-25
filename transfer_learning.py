@@ -199,7 +199,7 @@ criterion = nn.CrossEntropyLoss()
 # Decay LR by a factor of 0.1 every 7 epochs
 # exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)
 
-learning_rates = [5e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1]
+learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1]
 for learning_rate in learning_rates:
     print("learning_rate: {}".format(learning_rate))
     model_conv = torchvision.models.resnet18(pretrained=True)
@@ -218,7 +218,7 @@ for learning_rate in learning_rates:
     exp_lr_scheduler = None
     optimizer_conv = optim.Adam(model_conv.fc.parameters(), lr=learning_rate)
     model_conv, train_losses, val_losses, train_accuracies, val_accuracies = train_model(model_conv, criterion, optimizer_conv,
-                             exp_lr_scheduler, num_epochs=1)
+                             exp_lr_scheduler, num_epochs=10)
     
     print("learning_rate: {}".format(learning_rate))
     
