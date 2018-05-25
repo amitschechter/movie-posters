@@ -66,16 +66,10 @@ def load_data(batchsize=1):
     Test_images_labels = 'Dataset_Test_479.csv'
 
     BATCHSIZE = batchsize #cifar10 set to 64
-    R_Mean = .4 # TODO: update these values
-    G_Mean = .4
-    B_Mean = .4
-    R_Std = .01
-    G_Std = .01
-    B_Std = .01
-    
     data_transforms = T.Compose([
                 T.Resize((224,224)),
-                T.ToTensor()])
+                T.ToTensor(),
+                T.Normalize((0.46, 0.41, 0.38),(0.06, 0.28, 0.27))])    
 
     poster_train = MOVIES(image_folder, Train_images_labels, transform=data_transforms, train=True)
     poster_val = MOVIES(image_folder, Val_images_labels, transform=data_transforms, train=True)
