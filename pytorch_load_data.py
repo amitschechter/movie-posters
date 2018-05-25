@@ -59,24 +59,16 @@ class MOVIES(Dataset):
         # Total number of samples in the dataset
         return self.len
     
-def load_data():
+def load_data(batchsize=1):
     image_folder = 'Data/poster_label_files'
     Train_images_labels = 'Dataset_Training_3345.csv'
     Val_images_labels = 'Dataset_Validation_955.csv'
     Test_images_labels = 'Dataset_Test_479.csv'
 
-    BATCHSIZE = 1 #cifar10 set to 64
-    R_Mean = 0.46
-    G_Mean = 0.41
-    B_Mean = 0.38
-    R_Std = 0.06
-    G_Std = 0.28
-    B_Std = 0.27
-            
+    BATCHSIZE = batchsize #cifar10 set to 64
     data_transforms = T.Compose([
                 T.Resize((224,224)),
                 T.ToTensor(),
-#                 T.Normalize((R_Mean, G_Mean, B_Mean),(R_Std, G_Std, B_Std))])
                 T.Normalize((0.46, 0.41, 0.38),(0.06, 0.28, 0.27))])    
 
     poster_train = MOVIES(image_folder, Train_images_labels, transform=data_transforms, train=True)
