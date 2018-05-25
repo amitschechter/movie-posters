@@ -66,12 +66,12 @@ def load_data(batchsize=1):
     Test_images_labels = 'Dataset_Test_479.csv'
 
     BATCHSIZE = batchsize #cifar10 set to 64
-    R_Mean = .4 # TODO: update these values
-    G_Mean = .4
-    B_Mean = .4
-    R_Std = .01
-    G_Std = .01
-    B_Std = .01
+    R_Mean = .46
+    G_Mean = .41
+    B_Mean = .38
+    R_Std = .06
+    G_Std = .28
+    B_Std = .27
     
     data_transforms = T.Compose([
                 T.Resize((224,224)),
@@ -87,4 +87,4 @@ def load_data(batchsize=1):
     dataloaders['test'] = DataLoader(poster_test, batch_size=BATCHSIZE)
     
     return dataloaders, poster_train, poster_val, poster_test
-    
+   
