@@ -45,7 +45,7 @@ class MOVIES(Dataset):
         
         image_fn, label = self.filenames[index]
         label = label[7] # Get drama label
-        image = Image.open('Data/posters_final_with_id/'+image_fn)
+        image = Image.open('Data/posters_images/'+image_fn)
 
         # May use transform function to transform samples
         # e.g., random crop, whitening
@@ -60,22 +60,24 @@ class MOVIES(Dataset):
         return self.len
     
 def load_data():
-    image_folder = 'Data/data_labels_genres_split'
+    image_folder = 'Data/poster_label_files'
     Train_images_labels = 'Dataset_Training_3345.csv'
     Val_images_labels = 'Dataset_Validation_955.csv'
     Test_images_labels = 'Dataset_Test_479.csv'
 
     BATCHSIZE = 1 #cifar10 set to 64
-    R_Mean = .4 # TODO: update these values
-    G_Mean = .4
-    B_Mean = .4
-    R_Std = .01
-    G_Std = .01
-    B_Std = .01
-    
+    R_Mean = 0.46
+    G_Mean = 0.41
+    B_Mean = 0.38
+    R_Std = 0.06
+    G_Std = 0.28
+    B_Std = 0.27
+            
     data_transforms = T.Compose([
                 T.Resize((224,224)),
-                T.ToTensor()])
+                T.ToTensor(),
+#                 T.Normalize((R_Mean, G_Mean, B_Mean),(R_Std, G_Std, B_Std))])
+                T.Normalize((0.46, 0.41, 0.38),(0.06, 0.28, 0.27))])    
 
     poster_train = MOVIES(image_folder, Train_images_labels, transform=data_transforms, train=True)
     poster_val = MOVIES(image_folder, Val_images_labels, transform=data_transforms, train=True)
