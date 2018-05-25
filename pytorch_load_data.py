@@ -45,7 +45,7 @@ class MOVIES(Dataset):
         
         image_fn, label = self.filenames[index]
         label = label[7] # Get drama label
-        image = Image.open('Data/posters_final_with_id/'+image_fn)
+        image = Image.open('Data/posters_images/'+image_fn)
 
         # May use transform function to transform samples
         # e.g., random crop, whitening
@@ -60,7 +60,7 @@ class MOVIES(Dataset):
         return self.len
     
 def load_data():
-    image_folder = 'Data/data_labels_genres_split'
+    image_folder = 'Data/poster_label_files'
     Train_images_labels = 'Dataset_Training_3345.csv'
     Val_images_labels = 'Dataset_Validation_955.csv'
     Test_images_labels = 'Dataset_Test_479.csv'
