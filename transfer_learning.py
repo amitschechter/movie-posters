@@ -4,13 +4,11 @@
 from __future__ import print_function, division
 
 import torch
+import torchvision
 import torch.nn as nn
 import torch.nn.functional as F
-
 import torch.optim as optim
 from torch.optim import lr_scheduler
-
-import torchvision
 from torchvision import models, transforms
 import torchvision.datasets as dset
 import torchvision.transforms as T
@@ -22,6 +20,7 @@ from torch.utils.data import Dataset
 import numpy as np
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
+
 import time
 import os
 import copy
@@ -101,7 +100,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
                 # statistics
                 running_loss += loss.item() * inputs.size(0)
-#                 running_corrects += torch.sum(preds == labels.data)
                 batch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy())
                 batch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())
                 if phase == 'train':
@@ -115,7 +113,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
                 
             epoch_loss = running_loss / dataset_sizes[phase]
             
-    
             if phase == 'train':
                 epoch_acc = np.mean(train_epoch_accuracies)
                 epoch_precision, epoch_recall = np.mean(train_epoch_precisions), np.mean(train_epoch_recalls)
@@ -179,19 +176,6 @@ def visualize_model(model, num_images=6):
                     return
         model.train(mode=was_training)
         
-model_conv = torchvision.models.resnet18(pretrained=True)
-
-# for param in model_conv.parameters():
-#     param.requires_grad = False
-
-# Parameters of newly constructed modules have requires_grad=True by default
-num_ftrs = model_conv.fc.in_features
-model_conv.fc = nn.Linear(num_ftrs, 2)
-
-model_conv = model_conv.to(device)
-
-criterion = nn.CrossEntropyLoss()
-
 # Observe that only parameters of final layer are being optimized as
 # opoosed to before.
 # optimizer_conv = optim.Adam(model_conv.parameters(), lr=0.01)
@@ -199,26 +183,29 @@ criterion = nn.CrossEntropyLoss()
 # Decay LR by a factor of 0.1 every 7 epochs
 # exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)
 
-learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1]
+# learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1]
+# learning_rates = [1e-2, 5e-2, 1e-1]
+# learning_rates = [0.0007, 0.0008, 0.00085, 0.00095, 0.1, 0.0015]
+learning_rates = [ 0.0008 ]
+
 for learning_rate in learning_rates:
     print("learning_rate: {}".format(learning_rate))
+   
+    # Setup the model to resnet 18 (finetune params). 
     model_conv = torchvision.models.resnet18(pretrained=True)
-
-    for param in model_conv.parameters():
-        param.requires_grad = False
-
+    # for param in model_conv.parameters():
+    #     param.requires_grad = False
     # Parameters of newly constructed modules have requires_grad=True by default
     num_ftrs = model_conv.fc.in_features
     model_conv.fc = nn.Linear(num_ftrs, 2)
-
     model_conv = model_conv.to(device)
-
     criterion = nn.CrossEntropyLoss()
 
+    # Optimize the model.
     exp_lr_scheduler = None
-    optimizer_conv = optim.Adam(model_conv.fc.parameters(), lr=learning_rate)
+    optimizer_conv = optim.Adam(model_conv.parameters(), lr=learning_rate)
     model_conv, train_losses, val_losses, train_accuracies, val_accuracies = train_model(model_conv, criterion, optimizer_conv,
-                             exp_lr_scheduler, num_epochs=10)
+                             exp_lr_scheduler, num_epochs=30)
     
     print("learning_rate: {}".format(learning_rate))
     
@@ -243,5 +230,5 @@ for learning_rate in learning_rates:
     plt.savefig('Transfer learning'+str(learning_rate)+'.pdf')
     
     with open(str(learning_rate)+'.pickle', 'wb') as file:
-        pickle.dump((train_losses, val_losses, train_accuracies, val_accuracies), file, protocol=pickle.HIGHEST_PROTOCOL)
+        pickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv), file, protocol=pickle.HIGHEST_PROTOCOL)
 
