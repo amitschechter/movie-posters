@@ -69,6 +69,7 @@ def load_data(batchsize=1, genreIdx=7):
     Test_images_labels = 'Dataset_Test_476.csv'
 
     BATCHSIZE = batchsize #cifar10 set to 64
+    
     data_transforms = T.Compose([
                 T.Resize((224,224)),
                 T.ToTensor(),
@@ -84,4 +85,4 @@ def load_data(batchsize=1, genreIdx=7):
     dataloaders['test'] = DataLoader(poster_test, batch_size=BATCHSIZE)
     
     return dataloaders, poster_train, poster_val, poster_test
-    
+   
