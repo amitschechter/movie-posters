@@ -16,6 +16,7 @@ from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader, sampler, Dataset
 from pytorch_load_data import load_data
 
+
 from sklearn.metrics import precision_recall_curve, average_precision_score, recall_score
 
 import time
@@ -24,8 +25,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 import copy
+import pickle
 
-plt.ion()   # interactive mode
+plt.switch_backend('agg')
 
 
 batchSize = 64
@@ -156,9 +158,10 @@ for learn_rt in learning_rates:
     epoch_train_precision = []
     epoch_val_precison = []
     
+    print('NOW ON LEARNING RATE: %s' %(learn_rt))
     lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
     optimizer_conv = optim.Adam(model_conv.parameters(), lr=learn_rt)
-    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=5)
+    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=10)
     
     fig, axes = plt.subplots(nrows=2, ncols=1, sharex=False, sharey=False, figsize=(15,5))
     axes = axes.ravel()
@@ -171,3 +174,7 @@ for learn_rt in learning_rates:
     axes[1].set_xlabel('Epoch')    
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.eps"%(learn_rt))    
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.jpg"%(learn_rt))   
+    
+    with open("Results/multi_label_TL/PickleFile_%s.pickle"%(learn_rt), 'wb') as file:
+        pickle.dump((train_losses, val_losses, epoch_train_accuracies, epoch_val_accuracies, model_conv), file,
+                    protocol=pickle.HIGHEST_PROTOCOL)
