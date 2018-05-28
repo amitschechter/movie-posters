@@ -84,7 +84,7 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
                     if phase == 'train':
                         loss.backward()
                         optimizer.step()
-                        fileToWrite.write('Train Loss: %s' %(loss))
+                        fileToWrite.write('Train Loss: %s\n' %(loss))
                         train_losses.append(loss)
                     elif phase =='val':
                         val_losses.append(loss)
@@ -92,19 +92,34 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
 
                 # Statistics --multilabel precision
                 average_precision = average_precision_score(labels, scores.data, average="micro")
-                fileToWrite.write("Average precision: %s" %(average_precision))
+                fileToWrite.write("Average precision: %s\n" %(average_precision))
+                running_precision.append(average_precision) 
                 print("Average precision: %s" %(average_precision))                
+                
+                recall_batch=[]              
+                for i in range(num_classes):
+                    average_recall = recall_score(labels[:, i], scores.data[:, i].round(), average="micro")
+                    recall_batch.append(average_recall)
+
+                average_recall = np.mean(recall_batch)    
+                fileToWrite.write("Average recall: %s\n" %(average_recall))
+                running_recall.append(average_recall)
+                print("Average recall: %s" %(average_recall))                                
+                
                 running_loss += loss.item() 
-                running_precision.append(average_precision)          
+         
 
             epoch_loss = running_loss / dataset_sizes[phase]
             epoch_prec = np.mean(running_precision)
+            epoch_recall = np.mean(running_recall)
             
             
             if phase == 'val':
                 epoch_val_precison.append(epoch_prec)
+                epoch_val_recall.append(epoch_recall)
             else:
                 epoch_train_precision.append(epoch_prec)
+                epoch_train_recall.append(epoch_recall)                
 
             fileToWrite.write('END OF EPOCH')
             fileToWrite.write('{} Loss: {:.4f} Prec: {:.4f}'.format(phase, epoch_loss, epoch_prec))            
@@ -150,13 +165,16 @@ model_conv.fc = nn.Linear(num_ftrs, num_classes)
 
 model_conv = model_conv.to(device)
 
-learning_rates = [9e-5, 3e-4, 9e-4, 3e-3, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
+# learning_rates = [9e-5, 3e-4, 9e-4, 3e-3, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
+learning_rates = [0]
 
 for learn_rt in learning_rates:
     train_losses = []
     val_losses = []
     epoch_train_precision = []
     epoch_val_precison = []
+    epoch_train_recall = []
+    epoch_val_recall = []
     
     print('NOW ON LEARNING RATE: %s' %(learn_rt))
     lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
@@ -168,9 +186,11 @@ for learn_rt in learning_rates:
     axes[0].plot(train_losses)
     axes[0].set_title('Train Loss')
     axes[0].set_xlabel('Iteration')
-    axes[1].plot(epoch_train_precision, 's')
-    axes[1].plot(epoch_val_precison, 'o')
-    axes[1].set_title('Precision')
+    axes[1].plot(epoch_train_precision, '-o', label="Train precision")
+    axes[1].plot(epoch_val_precison, '-o', label="Val precision")
+    axes[1].plot(epoch_train_recall, '-s', label="Train recall")
+    axes[1].plot(epoch_val_recall, '-s', label="Val recall")    
+    axes[1].set_title('Precision/Recall')
     axes[1].set_xlabel('Epoch')    
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.eps"%(learn_rt))    
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.jpg"%(learn_rt))   
@@ -178,3 +198,4 @@ for learn_rt in learning_rates:
     with open("Results/multi_label_TL/PickleFile_%s.pickle"%(learn_rt), 'wb') as file:
         pickle.dump((train_losses, val_losses, epoch_train_accuracies, epoch_val_accuracies, model_conv), file,
                     protocol=pickle.HIGHEST_PROTOCOL)
+
