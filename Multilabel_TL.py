@@ -61,6 +61,7 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
             
             running_loss = 0.0
             running_precision = []
+            running_probs_precision = []
             running_recall = []
             # Iterate over data.
             for inputs, labels in dataloaders[phase]:
@@ -77,7 +78,7 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
                 # forward -- track history if only in train
                 with torch.set_grad_enabled(phase == 'train'):
                     scores = model(inputs)
-                    loss = multilabel_Loss(scores, labels)                     
+                    probabilities, loss = multilabel_Loss(scores, labels)                     
                     print('Loss: %s' %(loss))
 
                     # backward + optimize only if in training phase
@@ -96,10 +97,17 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
                 running_precision.append(average_precision) 
                 print("Average precision: %s" %(average_precision))                
                 
+                
                 recall_batch=[]              
                 for i in range(num_classes):
-                    average_recall = recall_score(labels[:, i], scores.data[:, i].round(), average="micro")
+                    probabilities.data[:, i][probabilities.data[:, i] >= 0.05] = 1
+                    probabilities.data[:, i][probabilities.data[:, i] < 0.05] = 0
+                    average_recall = recall_score(labels[:, i], probabilities.data[:, i], average="micro")
                     recall_batch.append(average_recall)
+                
+                average_probs_precision = average_precision_score(labels, probabilities.data, average="micro")
+                running_probs_precision.append(average_probs_precision) 
+                print("Average probs precision: %s" %(average_probs_precision))                
 
                 average_recall = np.mean(recall_batch)    
                 fileToWrite.write("Average recall: %s\n" %(average_recall))
@@ -108,18 +116,21 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
                 
                 running_loss += loss.item() 
          
-
             epoch_loss = running_loss / dataset_sizes[phase]
             epoch_prec = np.mean(running_precision)
+            epoch_probs_prec = np.mean(running_probs_precision)
             epoch_recall = np.mean(running_recall)
             
             
             if phase == 'val':
                 epoch_val_precison.append(epoch_prec)
                 epoch_val_recall.append(epoch_recall)
+                epoch_val_probs_prec.append(epoch_probs_prec)
             else:
                 epoch_train_precision.append(epoch_prec)
-                epoch_train_recall.append(epoch_recall)                
+                epoch_train_recall.append(epoch_recall)
+                epoch_train_probs_prec.append(epoch_probs_prec)
+
 
             fileToWrite.write('END OF EPOCH')
             fileToWrite.write('{} Loss: {:.4f} Prec: {:.4f}'.format(phase, epoch_loss, epoch_prec))            
@@ -147,12 +158,13 @@ def multilabel_Loss(x, y):
     ## to calculate the log of the 
     shifted_logits = x - torch.max(x, dim=1, keepdim=True)[0]
     summed = torch.sum(torch.exp(shifted_logits), dim=1, keepdim=True)    
+    probs = torch.exp(shifted_logits) / summed
     log_probs = torch.log(torch.exp(shifted_logits) / summed)
     N, _ = x.size()
     
     loss = -1 * torch.sum(y * log_probs) / N    
     
-    return loss
+    return probs, loss
 
 model_conv = torchvision.models.resnet18(pretrained=True)
 
@@ -173,13 +185,18 @@ for learn_rt in learning_rates:
     val_losses = []
     epoch_train_precision = []
     epoch_val_precision = []
+
+    epoch_train_probs_prec = []
+    epoch_val_probs_prec = []
+    
     epoch_train_recall = []
     epoch_val_recall = []
     
     print('NOW ON LEARNING RATE: %s' %(learn_rt))
-    lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
+    lr_record_file= open("Results/multi_label_TL/test%s.txt" %(learn_rt),"w+")
+#     lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
     optimizer_conv = optim.Adam(model_conv.parameters(), lr=learn_rt)
-    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=10)
+    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=1)
     
     fig, axes = plt.subplots(nrows=2, ncols=1, sharex=False, sharey=False, figsize=(15,5))
     axes = axes.ravel()
@@ -190,6 +207,8 @@ for learn_rt in learning_rates:
     axes[1].plot(epoch_val_precision, '-o', label="Val precision")
     axes[1].plot(epoch_train_recall, '-s', label="Train recall")
     axes[1].plot(epoch_val_recall, '-s', label="Val recall")    
+    axes[1].plot(epoch_train_recall, '-D', label="Train probs prec")
+    axes[1].plot(epoch_val_recall, '-D', label="Val probs prec")    
     axes[1].set_title('Precision/Recall')
     axes[1].set_xlabel('Epoch')    
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.eps"%(learn_rt))    
