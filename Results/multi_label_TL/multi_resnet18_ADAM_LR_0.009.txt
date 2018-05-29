@@ -1,0 +1,16 @@
+Epoch 0/9----------Train Loss: tensor(6.7601, device='cuda:0')
+Average precision: 0.12589721993595052
+Average recall: 0.4654605263157895
+Train Loss: tensor(10.9304, device='cuda:0')
+Average precision: 0.3124959263104161
+Average recall: 0.039473684210526314
+Train Loss: tensor(11.7116, device='cuda:0')
+Average precision: 0.29015985702923075
+Average recall: 0.1455592105263158
+Train Loss: tensor(7.9070, device='cuda:0')
+Average precision: 0.1837201132284379
+Average recall: 0.20559210526315788
+Train Loss: tensor(nan., device='cuda:0')
+Average precision: 0.2120234004686326
+Average recall: 0.3536184210526316
+Train Loss: tensor(nan., device='cuda:0')

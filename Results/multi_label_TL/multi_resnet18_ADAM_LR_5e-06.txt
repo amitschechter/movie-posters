@@ -1,0 +1,189 @@
+Epoch 0/9----------Train Loss: tensor(6.5635, device='cuda:0')
+Average precision: 0.1450984552052404
+Average recall: 0.5600328947368421
+Train Loss: tensor(7.3807, device='cuda:0')
+Average precision: 0.1384015083231217
+Average recall: 0.5476973684210527
+Train Loss: tensor(8.4100, device='cuda:0')
+Average precision: 0.1573299475916458
+Average recall: 0.5238486842105263
+Train Loss: tensor(7.2484, device='cuda:0')
+Average precision: 0.14140423084830755
+Average recall: 0.5625
+Train Loss: tensor(7.4333, device='cuda:0')
+Average precision: 0.12863666901420473
+Average recall: 0.5419407894736842
+Train Loss: tensor(8.0796, device='cuda:0')
+Average precision: 0.1491772347217371
+Average recall: 0.522203947368421
+Train Loss: tensor(7.8744, device='cuda:0')
+Average precision: 0.1463286838664698
+Average recall: 0.5172697368421053
+Train Loss: tensor(8.1729, device='cuda:0')
+Average precision: 0.15313806826961673
+Average recall: 0.553453947368421
+Train Loss: tensor(8.1277, device='cuda:0')
+Average precision: 0.13671158531942834
+Average recall: 0.5279605263157895
+Train Loss: tensor(7.7451, device='cuda:0')
+Average precision: 0.14618274487430977
+Average recall: 0.5518092105263158
+Train Loss: tensor(7.7234, device='cuda:0')
+Average precision: 0.16648146468690933
+Average recall: 0.546875
+Train Loss: tensor(8.3920, device='cuda:0')
+Average precision: 0.16061622427975153
+Average recall: 0.5444078947368421
+Train Loss: tensor(8.2466, device='cuda:0')
+Average precision: 0.1947272036237877
+Average recall: 0.5411184210526315
+Train Loss: tensor(8.0550, device='cuda:0')
+Average precision: 0.16663220437750548
+Average recall: 0.5592105263157895
+Train Loss: tensor(7.9752, device='cuda:0')
+Average precision: 0.16385201085430223
+Average recall: 0.5509868421052632
+Train Loss: tensor(8.2658, device='cuda:0')
+Average precision: 0.1740721703866311
+Average recall: 0.5493421052631579
+Train Loss: tensor(7.8872, device='cuda:0')
+Average precision: 0.17644197785966836
+Average recall: 0.5205592105263158
+Train Loss: tensor(7.8231, device='cuda:0')
+Average precision: 0.1525199493456706
+Average recall: 0.5279605263157895
+Train Loss: tensor(7.9015, device='cuda:0')
+Average precision: 0.1507859998937466
+Average recall: 0.537828947368421
+Train Loss: tensor(8.0935, device='cuda:0')
+Average precision: 0.17825155774666165
+Average recall: 0.5427631578947368
+Train Loss: tensor(8.1676, device='cuda:0')
+Average precision: 0.17763509074421152
+Average recall: 0.5419407894736842
+Train Loss: tensor(7.3967, device='cuda:0')
+Average precision: 0.1567782776976792
+Average recall: 0.5345394736842105
+Train Loss: tensor(8.2516, device='cuda:0')
+Average precision: 0.1742639411797362
+Average recall: 0.540296052631579
+Train Loss: tensor(7.3957, device='cuda:0')
+Average precision: 0.1735624775533312
+Average recall: 0.5427631578947368
+Train Loss: tensor(7.7922, device='cuda:0')
+Average precision: 0.18149356693494575
+Average recall: 0.5509868421052632
+Train Loss: tensor(8.1581, device='cuda:0')
+Average precision: 0.15715946137130804
+Average recall: 0.5419407894736842
+Train Loss: tensor(7.7538, device='cuda:0')
+Average precision: 0.17538516969013734
+Average recall: 0.5419407894736842
+Train Loss: tensor(7.3402, device='cuda:0')
+Average precision: 0.17804844030913525
+Average recall: 0.5526315789473685
+Train Loss: tensor(7.5980, device='cuda:0')
+Average precision: 0.17715618891925766
+Average recall: 0.5485197368421053
+Train Loss: tensor(7.4605, device='cuda:0')
+Average precision: 0.16069570639361377
+Average recall: 0.555921052631579
+Train Loss: tensor(7.3061, device='cuda:0')
+Average precision: 0.17081252625931395
+Average recall: 0.553453947368421
+Train Loss: tensor(7.8297, device='cuda:0')
+Average precision: 0.18085338393141007
+Average recall: 0.5674342105263158
+Train Loss: tensor(6.7337, device='cuda:0')
+Average precision: 0.18937013848823314
+Average recall: 0.5427631578947368
+Train Loss: tensor(7.4469, device='cuda:0')
+Average precision: 0.1630512760133082
+Average recall: 0.5542763157894737
+Train Loss: tensor(7.9138, device='cuda:0')
+Average precision: 0.22027734282045716
+Average recall: 0.5411184210526315
+Train Loss: tensor(8.7282, device='cuda:0')
+Average precision: 0.18049925413814008
+Average recall: 0.540296052631579
+Train Loss: tensor(8.3233, device='cuda:0')
+Average precision: 0.20892109202272058
+Average recall: 0.540296052631579
+Train Loss: tensor(7.5337, device='cuda:0')
+Average precision: 0.19498600173048664
+Average recall: 0.5575657894736842
+Train Loss: tensor(8.6216, device='cuda:0')
+Average precision: 0.19629607426530052
+Average recall: 0.5320723684210527
+Train Loss: tensor(8.0063, device='cuda:0')
+Average precision: 0.17845645093041823
+Average recall: 0.5625
+Train Loss: tensor(8.0655, device='cuda:0')
+Average precision: 0.1640999992100045
+Average recall: 0.53125
+Train Loss: tensor(7.2871, device='cuda:0')
+Average precision: 0.2116395436424443
+Average recall: 0.5542763157894737
+Train Loss: tensor(7.6476, device='cuda:0')
+Average precision: 0.1520207149046783
+Average recall: 0.5394736842105263
+Train Loss: tensor(6.9540, device='cuda:0')
+Average precision: 0.17091845100661407
+Average recall: 0.569078947368421
+Train Loss: tensor(7.8192, device='cuda:0')
+Average precision: 0.1879059690271192
+Average recall: 0.5600328947368421
+Train Loss: tensor(7.5867, device='cuda:0')
+Average precision: 0.20585469359314196
+Average recall: 0.5682565789473685
+Train Loss: tensor(7.1994, device='cuda:0')
+Average precision: 0.21797888995374065
+Average recall: 0.5460526315789473
+Train Loss: tensor(8.5446, device='cuda:0')
+Average precision: 0.175598024314163
+Average recall: 0.5452302631578947
+Train Loss: tensor(7.8666, device='cuda:0')
+Average precision: 0.2340024963313858
+Average recall: 0.5608552631578947
+Train Loss: tensor(7.1491, device='cuda:0')
+Average precision: 0.177422516416942
+Average recall: 0.5542763157894737
+Train Loss: tensor(6.2082, device='cuda:0')
+Average precision: 0.2077574887970559
+Average recall: 0.5641447368421053
+Train Loss: tensor(6.6746, device='cuda:0')
+Average precision: 0.21248391934473213
+Average recall: 0.5625
+Train Loss: tensor(6.5366, device='cuda:0')
+Average precision: 0.1606165749002793
+Average recall: 0.5493421052631579
+END OF EPOCHtrain Loss: 7.7112 Prec: 0.1736EPOCH complete in 3m 42sAverage precision: 0.23900376014219837
+Average recall: 0.5731907894736842
+Average precision: 0.20251010058367222
+Average recall: 0.5797697368421053
+Average precision: 0.19140883558611832
+Average recall: 0.5657894736842105
+Average precision: 0.18798550438590433
+Average recall: 0.5345394736842105
+Average precision: 0.2024806366088368
+Average recall: 0.5337171052631579
+Average precision: 0.18847110533618466
+Average recall: 0.5657894736842105
+Average precision: 0.2008679759344641
+Average recall: 0.5427631578947368
+Average precision: 0.1778006256215748
+Average recall: 0.5542763157894737
+Average precision: 0.17777338047448982
+Average recall: 0.5657894736842105
+Average precision: 0.21028560051679288
+Average recall: 0.5361842105263158
+Average precision: 0.1894617942768395
+Average recall: 0.553453947368421
+Average precision: 0.22898480766100926
+Average recall: 0.5789473684210527
+Average precision: 0.198986508294479
+Average recall: 0.5460526315789473
+Average precision: 0.19780091054589066
+Average recall: 0.5230263157894737
+Average precision: 0.18770848498180354
+Average recall: 0.5508166969147005

@@ -165,14 +165,14 @@ model_conv.fc = nn.Linear(num_ftrs, num_classes)
 
 model_conv = model_conv.to(device)
 
-# learning_rates = [9e-5, 3e-4, 9e-4, 3e-3, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
-learning_rates = [0]
+# learning_rates = [9e-4, 3e-3, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
+learning_rates = [5e-6, 6e-6, 7e-6, 8e-6]#, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
 
 for learn_rt in learning_rates:
     train_losses = []
     val_losses = []
     epoch_train_precision = []
-    epoch_val_precison = []
+    epoch_val_precision = []
     epoch_train_recall = []
     epoch_val_recall = []
     
@@ -187,7 +187,7 @@ for learn_rt in learning_rates:
     axes[0].set_title('Train Loss')
     axes[0].set_xlabel('Iteration')
     axes[1].plot(epoch_train_precision, '-o', label="Train precision")
-    axes[1].plot(epoch_val_precison, '-o', label="Val precision")
+    axes[1].plot(epoch_val_precision, '-o', label="Val precision")
     axes[1].plot(epoch_train_recall, '-s', label="Train recall")
     axes[1].plot(epoch_val_recall, '-s', label="Val recall")    
     axes[1].set_title('Precision/Recall')
@@ -196,6 +196,7 @@ for learn_rt in learning_rates:
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.jpg"%(learn_rt))   
     
     with open("Results/multi_label_TL/PickleFile_%s.pickle"%(learn_rt), 'wb') as file:
-        pickle.dump((train_losses, val_losses, epoch_train_accuracies, epoch_val_accuracies, model_conv), file,
+        pickle.dump((train_losses, val_losses, epoch_train_precision, epoch_val_precision, 
+                     epoch_train_recall, epoch_val_recall, model_conv), file,
                     protocol=pickle.HIGHEST_PROTOCOL)
 
