@@ -34,7 +34,7 @@ from sklearn.metrics import precision_recall_fscore_support as score
 from sklearn.metrics import accuracy_score
 
 batchsize=64
-dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize)
+dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=3)
 dataset_sizes = {}
 dataset_sizes['train'] = len(dataloaders['train'])
 dataset_sizes['val'] = len(dataloaders['val'])
@@ -100,7 +100,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
                 # statistics
                 running_loss += loss.item() * inputs.size(0)
-                batch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy())
+                batch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy(), average = 'binary')
                 batch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())
                 if phase == 'train':
                     train_epoch_accuracies.append(batch_accuracy)
@@ -148,7 +148,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
     # load best model weights
     model.load_state_dict(best_model_wts)
-    return model, train_losses, val_losses, train_accuracies, val_accuracies
+    return model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls
 
 def visualize_model(model, num_images=6):
     was_training = model.training
@@ -204,8 +204,8 @@ for learning_rate in learning_rates:
     # Optimize the model.
     exp_lr_scheduler = None
     optimizer_conv = optim.Adam(model_conv.parameters(), lr=learning_rate)
-    model_conv, train_losses, val_losses, train_accuracies, val_accuracies = train_model(model_conv, criterion, optimizer_conv,
-                             exp_lr_scheduler, num_epochs=30)
+    model_conv, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls = train_model(model_conv, criterion, optimizer_conv,
+                             exp_lr_scheduler, num_epochs=20)
     
     print("learning_rate: {}".format(learning_rate))
     
@@ -228,7 +228,9 @@ for learning_rate in learning_rates:
     plt.legend(loc='lower center')
     
     plt.savefig('Transfer learning'+str(learning_rate)+'.pdf')
+    plt.savefig('Transfer learning'+str(learning_rate)+'.eps')
+
     
     with open(str(learning_rate)+'.pickle', 'wb') as file:
-        pickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv), file, protocol=pickle.HIGHEST_PROTOCOL)
+        pickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv, train_precisions, val_precisions, train_recalls, val_recalls), file, protocol=pickle.HIGHEST_PROTOCOL)
 
