@@ -66,7 +66,7 @@ def load_data(batchsize=1, genreIdx=7):
     image_folder = 'Data/poster_label_files'
     Train_images_labels = 'Dataset_Training_3345.csv'
     Val_images_labels = 'Dataset_Validation_955.csv'
-    Test_images_labels = 'Dataset_Test_476.csv'
+    Test_images_labels = 'Dataset_Test_479.csv'
 
     BATCHSIZE = batchsize #cifar10 set to 64
     
