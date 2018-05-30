@@ -121,7 +121,7 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
             average_all_class_r = np.mean(recall_all_classes)                
 
             if phase == 'val':
-                epoch_val_precison_old.append(epoch_prec)
+                epoch_val_precision_old.append(epoch_prec)
                 epoch_val_probs_prec_old.append(epoch_probs_prec)
                 epoch_val_precision_new.append(average_all_class_p)
                 epoch_val_recall_new.append(average_all_class_r)
@@ -135,15 +135,15 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
             fileToWrite.write('{} Loss: {:.4f} Prec: {:.4f}'.format(phase, epoch_loss, average_all_class_p, average_all_class_r))
             time_elapsed = time.time() - since
             fileToWrite.write('EPOCH complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
-            print('{} Loss: {:.4f} Prec: {:.4f}'.format(phase, epoch_loss))#, average_all_class_p, average_all_class_r))
+            print('{} Loss: {:.4f}'.format(phase, epoch_loss))#, average_all_class_p, average_all_class_r))
             print("Average all class precision: %s" %(average_all_class_p))                
             print("Average all class recall: %s" %(average_all_class_r))  
             print("Average precision -- old way: %s" %(epoch_prec))                            
-            print("Average probs precision -- old way: %s" %(epoch_probsprec))                
+            print("Average probs precision -- old way: %s" %(epoch_probs_prec))                
             print('EPOCH complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
 
 #             # deep copy the model
-            if phase == 'val' and average_all_class_precision > best_prec:
+            if phase == 'val' and average_all_class_p > best_prec:
                   best_prec = epoch_prec
                   best_model_wts = copy.deepcopy(model.state_dict())
 
@@ -181,7 +181,7 @@ model_conv.fc = nn.Linear(num_ftrs, num_classes)
 model_conv = model_conv.to(device)
 
 # learning_rates = [9e-4, 3e-3, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
-learning_rates = [5e-6, 6e-6, 7e-6, 8e-6]#, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
+learning_rates = [3e-6, 5e-6, 5e-5, 5e-4, 5e-3, 3e-2, 9e-2]
 
 for learn_rt in learning_rates:
     train_losses = []
@@ -198,10 +198,10 @@ for learn_rt in learning_rates:
     epoch_val_recall_new = []
     
     print('NOW ON LEARNING RATE: %s' %(learn_rt))
-    lr_record_file= open("Results/multi_label_TL/test%s.txt" %(learn_rt),"w+")
-#     lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
+#     lr_record_file= open("Results/multi_label_TL/test%s.txt" %(learn_rt),"w+")
+    lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
     optimizer_conv = optim.Adam(model_conv.parameters(), lr=learn_rt)
-    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=1)
+    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=20)
     
     fig, axes = plt.subplots(nrows=3, ncols=1, sharex=False, sharey=False, figsize=(15,5))
     axes = axes.ravel()
@@ -230,7 +230,7 @@ for learn_rt in learning_rates:
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.jpg"%(learn_rt))   
     
     with open("Results/multi_label_TL/PickleFile_%s.pickle"%(learn_rt), 'wb') as file:
-        pickle.dump((train_losses, val_losses, epoch_train_precision, epoch_val_precision, 
-                     epoch_train_recall, epoch_val_recall, model_conv), file,
+        pickle.dump((train_losses, val_losses, epoch_train_precision_new, epoch_val_precision_new, 
+                     epoch_train_recall_new, epoch_val_recall_new, model_conv), file,
                     protocol=pickle.HIGHEST_PROTOCOL)
 
