@@ -32,9 +32,9 @@ class MOVIES(Dataset):
         filenames = all_filenames['filename']
         
         # labels are read in this order:
-        # 'Action', 'Thriller', 'Adventure', 'Animation', 'Western', 'Comedy', 
-        # 'Crime', 'Drama', 'Horror', 'Romance', 'Science Fiction', 'Fantasy', 
-        # 'Family', 'Documentary', 'History', 'Music', 'Mystery', 'TV Movie', 'War'
+        # 'Action'[0], 'Thriller'[1], 'Adventure'[2], 'Animation'[3], 'Western'[4], 'Comedy'[5], 
+        # 'Crime'[6], 'Drama'[7], 'Horror'[8], 'Romance'[9], 'Science Fiction'[10], 'Fantasy'[11], 
+        # 'Family'[12], 'Documentary'[13], 'History'[14], 'Music'[15], 'Mystery'[16], 'TV Movie'[17], 'War'[18]
         labels = all_filenames[all_filenames.columns[2:]]
         
         for idx, fn in enumerate(filenames):
@@ -66,7 +66,7 @@ def load_data(batchsize=1, genreIdx=7):
     image_folder = 'Data/poster_label_files'
     Train_images_labels = 'Dataset_Training_3345.csv'
     Val_images_labels = 'Dataset_Validation_955.csv'
-    Test_images_labels = 'Dataset_Test_476.csv'
+    Test_images_labels = 'Dataset_Test_479.csv'
 
     BATCHSIZE = batchsize #cifar10 set to 64
     
