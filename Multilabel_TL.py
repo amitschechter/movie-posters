@@ -90,18 +90,19 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
                     elif phase =='val':
                         val_losses.append(loss)
                         
-
+                if len(scores) < 64:
+                    test_mat = probabilities.clone()
+                
                 # Statistics --multilabel precision
                 average_precision = average_precision_score(labels, scores.data, average="micro")
                 fileToWrite.write("Average precision: %s\n" %(average_precision))
                 running_precision.append(average_precision) 
                 print("Average precision: %s" %(average_precision))                
                 
-                
                 recall_batch=[]              
                 for i in range(num_classes):
-                    probabilities.data[:, i][probabilities.data[:, i] >= 0.05] = 1
-                    probabilities.data[:, i][probabilities.data[:, i] < 0.05] = 0
+                    probabilities.data[:, i][probabilities.data[:, i] >= 0.1] = 1
+                    probabilities.data[:, i][probabilities.data[:, i] < 0.1] = 0
                     average_recall = recall_score(labels[:, i], probabilities.data[:, i], average="micro")
                     recall_batch.append(average_recall)
                 
@@ -121,9 +122,13 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
             epoch_probs_prec = np.mean(running_probs_precision)
             epoch_recall = np.mean(running_recall)
             
+            for idx in range(19):
+                print(labels[:,idx])
+                print(test_mat[:,idx])
+            
             
             if phase == 'val':
-                epoch_val_precison.append(epoch_prec)
+                epoch_val_precision.append(epoch_prec)
                 epoch_val_recall.append(epoch_recall)
                 epoch_val_probs_prec.append(epoch_probs_prec)
             else:
@@ -193,10 +198,10 @@ for learn_rt in learning_rates:
     epoch_val_recall = []
     
     print('NOW ON LEARNING RATE: %s' %(learn_rt))
-    lr_record_file= open("Results/multi_label_TL/test%s.txt" %(learn_rt),"w+")
-#     lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
+#     lr_record_file= open("Results/multi_label_TL/test%s.txt" %(learn_rt),"w+")
+    lr_record_file= open("Results/multi_label_TL/multi_resnet18_ADAM_LR_%s.txt"%(learn_rt),"w+")
     optimizer_conv = optim.Adam(model_conv.parameters(), lr=learn_rt)
-    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=1)
+    model_conv = train_model(model_conv, optimizer_conv, lr_record_file, num_epochs=20)
     
     fig, axes = plt.subplots(nrows=2, ncols=1, sharex=False, sharey=False, figsize=(15,5))
     axes = axes.ravel()
@@ -207,8 +212,8 @@ for learn_rt in learning_rates:
     axes[1].plot(epoch_val_precision, '-o', label="Val precision")
     axes[1].plot(epoch_train_recall, '-s', label="Train recall")
     axes[1].plot(epoch_val_recall, '-s', label="Val recall")    
-    axes[1].plot(epoch_train_recall, '-D', label="Train probs prec")
-    axes[1].plot(epoch_val_recall, '-D', label="Val probs prec")    
+    axes[1].plot(epoch_train_probs_prec, '-D', label="Train probs prec")
+    axes[1].plot(epoch_val_probs_prec, '-D', label="Val probs prec")    
     axes[1].set_title('Precision/Recall')
     axes[1].set_xlabel('Epoch')    
     fig.savefig("Results/multi_label_TL/multi_resnet18_plots_ADAM_LR_%s.eps"%(learn_rt))    
