@@ -94,11 +94,9 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
                 # "OLD" way to calc precision using average_precision_score
                 # calculating with the scores and probabilities
                 average_precision = average_precision_score(labels, scores.data, average="micro")
-#                 fileToWrite.write("Average precision: %s\n" %(average_precision))
                 running_precision.append(average_precision) 
 
                 average_probs_precision = average_precision_score(labels, probabilities.data, average="micro")
-#                 fileToWrite.write("Average Probs precision: %s\n" %(average_probs_precision))
                 running_probs_precision.append(average_probs_precision)             
                 
                 running_loss += loss.item() 
@@ -144,14 +142,18 @@ def train_model(model, optimizer, fileToWrite, num_epochs=25):
 
 #             # deep copy the model
             if phase == 'val' and average_all_class_p > best_prec:
-                  best_prec = epoch_prec
-                  best_model_wts = copy.deepcopy(model.state_dict())
+                best_prec = epoch_prec
+                best_model_wts = copy.deepcopy(model.state_dict())
 
 
     time_elapsed = time.time() - since
     fileToWrite.write('Training complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))            
     fileToWrite.write('Best val Prec: {:4f}'.format(best_prec))            
 
+    print('LAST EPOCH LABELS AND SCORES')
+    for i in range(num_classes):
+        print(labels[:,i])
+        print(probabilities[:,i])
     # load best model weights
     model.load_state_dict(best_model_wts)
     return model
@@ -181,7 +183,7 @@ model_conv.fc = nn.Linear(num_ftrs, num_classes)
 model_conv = model_conv.to(device)
 
 # learning_rates = [9e-4, 3e-3, 9e-3, 3e-2, 9e-2, 3e-1, 9e-1, 1]
-learning_rates = [3e-6, 5e-6, 5e-5, 5e-4, 5e-3, 3e-2, 9e-2]
+learning_rates = [9e-6, 5e-4, 5e-3, 3e-2, 9e-2]
 
 for learn_rt in learning_rates:
     train_losses = []
