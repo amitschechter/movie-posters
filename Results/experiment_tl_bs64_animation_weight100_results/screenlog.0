@@ -1,0 +1,1148 @@
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ python[K[K[K[K[K[Kpython transfer_learning.py 
+learning_rate: 0.0008
+Epoch 0/19
+----------
+/home/shared/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+train Loss: 30.6739 Acc: 0.8293
+Precision: 0.0705, Recall: 0.0468
+Time passes: 6m 23s
+val Loss: 25.6816 Acc: 0.8527
+Precision: 0.0000, Recall: 0.0000
+Time passes: 8m 5s
+
+Epoch 1/19
+----------
+train Loss: 24.7031 Acc: 0.8508
+Precision: 0.0189, Recall: 0.0031
+Time passes: 11m 17s
+val Loss: 33.1031 Acc: 0.8548
+Precision: 0.0000, Recall: 0.0000
+Time passes: 12m 6s
+
+Epoch 2/19
+----------
+train Loss: 22.7981 Acc: 0.8532
+Precision: 0.2465, Recall: 0.0592
+Time passes: 15m 15s
+val Loss: 27.7372 Acc: 0.8403
+Precision: 0.3151, Recall: 0.1617
+Time passes: 16m 4s
+
+Epoch 3/19
+----------
+train Loss: 21.4571 Acc: 0.8588
+Precision: 0.5429, Recall: 0.1950
+Time passes: 19m 13s
+val Loss: 42.2939 Acc: 0.7035
+Precision: 0.2193, Recall: 0.4589
+Time passes: 20m 2s
+
+Epoch 4/19
+----------
+train Loss: 19.2962 Acc: 0.8726
+Precision: 0.6434, Recall: 0.3162
+Time passes: 23m 12s
+val Loss: 46.1035 Acc: 0.6200
+Precision: 0.2238, Recall: 0.6751
+Time passes: 24m 2s
+
+Epoch 5/19
+----------
+train Loss: 15.7360 Acc: 0.9006
+Precision: 0.7672, Recall: 0.5144
+Time passes: 27m 12s
+val Loss: 37.6143 Acc: 0.7531
+Precision: 0.2166, Recall: 0.2806
+Time passes: 28m 0s
+
+Epoch 6/19
+----------
+train Loss: 13.3971 Acc: 0.9148
+Precision: 0.7883, Recall: 0.5773
+Time passes: 31m 10s
+val Loss: 71.8557 Acc: 0.4869
+Precision: 0.1663, Recall: 0.6498
+Time passes: 31m 59s
+
+Epoch 7/19
+----------
+train Loss: 10.7201 Acc: 0.9322
+Precision: 0.8115, Recall: 0.6904
+Time passes: 35m 12s
+val Loss: 45.1335 Acc: 0.7579
+Precision: 0.2291, Recall: 0.3103
+Time passes: 36m 0s
+
+Epoch 8/19
+----------
+train Loss: 7.9402 Acc: 0.9567
+Precision: 0.8867, Recall: 0.8217
+Time passes: 39m 7s
+val Loss: 105.2010 Acc: 0.5556
+Precision: 0.1939, Recall: 0.6830
+Time passes: 39m 55s
+
+Epoch 9/19
+----------
+train Loss: 6.6633 Acc: 0.9617
+Precision: 0.8981, Recall: 0.8487
+Time passes: 43m 6s
+val Loss: 48.7918 Acc: 0.8081
+Precision: 0.3024, Recall: 0.2924
+Time passes: 43m 54s
+
+Epoch 10/19
+----------
+train Loss: 6.1174 Acc: 0.9611
+Precision: 0.8834, Recall: 0.8606
+Time passes: 47m 3s
+val Loss: 88.4099 Acc: 0.8496
+Precision: 0.2667, Recall: 0.0456
+Time passes: 47m 51s
+
+Epoch 11/19
+----------
+train Loss: 4.1791 Acc: 0.9761
+Precision: 0.9339, Recall: 0.9059
+Time passes: 51m 3s
+val Loss: 60.8415 Acc: 0.8538
+Precision: 0.2333, Recall: 0.0318
+Time passes: 51m 52s
+
+Epoch 12/19
+----------
+train Loss: 3.3422 Acc: 0.9770
+Precision: 0.9318, Recall: 0.9213
+Time passes: 54m 59s
+val Loss: 51.0766 Acc: 0.8237
+Precision: 0.3397, Recall: 0.1606
+Time passes: 55m 48s
+
+Epoch 13/19
+----------
+train Loss: 1.7987 Acc: 0.9903
+Precision: 0.9697, Recall: 0.9700
+Time passes: 58m 54s
+val Loss: 66.9689 Acc: 0.8308
+Precision: 0.2822, Recall: 0.1177
+Time passes: 59m 42s
+
+Epoch 14/19
+----------
+train Loss: 1.3991 Acc: 0.9923
+Precision: 0.9687, Recall: 0.9810
+Time passes: 62m 50s
+val Loss: 78.5865 Acc: 0.8505
+Precision: 0.3333, Recall: 0.0755
+Time passes: 63m 38s
+
+Epoch 15/19
+----------
+train Loss: 1.6791 Acc: 0.9923
+Precision: 0.9827, Recall: 0.9659
+Time passes: 66m 48s
+val Loss: 53.0639 Acc: 0.8119
+Precision: 0.3096, Recall: 0.2603
+Time passes: 67m 37s
+
+Epoch 16/19
+----------
+train Loss: 2.1737 Acc: 0.9876
+Precision: 0.9647, Recall: 0.9574
+Time passes: 70m 46s
+val Loss: 84.0108 Acc: 0.8131
+Precision: 0.2289, Recall: 0.1406
+Time passes: 71m 35s
+
+Epoch 17/19
+----------
+train Loss: 2.2720 Acc: 0.9870
+Precision: 0.9613, Recall: 0.9547
+Time passes: 74m 38s
+val Loss: 153.9789 Acc: 0.8548
+Precision: 0.2000, Recall: 0.0333
+Time passes: 75m 25s
+
+Epoch 18/19
+----------
+train Loss: 1.2346 Acc: 0.9935
+Precision: 0.9733, Recall: 0.9825
+Time passes: 78m 30s
+val Loss: 73.3921 Acc: 0.8097
+Precision: 0.2702, Recall: 0.2126
+Time passes: 79m 19s
+
+Epoch 19/19
+----------
+train Loss: 2.1044 Acc: 0.9870
+Precision: 0.9553, Recall: 0.9654
+Time passes: 82m 26s
+val Loss: 94.8722 Acc: 0.8506
+Precision: 0.3000, Recall: 0.0382
+Time passes: 83m 16s
+
+Training complete in 83m 16s
+Best val Acc: 0.854849
+learning_rate: 0.0008
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ ls
+check_accuracy.py             hardcopy.0                                Pytorch_discussion_MNIST_model.ipynb  TranfserLearning_resnet101_NB.ipynb
+CNN_modeledAfter_Ass2.ipynb   Make_test_training_validation_sets.ipynb  pytorch_load_data.py                  transfer_learning_lr_0.0008_batchsize_64_genre_6.eps
+[0m[01;34mData[0m                          Multilabel_lossFunction.ipynb             README.md                             transfer_learning_lr_0.0008_batchsize_64_genre_6.pdf
+Data_Stats.ipynb              Multilabel_TL.py                          [01;34mResults[0m                               transfer_learning_lr_0.0008_batchsize_64_genre_6.pickle
+download_posters.ipynb        [01;34mnot_in_use[0m                                Saliency_Maps.ipynb                   transfer_learning.py
+explore_missing_images.ipynb  output.txt                                screenlog.0                           Untitled.ipynb
+Get_RGB_values.ipynb          [01;34m__pycache__[0m                               split_data.ipynb
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ exit
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ python transfer_learning.py 
+learning_rate: 0.0008
+Traceback (most recent call last):
+  File "transfer_learning.py", line 204, in <module>
+    required_weights = torch.tensor([1.0, 100.0]).device()
+TypeError: 'torch.Device' object is not callable
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ python transfer_learning.py ls[Kpython transfer_learning.py [12Pcat screenlog.0[Cls[Kcat screenlog.0 ls[Kcat screenlog.0 [12@python transfer_learning.py[Cls[Kpython transfer_learning.py [Kvim transfer_learning.py 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;62r[?12;25h[?12l[?25h[27m[24m[0m[H[2J[?25l[62;1H"transfer_learning.py" 239L, 9318C[1;1H[34m# License: BSD
+# Author: Sasank Chilamkurthy[0m
+
+[35mfrom[0m __future__ [35mimport[0m print_function, division
+
+[35mimport[0m torch
+[35mimport[0m torchvision
+[35mimport[0m torch.nn [38;5;130mas[0m nn
+[35mimport[0m torch.nn.functional [38;5;130mas[0m F
+[35mimport[0m torch.optim [38;5;130mas[0m optim
+[35mfrom[0m torch.optim [35mimport[0m lr_scheduler
+[35mfrom[0m torchvision [35mimport[0m models, transforms
+[35mimport[0m torchvision.datasets [38;5;130mas[0m dset
+[35mimport[0m torchvision.transforms [38;5;130mas[0m T
+
+[35mfrom[0m torch.utils.data [35mimport[0m DataLoader
+[35mfrom[0m torch.utils.data [35mimport[0m sampler
+[35mfrom[0m torch.utils.data [35mimport[0m Dataset
+
+[35mimport[0m numpy [38;5;130mas[0m np
+[35mimport[0m matplotlib.pyplot [38;5;130mas[0m plt
+plt.switch_backend([31m'agg'[0m)
+
+[35mimport[0m time
+[35mimport[0m os
+[35mimport[0m copy
+[35mimport[0m glob
+[35mimport[0m os.path [38;5;130mas[0m osp
+[35mfrom[0m PIL [35mimport[0m Image
+[35mimport[0m pickle
+
+[35mfrom[0m pytorch_load_data [35mimport[0m load_data
+[35mfrom[0m sklearn.metrics [35mimport[0m precision_recall_fscore_support [38;5;130mas[0m score
+[35mfrom[0m sklearn.metrics [35mimport[0m accuracy_score
+
+batchsize=[31m64[0m
+genreIdx=[31m3[0m
+
+dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=genreIdx)
+dataset_sizes = {}
+dataset_sizes[[31m'train'[0m] = [36mlen[0m(dataloaders[[31m'train'[0m])
+dataset_sizes[[31m'val'[0m] = [36mlen[0m(dataloaders[[31m'val'[0m])
+
+device = torch.device([31m"cuda:0"[0m [38;5;130mif[0m torch.cuda.is_available() [38;5;130melse[0m [31m"cpu"[0m)
+
+train_positives_count = [31m1601.0[0m
+train_negatives_count = [31m1744.0[0m
+val_positives_count = [31m461.0[0m
+val_negatives_count = [31m493.0[0m
+
+[38;5;130mdef[0m [36mtrain_model[0m(model, criterion, optimizer, scheduler, num_epochs=[31m25[0m):
+    train_losses, val_losses = [], []
+    train_accuracies, val_accuracies = [], []
+    train_precisions, val_precisions = [], []
+    train_recalls, val_recalls = [], []
+    since = time.time()[58;5Hbest_model_wts = copy.deepcopy(model.state_dict())
+    best_acc = [31m0.0[0m[61;5H[38;5;130mfor[0m epoch [38;5;130min[0m [36mrange[0m(num_epochs):[62;187H1,1[11CTop[1;1H[?12l[?25h[?25l[62;187H2[2;1H[?12l[?25h[?25l[62;187H3,0-1[3;1H[?12l[?25h[?25l[62;187H4,1  [4;1H[?12l[?25h[?25l[62;187H5,0-1[5;1H[?12l[?25h[?25l[62;187H6,1  [6;1H[?12l[?25h[?25l[62;187H7[7;1H[?12l[?25h[?25l[62;187H8[8;1H[?12l[?25h[?25l[62;187H9[9;1H[?12l[?25h[?25l[62;187H10,1[10;1H[?12l[?25h[?25l[62;188H1[11;1H[?12l[?25h[?25l[62;188H2[12;1H[?12l[?25h[?25l[62;188H3[13;1H[?12l[?25h[?25l[62;188H4[14;1H[?12l[?25h[?25l[62;188H5,0-1[15;1H[?12l[?25h[?25l[62;188H6,1  [16;1H[?12l[?25h[?25l[62;188H7[17;1H[?12l[?25h[?25l[62;188H8[18;1H[?12l[?25h[?25l[62;188H9,0-1[19;1H[?12l[?25h[?25l[62;187H20,1  [20;1H[?12l[?25h[?25l[62;188H1[21;1H[?12l[?25h[?25l[62;188H2[22;1H[?12l[?25h[?25l[62;188H3,0-1[23;1H[?12l[?25h[?25l[62;188H4,1  [24;1H[?12l[?25h[?25l[62;188H5[25;1H[?12l[?25h[?25l[62;188H6[26;1H[?12l[?25h[?25l[62;188H7[27;1H[?12l[?25h[?25l[62;188H8[28;1H[?12l[?25h[?25l[62;188H9[29;1H[?12l[?25h[?25l[62;187H30[30;1H[?12l[?25h[?25l[62;188H1,0-1[31;1H[?12l[?25h[?25l[62;188H2,1  [32;1H[?12l[?25h[?25l[62;188H3[33;1H[?12l[?25h[?25l[62;188H4[34;1H[?12l[?25h[?25l[62;188H5,0-1[35;1H[?12l[?25h[?25l[62;188H6,1  [36;1H[?12l[?25h[?25l[62;188H7[37;1H[?12l[?25h[?25l[62;188H8,0-1[38;1H[?12l[?25h[?25l[62;188H9,1  [39;1H[?12l[?25h[?25l[62;187H40[40;1H[?12l[?25h[?25l[62;188H1[41;1H[?12l[?25h[?25l[62;188H2[42;1H[?12l[?25h[?25l[62;188H3,0-1[43;1H[?12l[?25h[?25l[62;188H4,1  [44;1H[?12l[?25h[?25l[62;188H5,0-1[45;1H[?12l[?25h[?25l[62;188H6,1  [46;1H[?12l[?25h[?25l[62;188H7[47;1H[?12l[?25h[?25l[62;188H8[48;1H[?12l[?25h[?25l[62;188H9[49;1H[?12l[?25h[?25l[62;187H50,0-1[50;1H[?12l[?25h[?25l[62;188H1,1  [51;1H[?12l[?25h[?25l[62;188H2[52;1H[?12l[?25h[?25l[62;188H3[53;1H[?12l[?25h[?25l[62;188H4[54;1H[?12l[?25h[?25l[62;188H5[55;1H[?12l[?25h[?25l[62;188H6[56;1H[?12l[?25h[?25l[62;188H7,0-1[57;1H[?12l[?25h[?25l[62;188H8,1  [58;1H[?12l[?25h[?25l[62;188H9[59;1H[?12l[?25h[?25l[62;187H60,0-1[60;1H[?12l[?25h[?25l[62;188H1,1  [61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m([31m'Epoch {}/{}'[0m.format(epoch, num_epochs - [31m1[0m))[62;1H[K[62;187H62,1[11C0%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m([31m'-'[0m * [31m10[0m)[62;187H[K[62;187H63,1[11C1%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_accuracies, val_epoch_accuracies = [], [][62;187H[K[62;187H64,1[11C1%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_precisions, val_epoch_precisions = [], [][62;187H[K[62;187H65,1[11C2%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_recalls, val_epoch_recalls = [], [][62;187H[K[62;187H66,1[11C2%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[34m# Each epoch has a training and validation phase[0m[62;187H[K[62;187H67,1[11C3%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[38;5;130mfor[0m phase [38;5;130min[0m [[31m'train'[0m, [31m'val'[0m]:[62;187H[K[62;187H68,1[11C3%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H69,1[11C4%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m#                 scheduler.step()    # Update learning rate (decay)[0m[62;187H[K[62;187H70,1[11C5%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hmodel.train()  [34m# Set model to training mode[0m[62;187H[K[62;187H71,1[11C5%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130melse[0m:[62;187H[K[62;187H72,1[11C6%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hmodel.eval()   [34m# Set model to evaluate mode[0m[62;187H[K[62;187H73,1[11C6%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H74,0-1[9C7%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_loss = [31m0.0[0m[62;187H[K[62;187H75,1[11C7%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_corrects = [31m0[0m[62;187H[K[62;187H76,1[11C8%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_corrects_positives = [31m0[0m[62;187H[K[62;187H77,1[11C8%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_pred_positives = [31m0[0m[62;187H[K[62;187H78,1[11C9%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H79,0-1[8C10%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[34m# Iterate over batches.[0m[62;187H[K[62;187H80,1[10C10%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m inputs, labels [38;5;130min[0m dataloaders[phase]:[62;187H[K[62;187H81,1[10C11%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hinputs = inputs.to(device)[62;187H[K[62;187H82,1[10C11%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hlabels = labels.to(device)[62;187H[K[62;187H83,1[10C12%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H84,0-1[8C12%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# zero the parameter gradients[0m[62;187H[K[62;187H85,1[10C13%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hoptimizer.zero_grad()[62;187H[K[62;187H86,1[10C14%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H87,0-1[8C14%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# forward[0m[62;187H[K[62;187H88,1[10C15%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# track history if only in train[0m[62;187H[K[62;187H89,1[10C15%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mwith[0m torch.set_grad_enabled(phase == [31m'train'[0m):[62;187H[K[62;187H90,1[10C16%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Houtputs = model(inputs)[62;187H[K[62;187H91,1[10C16%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H92,1[10C17%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hloss = criterion(outputs, labels)[62;187H[K[62;187H93,1[10C17%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H94,0-1[8C18%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[34m# backward + optimize only if in training phase[0m[62;187H[K[62;187H95,1[10C19%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H96,1[10C19%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hloss.backward()[62;187H[K[62;187H97,1[10C20%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hoptimizer.step()[62;187H[K[62;187H98,1[10C20%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Htrain_losses.append(loss)[62;187H[K[62;187H99,1[10C21%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H100,1[9C21%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hval_losses.append(loss)[62;187H[K[62;187H101,1[9C22%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H102,0-1[7C23%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# statistics[0m[62;187H[K[62;187H103,1[9C23%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hrunning_loss += loss.item() * inputs.size([31m0[0m)[62;187H[K[62;187H104,1[9C24%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbatch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy(), average = [31m'binary'[0m)[62;187H[K[62;187H105,1[9C24%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbatch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())[62;187H[K[62;187H106,1[9C25%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H107,1[9C25%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_accuracies.append(batch_accuracy)[62;187H[K[62;187H108,1[9C26%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_precisions.append(batch_precision)[62;187H[K[62;187H109,1[9C26%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_recalls.append(batch_recall)[62;187H[K[62;187H110,1[9C27%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H111,1[9C28%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_accuracies.append(batch_accuracy)[62;187H[K[62;187H112,1[9C28%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_precisions.append(batch_precision)[62;187H[K[62;187H113,1[9C29%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_recalls.append(batch_recall)[62;187H[K[62;187H114,1[9C29%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H115,1[9C30%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hepoch_loss = running_loss / dataset_sizes[phase][62;187H[K[62;187H116,1[9C30%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H117,1[9C31%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H118,1[9C32%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_acc = np.mean(train_epoch_accuracies)[62;187H[K[62;187H119,1[9C32%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall = np.mean(train_epoch_precisions), np.mean(train_epoch_recalls)[62;187H[K[62;187H120,1[9C33%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_accuracies.append(epoch_acc)[62;187H[K[62;187H121,1[9C33%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_precisions.append(epoch_precision)[62;187H[K[62;187H122,1[9C34%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_recalls.append(epoch_recall)[62;187H[K[62;187H123,1[9C34%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H124,1[9C35%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_acc = np.mean(val_epoch_accuracies)[62;187H[K[62;187H125,1[9C35%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall = np.mean(val_epoch_precisions), np.mean(val_epoch_recalls)[62;187H[K[62;187H126,1[9C36%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_accuracies.append(epoch_acc)[62;187H[K[62;187H127,1[9C37%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_precisions.append(epoch_precision)[62;187H[K[62;187H128,1[9C37%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_recalls.append(epoch_recall)[62;187H[K[62;187H129,1[9C38%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H130,0-1[7C38%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'{} Loss: {:.4f} Acc: {:.4f}'[0m.format([62;187H[K[62;187H131,1[9C39%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hphase, epoch_loss, epoch_acc))[62;187H[K[62;187H132,1[9C39%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'Precision: {:.4f}, Recall: {:.4f}'[0m.format([62;187H[K[62;187H133,1[9C40%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall))[62;187H[K[62;187H134,1[9C41%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Htime_elapsed = time.time() - since[62;187H[K[62;187H135,1[9C41%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'Time passes: {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H136,1[9C42%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H137,1[9C42%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H138,0-1[7C43%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[34m# deep copy the model[0m[62;187H[K[62;187H139,1[9C43%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'val'[0m [38;5;130mand[0m epoch_acc > best_acc:[62;187H[K[62;187H140,1[9C44%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbest_acc = epoch_acc[62;187H[K[62;187H141,1[9C44%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbest_model_wts = copy.deepcopy(model.state_dict())[62;187H[K[62;187H142,1[9C45%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H143,0-1[7C46%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m()[62;187H[K[62;187H144,1[9C46%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H145,0-1[7C47%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Htime_elapsed = time.time() - since[62;187H[K[62;187H146,1[9C47%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m'Training complete in {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H147,1[9C48%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H148,1[9C48%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m'Best val Acc: {:4f}'[0m.format(best_acc))[62;187H[K[62;187H149,1[9C49%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H150,0-1[7C50%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# load best model weights[0m[62;187H[K[62;187H151,1[9C50%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel.load_state_dict(best_model_wts)[62;187H[K[62;187H152,1[9C51%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mreturn[0m model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls[62;187H[K[62;187H153,1[9C51%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H154,0-1[7C52%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[38;5;130mdef[0m [36mvisualize_model[0m(model, num_images=[31m6[0m):[62;187H[K[62;187H155,1[9C52%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hwas_training = model.training[62;187H[K[62;187H156,1[9C53%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel.eval()[62;187H[K[62;187H157,1[9C53%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Himages_so_far = [31m0[0m[62;187H[K[62;187H158,1[9C54%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hfig = plt.figure()[62;187H[K[62;187H159,1[9C55%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H160,0-1[7C55%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mwith[0m torch.no_grad():[62;187H[K[62;187H161,1[9C56%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[38;5;130mfor[0m i, (inputs, labels) [38;5;130min[0m [36menumerate[0m(dataloaders[[31m'val'[0m]):[62;187H[K[62;187H162,1[9C56%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hinputs = inputs.to(device)[62;187H[K[62;187H163,1[9C57%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hlabels = labels.to(device)[62;187H[K[62;187H164,1[9C57%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H165,0-1[7C58%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Houtputs = model(inputs)[62;187H[K[62;187H166,1[9C58%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H167,1[9C59%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H168,0-1[7C60%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m j [38;5;130min[0m [36mrange[0m(inputs.size()[[31m0[0m]):[62;187H[K[62;187H169,1[9C60%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Himages_so_far += [31m1[0m[62;187H[K[62;187H170,1[9C61%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax = plt.subplot(num_images//[31m2[0m, [31m2[0m, images_so_far)[62;187H[K[62;187H171,1[9C61%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax.axis([31m'off'[0m)[62;187H[K[62;187H172,1[9C62%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax.set_title([31m'predicted: {}'[0m.format(class_names[preds[j]]))[62;187H[K[62;187H173,1[9C62%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Himshow(inputs.cpu().data[j])[62;187H[K[62;187H174,1[9C63%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H175,0-1[7C64%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mif[0m images_so_far == num_images:[62;187H[K[62;187H176,1[9C64%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hmodel.train(mode=was_training)[62;187H[K[62;187H177,1[9C65%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130mreturn[0m[62;187H[K[62;187H178,1[9C65%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Hmodel.train(mode=was_training)[62;187H[K[62;187H179,1[9C66%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H180,1[9C66%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# Observe that only parameters of final layer are being optimized as[0m[62;187H[K[62;187H181,1[9C67%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# opoosed to before.[0m[62;187H[K[62;187H182,1[9C67%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# optimizer_conv = optim.Adam(model_conv.parameters(), lr=0.01)[0m[62;187H[K[62;187H183,1[9C68%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H184,0-1[7C69%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# Decay LR by a factor of 0.1 every 7 epochs[0m[62;187H[K[62;187H185,1[9C69%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)[0m[62;187H[K[62;187H186,1[9C70%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H187,0-1[7C70%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1][0m[62;187H[K[62;187H188,1[9C71%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [1e-2, 5e-2, 1e-1][0m[62;187H[K[62;187H189,1[9C71%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [0.0007, 0.0008, 0.00085, 0.00095, 0.1, 0.0015][0m[62;187H[K[62;187H190,1[9C72%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1Hlearning_rates = [ [31m0.0008[0m ][62;187H[K[62;187H191,1[9C73%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H192,0-1[7C73%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[38;5;130mfor[0m learning_rate [38;5;130min[0m learning_rates:[62;187H[K[62;187H193,1[9C74%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H194,1[9C74%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H195,1[9C75%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Setup the model to resnet 18 (finetune params). [0m[62;187H[K[62;187H196,1[9C75%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv = torchvision.models.resnet18(pretrained=[36mTrue[0m)[62;187H[K[62;187H197,1[9C76%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# for param in model_conv.parameters():[0m[62;187H[K[62;187H198,1[9C76%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m#     param.requires_grad = False[0m[62;187H[K[62;187H199,1[9C77%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Parameters of newly constructed modules have requires_grad=True by default[0m[62;187H[K[62;187H200,1[9C78%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hnum_ftrs = model_conv.fc.in_features[62;187H[K[62;187H201,1[9C78%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv.fc = nn.Linear(num_ftrs, [31m2[0m)[62;187H[K[62;187H202,1[9C79%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv = model_conv.to(device)[62;187H[K[62;187H203,1[9C79%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hrequired_weights = torch.tensor([[31m1.0[0m, [31m100.0[0m]).device()[62;187H[K[62;187H204,1[9C80%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hcriterion = nn.CrossEntropyLoss(weight=required_weights)[62;187H[K[62;187H205,1[9C80%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H206,0-1[7C81%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Optimize the model.[0m[62;187H[K[62;187H207,1[9C82%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hexp_lr_scheduler = [36mNone[0m[62;187H[K[62;187H208,1[9C82%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hoptimizer_conv = optim.Adam(model_conv.parameters(), lr=learning_rate)[62;187H[K[62;187H209,1[9C83%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls = train_model(model_conv, criterion, optimizer_conv,[62;187H[K[62;187H210,1[9C83%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;30Hexp_lr_scheduler, num_epochs=[31m20[0m)[62;187H[K[62;187H211,1[9C84%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H212,1[9C84%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H213,1[9C85%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H214,1[9C85%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.figure()[62;187H[K[62;187H215,1[9C86%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m311[0m)[62;187H[K[62;187H216,1[9C87%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.title([31m'Training loss'[0m)[62;187H[K[62;187H217,1[9C87%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(train_losses, [31m'o'[0m)[62;187H[K[62;187H218,1[9C88%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H219,1[9C88%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H220,0-1[7C89%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m312[0m)[62;187H[K[62;187H221,1[9C89%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.title([31m'Validation loss'[0m)[62;187H[K[62;187H222,1[9C90%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(val_losses, [31m'o'[0m)[62;187H[K[62;187H223,1[9C91%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H224,1[9C91%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H225,1[9C92%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m313[0m)[62;187H[K[62;187H226,1[9C92%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.title([31m'Accuracy'[0m)[62;187H[K[62;187H227,1[9C93%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(train_accuracies, [31m'-o'[0m, label=[31m'Train Accuracy'[0m)[62;187H[K[62;187H228,1[9C93%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(val_accuracies, [31m'-o'[0m, label=[31m'Val Accuracy'[0m)[62;187H[K[62;187H229,1[9C94%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H230,1[9C94%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.legend(loc=[31m'lower center'[0m)[62;187H[K[62;187H231,1[9C95%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H232,1[9C96%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pdf'[0m)[62;187H[K[62;187H233,1[9C96%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.eps'[0m)[62;187H[K[62;187H234,1[9C97%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H235,0-1[7C97%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H236,1[9C98%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mwith[0m [36mopen[0m([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pickle'[0m, [31m'wb'[0m) [38;5;130mas[0m [36mfile[0m:[62;187H[K[62;187H237,1[9C98%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Hpickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv, train_precisions, val_precisions, train_recalls, val_recalls), [36mfile[0m, protocol=pickle.HIGHEST_PROTOCOL)[62;187H[K[62;187H238,1[9C99%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H239,0-1[7CBot[61;1H[?12l[?25h[?25l[62;189H8,1  [60;1H[?12l[?25h[?25l[62;189H7[59;1H[?12l[?25h[?25l[62;189H6[58;1H[?12l[?25h[?25l[62;189H5,0-1[57;1H[?12l[?25h[?25l[62;189H4,1  [56;1H[?12l[?25h[?25l[62;189H3[55;1H[?12l[?25h[?25l[62;189H2[54;1H[?12l[?25h[?25l[62;189H1[53;1H[?12l[?25h[?25l[62;189H0[52;1H[?12l[?25h[?25l[62;188H29[51;1H[?12l[?25h[?25l[62;189H8[50;1H[?12l[?25h[?25l[62;189H7[49;1H[?12l[?25h[?25l[62;189H6[48;1H[?12l[?25h[?25l[62;189H5[47;1H[?12l[?25h[?25l[62;189H4[46;1H[?12l[?25h[?25l[62;189H3[45;1H[?12l[?25h[?25l[62;189H2[44;1H[?12l[?25h[?25l[62;189H1[43;1H[?12l[?25h[?25l[62;189H0,0-1[42;1H[?12l[?25h[?25l[62;188H19,1  [41;1H[?12l[?25h[?25l[62;189H8[40;1H[?12l[?25h[?25l[62;189H7[39;1H[?12l[?25h[?25l[62;189H6[38;1H[?12l[?25h[?25l[62;189H5[37;1H[?12l[?25h[?25l[62;189H4[36;1H[?12l[?25h[?25l[62;189H3[35;1H[?12l[?25h[?25l[62;189H2[34;1H[?12l[?25h[?25l[62;189H1[33;1H[?12l[?25h[?25l[62;189H0[32;1H[?12l[?25h[?25l[62;188H09[31;1H[?12l[?25h[?25l[62;189H8[30;1H[?12l[?25h[?25l[62;189H7[29;1H[?12l[?25h[?25l[62;189H6,0-1[28;1H[?12l[?25h[?25l[62;189H5,1  [27;1H[?12l[?25h[?25l[62;189H4[26;1H[?12l[?25h[?25l[62;189H3[25;1H[?12l[?25h[?25l[62;189H2[24;1H[?12l[?25h[?25l[62;189H1[23;1H[?12l[?25h[?25l[62;189H0[22;1H[?12l[?25h[?25l[62;187H199[21;1H[?12l[?25h[?25l[62;189H8[20;1H[?12l[?25h[?25l[62;189H7[19;1H[?12l[?25h[?25l[62;189H6[18;1H[?12l[?25h[?25l[62;189H5[17;1H[?12l[?25h[?25l[62;189H4[16;1H[?12l[?25h[?25l[62;189H3[15;1H[?12l[?25h[?25l[62;189H2,0-1[14;1H[?12l[?25h[?25l[62;189H1,1  [13;1H[?12l[?25h[?25l[62;189H0[12;1H[?12l[?25h[?25l[62;188H89[11;1H[?12l[?25h[?25l[62;189H8[10;1H[?12l[?25h[?25l[62;189H7,0-1[9;1H[?12l[?25h[?25l[62;189H6,1  [8;1H[?12l[?25h[?25l[62;189H5[7;1H[?12l[?25h[?25l[62;189H4,0-1[6;1H[?12l[?25h[?25l[62;189H3,1  [5;1H[?12l[?25h[?25l[62;189H2[4;1H[?12l[?25h[?25l[62;189H1[3;1H[?12l[?25h[?25l[62;189H0[2;1H[?12l[?25h[?25l[62;188H79[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;21H[38;5;130mreturn[0m[62;187H[K[62;187H178,1[9C99%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;21Hmodel.train(mode=was_training)[62;187H[K[62;187H177,1[9C98%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17H[38;5;130mif[0m images_so_far == num_images:[62;187H[K[62;187H176,1[9C98%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H175,0-1[7C97%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17Himshow(inputs.cpu().data[j])[62;187H[K[62;187H174,1[9C97%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17Hax.set_title([31m'predicted: {}'[0m.format(class_names[preds[j]]))[62;187H[K[62;187H173,1[9C96%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17Hax.axis([31m'off'[0m)[62;187H[K[62;187H172,1[9C96%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17Hax = plt.subplot(num_images//[31m2[0m, [31m2[0m, images_so_far)[62;187H[K[62;187H171,1[9C95%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17Himages_so_far += [31m1[0m[62;187H[K[62;187H170,1[9C94%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;13H[38;5;130mfor[0m j [38;5;130min[0m [36mrange[0m(inputs.size()[[31m0[0m]):[62;187H[K[62;187H169,1[9C94%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H168,0-1[7C93%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;13H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H167,1[9C93%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;13Houtputs = model(inputs)[62;187H[K[62;187H166,1[9C92%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H165,0-1[7C92%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;13Hlabels = labels.to(device)[62;187H[K[62;187H164,1[9C91%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;13Hinputs = inputs.to(device)[62;187H[K[62;187H163,1[9C91%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;9H[38;5;130mfor[0m i, (inputs, labels) [38;5;130min[0m [36menumerate[0m(dataloaders[[31m'val'[0m]):[62;187H[K[62;187H162,1[9C90%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5H[38;5;130mwith[0m torch.no_grad():[62;187H[K[62;187H161,1[9C89%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H160,0-1[7C89%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5Hfig = plt.figure()[62;187H[K[62;187H159,1[9C88%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5Himages_so_far = [31m0[0m[62;187H[K[62;187H158,1[9C88%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5Hmodel.eval()[62;187H[K[62;187H157,1[9C87%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5Hwas_training = model.training[62;187H[K[62;187H156,1[9C87%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;1H[38;5;130mdef[0m [36mvisualize_model[0m(model, num_images=[31m6[0m):[62;187H[K[62;187H155,1[9C86%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H154,0-1[7C85%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5H[38;5;130mreturn[0m model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls[62;187H[K[62;187H153,1[9C85%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5Hmodel.load_state_dict(best_model_wts)[62;187H[K[62;187H152,1[9C84%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5H[34m# load best model weights[0m[62;187H[K[62;187H151,1[9C84%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H150,0-1[7C83%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5H[36mprint[0m([31m'Best val Acc: {:4f}'[0m.format(best_acc))[62;187H[K[62;187H149,1[9C83%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;9Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H148,1[9C82%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5H[36mprint[0m([31m'Training complete in {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H147,1[9C82%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;5Htime_elapsed = time.time() - since[62;187H[K[62;187H146,1[9C81%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H145,0-1[7C80%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;9H[36mprint[0m()[62;187H[K[62;187H144,1[9C80%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[62;187H[K[62;187H143,0-1[7C79%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17Hbest_model_wts = copy.deepcopy(model.state_dict())[62;187H[K[62;187H142,1[9C79%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;17Hbest_acc = epoch_acc[62;187H[K[62;187H141,1[9C78%[1;1H[?12l[?25h[?25l[1;61r[1;1H[L[1;62r[1;13H[38;5;130mif[0m phase == [31m'val'[0m [38;5;130mand[0m epoch_acc > best_acc:[62;187H[K[62;187H140,1[9C78%[1;1H[?12l[?25h[?25l[62;189H1[2;1H[?12l[?25h[?25l[62;189H2[3;1H[?12l[?25h[?25l[62;189H3,0-1[4;1H[?12l[?25h[?25l[62;189H4,1  [5;1H[?12l[?25h[?25l[62;189H5,0-1[6;1H[?12l[?25h[?25l[62;189H6,1  [7;1H[?12l[?25h[?25l[62;189H7[8;1H[?12l[?25h[?25l[62;189H8[9;1H[?12l[?25h[?25l[62;189H9[10;1H[?12l[?25h[?25l[62;188H50,0-1[11;1H[?12l[?25h[?25l[62;187H[K[62;1H/[?12l[?25hd[?25l[?12l[?25he[?25l[?12l[?25hv[?25l[?12l[?25hi[?25l[?12l[?25hc[?25l[?12l[?25he[?25l[?12l[?25h[?25l[186C163,32[8C78%[24;32H[?12l[?25h[?25l[62;187H[K[62;1H[186C164,32[8C78%[25;32H[?12l[?25h[?25l[62;187H[K[62;1H[1;61r[1;1H[3M[1;62r[59;5Hnum_ftrs = model_conv.fc.in_features
+    model_conv.fc = nn.Linear(num_ftrs, [31m2[0m)
+    model_conv = model_conv.to(device)[62;1H[K[62;187H203,32[8C79%[61;32H[?12l[?25h[?25l
+/device[62;187H[K[62;1H[1;61r[61;1H
+[1;62r[61;5Hrequired_weights = torch.tensor([[31m1.0[0m, [31m100.0[0m]).device()[62;1H[K[62;187H204,51[8C80%[61;51H[?12l[?25h[?25l
+/device[62;187H[K[62;1H[31msearch hit BOTTOM, continuing at TOP[27m[24m[0m[H[2J[1;1H[35mimport[0m torchvision.transforms [38;5;130mas[0m T
+
+[35mfrom[0m torch.utils.data [35mimport[0m DataLoader
+[35mfrom[0m torch.utils.data [35mimport[0m sampler
+[35mfrom[0m torch.utils.data [35mimport[0m Dataset
+
+[35mimport[0m numpy [38;5;130mas[0m np
+[35mimport[0m matplotlib.pyplot [38;5;130mas[0m plt
+plt.switch_backend([31m'agg'[0m)
+
+[35mimport[0m time
+[35mimport[0m os
+[35mimport[0m copy
+[35mimport[0m glob
+[35mimport[0m os.path [38;5;130mas[0m osp
+[35mfrom[0m PIL [35mimport[0m Image
+[35mimport[0m pickle
+
+[35mfrom[0m pytorch_load_data [35mimport[0m load_data
+[35mfrom[0m sklearn.metrics [35mimport[0m precision_recall_fscore_support [38;5;130mas[0m score
+[35mfrom[0m sklearn.metrics [35mimport[0m accuracy_score
+
+batchsize=[31m64[0m
+genreIdx=[31m3[0m
+
+dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=genreIdx)
+dataset_sizes = {}
+dataset_sizes[[31m'train'[0m] = [36mlen[0m(dataloaders[[31m'train'[0m])
+dataset_sizes[[31m'val'[0m] = [36mlen[0m(dataloaders[[31m'val'[0m])
+
+device = torch.device([31m"cuda:0"[0m [38;5;130mif[0m torch.cuda.is_available() [38;5;130melse[0m [31m"cpu"[0m)
+
+train_positives_count = [31m1601.0[0m
+train_negatives_count = [31m1744.0[0m
+val_positives_count = [31m461.0[0m
+val_negatives_count = [31m493.0[0m
+
+[38;5;130mdef[0m [36mtrain_model[0m(model, criterion, optimizer, scheduler, num_epochs=[31m25[0m):
+    train_losses, val_losses = [], []
+    train_accuracies, val_accuracies = [], []
+    train_precisions, val_precisions = [], []
+    train_recalls, val_recalls = [], []
+    since = time.time()[45;5Hbest_model_wts = copy.deepcopy(model.state_dict())
+    best_acc = [31m0.0[0m[48;5H[38;5;130mfor[0m epoch [38;5;130min[0m [36mrange[0m(num_epochs):[49;9H[36mprint[0m([31m'Epoch {}/{}'[0m.format(epoch, num_epochs - [31m1[0m))[50;9H[36mprint[0m([31m'-'[0m * [31m10[0m)[51;9Htrain_epoch_accuracies, val_epoch_accuracies = [], [][52;9Htrain_epoch_precisions, val_epoch_precisions = [], [][53;9Htrain_epoch_recalls, val_epoch_recalls = [], [][54;9H[34m# Each epoch has a training and validation phase[0m[55;9H[38;5;130mfor[0m phase [38;5;130min[0m [[31m'train'[0m, [31m'val'[0m]:[56;13H[38;5;130mif[0m phase == [31m'train'[0m:
+[34m#                 scheduler.step()    # Update learning rate (decay)[0m[58;17Hmodel.train()  [34m# Set model to training mode[0m[59;13H[38;5;130melse[0m:[60;17Hmodel.eval()   [34m# Set model to evaluate mode[0m[62;187H44,1[11C7%[31msearch hit BOTTOM, continuing at TOP[0m[62;187H[K[62;187H44,1[11C7%[31;1H[?12l[?25h[?25l[62;188H3,0-1[30;1H[?12l[?25h[?25l[62;188H2,1  [29;1H[?12l[?25h[?25l[62;188H3,0-1[30;1H[?12l[?25h[?25l[62;188H4,1  [31;1H[?12l[?25h[?25l[62;188H5,0-1[32;1H[?12l[?25h[?25l[62;188H6,1  [33;1H[?12l[?25h[?25l[62;188H7[34;1H[?12l[?25h[?25l[62;188H8[35;1H[?12l[?25h[?25l[62;188H9[36;1H[?12l[?25h[?25l[62;187H50,0-1[37;1H[?12l[?25h[?25l[62;188H1,1  [38;1H[?12l[?25h[?25l[62;188H2[39;1H[?12l[?25h[?25l[62;188H3[40;1H[?12l[?25h[?25l[62;188H4[41;1H[?12l[?25h[?25l[62;188H5[42;1H[?12l[?25h[?25l[62;188H6[43;1H[?12l[?25h[?25l[62;188H7,0-1[44;1H[?12l[?25h[?25l[62;188H8,1  [45;1H[?12l[?25h[?25l[62;188H9[46;1H[?12l[?25h[?25l[62;187H60,0-1[47;1H[?12l[?25h[?25l[62;188H1,1  [48;1H[?12l[?25h[?25l[62;188H2[49;1H[?12l[?25h[?25l[62;188H3[50;1H[?12l[?25h[?25l[62;188H4[51;1H[?12l[?25h[?25l[62;188H5[52;1H[?12l[?25h[?25l[62;188H6[53;1H[?12l[?25h[?25l[62;188H7[54;1H[?12l[?25h[?25l[62;188H8[55;1H[?12l[?25h[?25l[62;188H9[56;1H[?12l[?25h[?25l[62;187H70[57;1H[?12l[?25h[?25l[62;188H1[58;1H[?12l[?25h[?25l[62;188H2[59;1H[?12l[?25h[?25l[62;188H3[60;1H[?12l[?25h[?25l[62;188H4,0-1[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_loss = [31m0.0[0m[62;1H[K[62;187H75,1[11C7%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_corrects = [31m0[0m[62;187H[K[62;187H76,1[11C8%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_corrects_positives = [31m0[0m[62;187H[K[62;187H77,1[11C8%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_pred_positives = [31m0[0m[62;187H[K[62;187H78,1[11C9%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H79,0-1[8C10%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[34m# Iterate over batches.[0m[62;187H[K[62;187H80,1[10C10%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m inputs, labels [38;5;130min[0m dataloaders[phase]:[62;187H[K[62;187H81,1[10C11%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hinputs = inputs.to(device)[62;187H[K[62;187H82,1[10C11%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hlabels = labels.to(device)[62;187H[K[62;187H83,1[10C12%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H84,0-1[8C12%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# zero the parameter gradients[0m[62;187H[K[62;187H85,1[10C13%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hoptimizer.zero_grad()[62;187H[K[62;187H86,1[10C14%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H87,0-1[8C14%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# forward[0m[62;187H[K[62;187H88,1[10C15%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# track history if only in train[0m[62;187H[K[62;187H89,1[10C15%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mwith[0m torch.set_grad_enabled(phase == [31m'train'[0m):[62;187H[K[62;187H90,1[10C16%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Houtputs = model(inputs)[62;187H[K[62;187H91,1[10C16%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H92,1[10C17%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hloss = criterion(outputs, labels)[62;187H[K[62;187H93,1[10C17%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H94,0-1[8C18%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[34m# backward + optimize only if in training phase[0m[62;187H[K[62;187H95,1[10C19%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H96,1[10C19%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hloss.backward()[62;187H[K[62;187H97,1[10C20%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hoptimizer.step()[62;187H[K[62;187H98,1[10C20%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Htrain_losses.append(loss)[62;187H[K[62;187H99,1[10C21%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H100,1[9C21%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hval_losses.append(loss)[62;187H[K[62;187H101,1[9C22%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H102,0-1[7C23%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# statistics[0m[62;187H[K[62;187H103,1[9C23%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hrunning_loss += loss.item() * inputs.size([31m0[0m)[62;187H[K[62;187H104,1[9C24%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbatch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy(), average = [31m'binary'[0m)[62;187H[K[62;187H105,1[9C24%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbatch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())[62;187H[K[62;187H106,1[9C25%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H107,1[9C25%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_accuracies.append(batch_accuracy)[62;187H[K[62;187H108,1[9C26%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_precisions.append(batch_precision)[62;187H[K[62;187H109,1[9C26%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_recalls.append(batch_recall)[62;187H[K[62;187H110,1[9C27%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H111,1[9C28%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_accuracies.append(batch_accuracy)[62;187H[K[62;187H112,1[9C28%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_precisions.append(batch_precision)[62;187H[K[62;187H113,1[9C29%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_recalls.append(batch_recall)[62;187H[K[62;187H114,1[9C29%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H115,1[9C30%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hepoch_loss = running_loss / dataset_sizes[phase][62;187H[K[62;187H116,1[9C30%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H117,1[9C31%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H118,1[9C32%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_acc = np.mean(train_epoch_accuracies)[62;187H[K[62;187H119,1[9C32%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall = np.mean(train_epoch_precisions), np.mean(train_epoch_recalls)[62;187H[K[62;187H120,1[9C33%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_accuracies.append(epoch_acc)[62;187H[K[62;187H121,1[9C33%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_precisions.append(epoch_precision)[62;187H[K[62;187H122,1[9C34%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_recalls.append(epoch_recall)[62;187H[K[62;187H123,1[9C34%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H124,1[9C35%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_acc = np.mean(val_epoch_accuracies)[62;187H[K[62;187H125,1[9C35%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall = np.mean(val_epoch_precisions), np.mean(val_epoch_recalls)[62;187H[K[62;187H126,1[9C36%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_accuracies.append(epoch_acc)[62;187H[K[62;187H127,1[9C37%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_precisions.append(epoch_precision)[62;187H[K[62;187H128,1[9C37%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_recalls.append(epoch_recall)[62;187H[K[62;187H129,1[9C38%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H130,0-1[7C38%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'{} Loss: {:.4f} Acc: {:.4f}'[0m.format([62;187H[K[62;187H131,1[9C39%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hphase, epoch_loss, epoch_acc))[62;187H[K[62;187H132,1[9C39%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'Precision: {:.4f}, Recall: {:.4f}'[0m.format([62;187H[K[62;187H133,1[9C40%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall))[62;187H[K[62;187H134,1[9C41%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Htime_elapsed = time.time() - since[62;187H[K[62;187H135,1[9C41%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'Time passes: {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H136,1[9C42%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H137,1[9C42%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H138,0-1[7C43%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[34m# deep copy the model[0m[62;187H[K[62;187H139,1[9C43%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'val'[0m [38;5;130mand[0m epoch_acc > best_acc:[62;187H[K[62;187H140,1[9C44%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbest_acc = epoch_acc[62;187H[K[62;187H141,1[9C44%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbest_model_wts = copy.deepcopy(model.state_dict())[62;187H[K[62;187H142,1[9C45%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H143,0-1[7C46%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m()[62;187H[K[62;187H144,1[9C46%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H145,0-1[7C47%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Htime_elapsed = time.time() - since[62;187H[K[62;187H146,1[9C47%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m'Training complete in {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H147,1[9C48%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H148,1[9C48%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m'Best val Acc: {:4f}'[0m.format(best_acc))[62;187H[K[62;187H149,1[9C49%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H150,0-1[7C50%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# load best model weights[0m[62;187H[K[62;187H151,1[9C50%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel.load_state_dict(best_model_wts)[62;187H[K[62;187H152,1[9C51%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mreturn[0m model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls[62;187H[K[62;187H153,1[9C51%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H154,0-1[7C52%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[38;5;130mdef[0m [36mvisualize_model[0m(model, num_images=[31m6[0m):[62;187H[K[62;187H155,1[9C52%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hwas_training = model.training[62;187H[K[62;187H156,1[9C53%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel.eval()[62;187H[K[62;187H157,1[9C53%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Himages_so_far = [31m0[0m[62;187H[K[62;187H158,1[9C54%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hfig = plt.figure()[62;187H[K[62;187H159,1[9C55%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H160,0-1[7C55%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mwith[0m torch.no_grad():[62;187H[K[62;187H161,1[9C56%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[38;5;130mfor[0m i, (inputs, labels) [38;5;130min[0m [36menumerate[0m(dataloaders[[31m'val'[0m]):[62;187H[K[62;187H162,1[9C56%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hinputs = inputs.to(device)[62;187H[K[62;187H163,1[9C57%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hlabels = labels.to(device)[62;187H[K[62;187H164,1[9C57%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H165,0-1[7C58%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Houtputs = model(inputs)[62;187H[K[62;187H166,1[9C58%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H167,1[9C59%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H168,0-1[7C60%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m j [38;5;130min[0m [36mrange[0m(inputs.size()[[31m0[0m]):[62;187H[K[62;187H169,1[9C60%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Himages_so_far += [31m1[0m[62;187H[K[62;187H170,1[9C61%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax = plt.subplot(num_images//[31m2[0m, [31m2[0m, images_so_far)[62;187H[K[62;187H171,1[9C61%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax.axis([31m'off'[0m)[62;187H[K[62;187H172,1[9C62%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax.set_title([31m'predicted: {}'[0m.format(class_names[preds[j]]))[62;187H[K[62;187H173,1[9C62%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Himshow(inputs.cpu().data[j])[62;187H[K[62;187H174,1[9C63%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H175,0-1[7C64%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mif[0m images_so_far == num_images:[62;187H[K[62;187H176,1[9C64%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hmodel.train(mode=was_training)[62;187H[K[62;187H177,1[9C65%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130mreturn[0m[62;187H[K[62;187H178,1[9C65%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Hmodel.train(mode=was_training)[62;187H[K[62;187H179,1[9C66%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H180,1[9C66%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# Observe that only parameters of final layer are being optimized as[0m[62;187H[K[62;187H181,1[9C67%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# opoosed to before.[0m[62;187H[K[62;187H182,1[9C67%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# optimizer_conv = optim.Adam(model_conv.parameters(), lr=0.01)[0m[62;187H[K[62;187H183,1[9C68%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H184,0-1[7C69%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# Decay LR by a factor of 0.1 every 7 epochs[0m[62;187H[K[62;187H185,1[9C69%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)[0m[62;187H[K[62;187H186,1[9C70%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H187,0-1[7C70%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1][0m[62;187H[K[62;187H188,1[9C71%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [1e-2, 5e-2, 1e-1][0m[62;187H[K[62;187H189,1[9C71%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [0.0007, 0.0008, 0.00085, 0.00095, 0.1, 0.0015][0m[62;187H[K[62;187H190,1[9C72%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1Hlearning_rates = [ [31m0.0008[0m ][62;187H[K[62;187H191,1[9C73%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H192,0-1[7C73%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[38;5;130mfor[0m learning_rate [38;5;130min[0m learning_rates:[62;187H[K[62;187H193,1[9C74%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H194,1[9C74%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H195,1[9C75%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Setup the model to resnet 18 (finetune params). [0m[62;187H[K[62;187H196,1[9C75%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv = torchvision.models.resnet18(pretrained=[36mTrue[0m)[62;187H[K[62;187H197,1[9C76%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# for param in model_conv.parameters():[0m[62;187H[K[62;187H198,1[9C76%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m#     param.requires_grad = False[0m[62;187H[K[62;187H199,1[9C77%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Parameters of newly constructed modules have requires_grad=True by default[0m[62;187H[K[62;187H200,1[9C78%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hnum_ftrs = model_conv.fc.in_features[62;187H[K[62;187H201,1[9C78%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv.fc = nn.Linear(num_ftrs, [31m2[0m)[62;187H[K[62;187H202,1[9C79%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv = model_conv.to(device)[62;187H[K[62;187H203,1[9C79%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hrequired_weights = torch.tensor([[31m1.0[0m, [31m100.0[0m]).device()[62;187H[K[62;187H204,1[9C80%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hcriterion = nn.CrossEntropyLoss(weight=required_weights)[62;187H[K[62;187H205,1[9C80%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H206,0-1[7C81%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Optimize the model.[0m[62;187H[K[62;187H207,1[9C82%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hexp_lr_scheduler = [36mNone[0m[62;187H[K[62;187H208,1[9C82%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hoptimizer_conv = optim.Adam(model_conv.parameters(), lr=learning_rate)[62;187H[K[62;187H209,1[9C83%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls = train_model(model_conv, criterion, optimizer_conv,[62;187H[K[62;187H210,1[9C83%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;30Hexp_lr_scheduler, num_epochs=[31m20[0m)[62;187H[K[62;187H211,1[9C84%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H212,1[9C84%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H213,1[9C85%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H214,1[9C85%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.figure()[62;187H[K[62;187H215,1[9C86%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m311[0m)[62;187H[K[62;187H216,1[9C87%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.title([31m'Training loss'[0m)[62;187H[K[62;187H217,1[9C87%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(train_losses, [31m'o'[0m)[62;187H[K[62;187H218,1[9C88%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H219,1[9C88%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H220,0-1[7C89%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m312[0m)[62;187H[K[62;187H221,1[9C89%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.title([31m'Validation loss'[0m)[62;187H[K[62;187H222,1[9C90%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(val_losses, [31m'o'[0m)[62;187H[K[62;187H223,1[9C91%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H224,1[9C91%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H225,1[9C92%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m313[0m)[62;187H[K[62;187H226,1[9C92%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.title([31m'Accuracy'[0m)[62;187H[K[62;187H227,1[9C93%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(train_accuracies, [31m'-o'[0m, label=[31m'Train Accuracy'[0m)[62;187H[K[62;187H228,1[9C93%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(val_accuracies, [31m'-o'[0m, label=[31m'Val Accuracy'[0m)[62;187H[K[62;187H229,1[9C94%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H230,1[9C94%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.legend(loc=[31m'lower center'[0m)[62;187H[K[62;187H231,1[9C95%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H232,1[9C96%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pdf'[0m)[62;187H[K[62;187H233,1[9C96%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.eps'[0m)[62;187H[K[62;187H234,1[9C97%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H235,0-1[7C97%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H236,1[9C98%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mwith[0m [36mopen[0m([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pickle'[0m, [31m'wb'[0m) [38;5;130mas[0m [36mfile[0m:[62;187H[K[62;187H237,1[9C98%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Hpickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv, train_precisions, val_precisions, train_recalls, val_recalls), [36mfile[0m, protocol=pickle.HIGHEST_PROTOCOL)[62;187H[K[62;187H238,1[9C99%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H239,0-1[7CBot[61;1H[?12l[?25h[?25l[62;189H8,1  [60;1H[?12l[?25h[?25l[62;189H9,0-1[61;1H[?12l[?25h[?25l[62;189H8,1  [60;1H[?12l[?25h[?25l[62;189H7[59;1H[?12l[?25h[?25l[62;189H6[58;1H[?12l[?25h[?25l[62;189H5,0-1[57;1H[?12l[?25h[?25l[62;189H4,1  [56;1H[?12l[?25h[?25l[62;189H3[55;1H[?12l[?25h[?25l[62;189H2[54;1H[?12l[?25h[?25l[62;189H1[53;1H[?12l[?25h[?25l[62;189H0[52;1H[?12l[?25h[?25l[62;188H29[51;1H[?12l[?25h[?25l[62;189H8[50;1H[?12l[?25h[?25l[62;189H7[49;1H[?12l[?25h[?25l[62;189H6[48;1H[?12l[?25h[?25l[62;189H5[47;1H[?12l[?25h[?25l[62;189H4[46;1H[?12l[?25h[?25l[62;189H3[45;1H[?12l[?25h[?25l[62;189H2[44;1H[?12l[?25h[?25l[62;189H1[43;1H[?12l[?25h[?25l[62;189H0,0-1[42;1H[?12l[?25h[?25l[62;188H19,1  [41;1H[?12l[?25h[?25l[62;189H8[40;1H[?12l[?25h[?25l[62;189H7[39;1H[?12l[?25h[?25l[62;189H6[38;1H[?12l[?25h[?25l[62;189H5[37;1H[?12l[?25h[?25l[62;189H4[36;1H[?12l[?25h[?25l[62;189H3[35;1H[?12l[?25h[?25l[62;189H2[34;1H[?12l[?25h[?25l[62;189H1[33;1H[?12l[?25h[?25l[62;189H0[32;1H[?12l[?25h[?25l[62;188H09[31;1H[?12l[?25h[?25l[62;189H8[30;1H[?12l[?25h[?25l[62;189H7[29;1H[?12l[?25h[?25l[62;189H6,0-1[28;1H[?12l[?25h[?25l[62;189H5,1  [27;1H[?12l[?25h[?25l[62;189H4[26;1H[?12l[?25h[?25l[62;189H3[25;1H[?12l[?25h[?25l[62;189H2[24;1H[?12l[?25h[?25l[62;189H1[23;1H[?12l[?25h[?25l[62;189H0[22;1H[?12l[?25h[?25l[62;187H199[21;1H[?12l[?25h[?25l[62;189H8[20;1H[?12l[?25h[?25l[62;189H7[19;1H[?12l[?25h[?25l[62;189H8[20;1H[?12l[?25h[?25l[62;189H9[21;1H[?12l[?25h[?25l[62;187H200[22;1H[?12l[?25h[?25l[62;189H1[23;1H[?12l[?25h[?25l[62;189H2[24;1H[?12l[?25h[?25l[62;189H3[25;1H[?12l[?25h[?25l[62;189H4[26;1H[?12l[?25h[?25l[62;189H5[27;1H[?12l[?25h[?25l[62;189H6,0-1[28;1H[?12l[?25h[?25l[62;189H7,1  [29;1H[?12l[?25h[?25l[62;189H8[30;1H[?12l[?25h[?25l[62;189H9[31;1H[?12l[?25h[?25l[62;188H10[32;1H[?12l[?25h[?25l[62;189H1[33;1H[?12l[?25h[?25l[62;189H2[34;1H[?12l[?25h[?25l[62;189H3[35;1H[?12l[?25h[?25l[62;189H4[36;1H[?12l[?25h[?25l[62;189H5[37;1H[?12l[?25h[?25l[62;189H6[38;1H[?12l[?25h[?25l[62;189H7[39;1H[?12l[?25h[?25l[62;189H8[40;1H[?12l[?25h[?25l[62;189H9[41;1H[?12l[?25h[?25l[62;188H20,0-1[42;1H[?12l[?25h[?25l[62;189H1,1  [43;1H[?12l[?25h[?25l[62;189H2[44;1H[?12l[?25h[?25l[62;189H3[45;1H[?12l[?25h[?25l[62;189H4[46;1H[?12l[?25h[?25l[62;189H5[47;1H[?12l[?25h[?25l[62;189H6[48;1H[?12l[?25h[?25l[62;189H7[49;1H[?12l[?25h[?25l[62;189H8[50;1H[?12l[?25h[?25l[62;189H9[51;1H[?12l[?25h[?25l[62;188H30[52;1H[?12l[?25h[?25l[62;189H1[53;1H[?12l[?25h[?25l[62;189H2[54;1H[?12l[?25h[?25l[62;189H3[55;1H[?12l[?25h[?25l[62;189H4[56;1H[?12l[?25h[?25l[62;189H5,0-1[57;1H[?12l[?25h[?25l[62;189H6,1  [58;1H[?12l[?25h[?25l[62;189H7[59;1H[?12l[?25h[?25l[62;189H8[60;1H[?12l[?25h[?25l[62;189H9,0-1[61;1H[?12l[?25h[?25l[62;189H8,1  [60;1H[?12l[?25h[?25l[62;189H7[59;1H[?12l[?25h[?25l[62;189H6[58;1H[?12l[?25h[?25l[62;189H5,0-1[57;1H[?12l[?25h[?25l[62;189H4,1  [56;1H[?12l[?25h[?25l[62;189H3[55;1H[?12l[?25h[?25l[62;189H2[54;1H[?12l[?25h[?25l[62;189H1[53;1H[?12l[?25h[?25l[62;189H0[52;1H[?12l[?25h[?25l[62;188H29[51;1H[?12l[?25h[?25l[62;189H8[50;1H[?12l[?25h[?25l[62;189H7[49;1H[?12l[?25h[?25l[62;189H6[48;1H[?12l[?25h[?25l[62;189H5[47;1H[?12l[?25h[?25l[62;189H4[46;1H[?12l[?25h[?25l[62;189H3[45;1H[?12l[?25h[?25l[62;189H2[44;1H[?12l[?25h[?25l[62;189H1[43;1H[?12l[?25h[?25l[62;189H0,0-1[42;1H[?12l[?25h[?25l[62;188H19,1  [41;1H[?12l[?25h[?25l[62;189H8[40;1H[?12l[?25h[?25l[62;1H[1m-- INSERT --[0m[62;187H[K[62;187H218,1[9CBot[14;1HO[?12l[?25h [?25l[1;61r[1;1H[8L[1;62r[1;17Hax = plt.subplot(num_images//[31m2[0m, [31m2[0m, images_so_far)[2;17Hax.axis([31m'off'[0m)[3;17Hax.set_title([31m'predicted: {}'[0m.format(class_names[preds[j]]))[4;17Himshow(inputs.cpu().data[j])[6;17H[38;5;130mif[0m images_so_far == num_images:[7;21Hmodel.train(mode=was_training)[8;21H[38;5;130mreturn[0m[62;187H[K[62;187H171,1[9C95%[1;1HO[?12l[?25h [?25l[1;61r[1;1H[21L[1;62r[2;5H[34m# load best model weights[0m
+    model.load_state_dict(best_model_wts)
+    [38;5;130mreturn[0m model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls
+
+[38;5;130mdef[0m [36mvisualize_model[0m(model, num_images=[31m6[0m):
+    was_training = model.training
+    model.eval()
+    images_so_far = [31m0[0m
+    fig = plt.figure()[12;5H[38;5;130mwith[0m torch.no_grad():[13;9H[38;5;130mfor[0m i, (inputs, labels) [38;5;130min[0m [36menumerate[0m(dataloaders[[31m'val'[0m]):[14;13Hinputs = inputs.to(device)[15;13Hlabels = labels.to(device)[17;13Houtputs = model(inputs)[18;13H_, preds = torch.max(outputs, [31m1[0m)[20;13H[38;5;130mfor[0m j [38;5;130min[0m [36mrange[0m(inputs.size()[[31m0[0m]):[21;17Himages_so_far += [31m1[0m[62;187H[K[62;187H150,1[9C83%[1;1HO[?12l[?25h [?25l[1;61r[1;1H[21L[1;62r[1;17Hval_recalls.append(epoch_recall)[3;13H[36mprint[0m([31m'{} Loss: {:.4f} Acc: {:.4f}'[0m.format([4;17Hphase, epoch_loss, epoch_acc))[5;13H[36mprint[0m([31m'Precision: {:.4f}, Recall: {:.4f}'[0m.format([6;17Hepoch_precision, epoch_recall))[7;13Htime_elapsed = time.time() - since[8;13H[36mprint[0m([31m'Time passes: {:.0f}m {:.0f}s'[0m.format([9;17Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[11;13H[34m# deep copy the model[0m[12;13H[38;5;130mif[0m phase == [31m'val'[0m [38;5;130mand[0m epoch_acc > best_acc:[13;17Hbest_acc = epoch_acc[14;17Hbest_model_wts = copy.deepcopy(model.state_dict())[16;9H[36mprint[0m()[18;5Htime_elapsed = time.time() - since
+    [36mprint[0m([31m'Training complete in {:.0f}m {:.0f}s'[0m.format([20;9Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))
+    [36mprint[0m([31m'Best val Acc: {:4f}'[0m.format(best_acc))[62;187H[K[62;187H129,1[9C71%[1;1HO[?12l[?25h [?25l[1;61r[1;1H[21L[1;62r[1;21Htrain_epoch_accuracies.append(batch_accuracy)[2;21Htrain_epoch_precisions.append(batch_precision)[3;21Htrain_epoch_recalls.append(batch_recall)[4;17H[38;5;130melif[0m phase == [31m'val'[0m:[5;21Hval_epoch_accuracies.append(batch_accuracy)[6;21Hval_epoch_precisions.append(batch_precision)[7;21Hval_epoch_recalls.append(batch_recall)[9;13Hepoch_loss = running_loss / dataset_sizes[phase][11;13H[38;5;130mif[0m phase == [31m'train'[0m:[12;17Hepoch_acc = np.mean(train_epoch_accuracies)[13;17Hepoch_precision, epoch_recall = np.mean(train_epoch_precisions), np.mean(train_epoch_recalls)[14;17Htrain_accuracies.append(epoch_acc)[15;17Htrain_precisions.append(epoch_precision)[16;17Htrain_recalls.append(epoch_recall)[17;13H[38;5;130melif[0m phase == [31m'val'[0m:[18;17Hepoch_acc = np.mean(val_epoch_accuracies)[19;17Hepoch_precision, epoch_recall = np.mean(val_epoch_precisions), np.mean(val_epoch_recalls)[20;17Hval_accuracies.append(epoch_acc)[21;17Hval_precisions.append(epoch_precision)[62;187H[K[62;187H108,1[9C60%[1;1HO[?12l[?25h [?25l[1;61r[1;1H[21L[1;62r[2;17H[34m# forward[3;17H# track history if only in train[0m[4;17H[38;5;130mwith[0m torch.set_grad_enabled(phase == [31m'train'[0m):[5;21Houtputs = model(inputs)[6;21H_, preds = torch.max(outputs, [31m1[0m)[7;21Hloss = criterion(outputs, labels)[9;21H[34m# backward + optimize only if in training phase[0m[10;21H[38;5;130mif[0m phase == [31m'train'[0m:[11;25Hloss.backward()[12;25Hoptimizer.step()[13;25Htrain_losses.append(loss)[14;21H[38;5;130melif[0m phase == [31m'val'[0m:[15;25Hval_losses.append(loss)[17;17H[34m# statistics[0m[18;17Hrunning_loss += loss.item() * inputs.size([31m0[0m)[19;17Hbatch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy(), average = [31m'binary'[0m)[20;17Hbatch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())[21;17H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H87,1[10C48%[1;1HO[?12l[?25h [?25l[1;61r[1;1H[21L[1;62r[1;9Htrain_epoch_recalls, val_epoch_recalls = [], [][2;9H[34m# Each epoch has a training and validation phase[0m[3;9H[38;5;130mfor[0m phase [38;5;130min[0m [[31m'train'[0m, [31m'val'[0m]:[4;13H[38;5;130mif[0m phase == [31m'train'[0m:
+[34m#                 scheduler.step()    # Update learning rate (decay)[0m[6;17Hmodel.train()  [34m# Set model to training mode[0m[7;13H[38;5;130melse[0m:[8;17Hmodel.eval()   [34m# Set model to evaluate mode[0m[10;13Hrunning_loss = [31m0.0[0m[11;13Hrunning_corrects = [31m0[0m[12;13Hrunning_corrects_positives = [31m0[0m[13;13Hrunning_pred_positives = [31m0[0m[15;13H[34m# Iterate over batches.[0m[16;13H[38;5;130mfor[0m inputs, labels [38;5;130min[0m dataloaders[phase]:[17;17Hinputs = inputs.to(device)[18;17Hlabels = labels.to(device)[20;17H[34m# zero the parameter gradients[0m[21;17Hoptimizer.zero_grad()[62;187H[K[62;187H66,1[10C36%[1;1HO[?12l[?25h [?25l[1;61r[1;1H[21L[1;62r[2;1Htrain_positives_count = [31m1601.0[0m
+train_negatives_count = [31m1744.0[0m
+val_positives_count = [31m461.0[0m
+val_negatives_count = [31m493.0[0m
+
+[38;5;130mdef[0m [36mtrain_model[0m(model, criterion, optimizer, scheduler, num_epochs=[31m25[0m):
+    train_losses, val_losses = [], []
+    train_accuracies, val_accuracies = [], []
+    train_precisions, val_precisions = [], []
+    train_recalls, val_recalls = [], []
+    since = time.time()[14;5Hbest_model_wts = copy.deepcopy(model.state_dict())
+    best_acc = [31m0.0[0m[17;5H[38;5;130mfor[0m epoch [38;5;130min[0m [36mrange[0m(num_epochs):[18;9H[36mprint[0m([31m'Epoch {}/{}'[0m.format(epoch, num_epochs - [31m1[0m))[19;9H[36mprint[0m([31m'-'[0m * [31m10[0m)[20;9Htrain_epoch_accuracies, val_epoch_accuracies = [], [][21;9Htrain_epoch_precisions, val_epoch_precisions = [], [][62;187H[K[62;187H45,1[10C24%[1;1HO[?12l[?25h [?25l[1;61r[1;1H[20L[1;62r[1;1H[35mimport[0m os
+[35mimport[0m copy
+[35mimport[0m glob
+[35mimport[0m os.path [38;5;130mas[0m osp
+[35mfrom[0m PIL [35mimport[0m Image
+[35mimport[0m pickle
+
+[35mfrom[0m pytorch_load_data [35mimport[0m load_data
+[35mfrom[0m sklearn.metrics [35mimport[0m precision_recall_fscore_support [38;5;130mas[0m score
+[35mfrom[0m sklearn.metrics [35mimport[0m accuracy_score
+
+batchsize=[31m64[0m
+genreIdx=[31m3[0m
+
+dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=genreIdx)
+dataset_sizes = {}
+dataset_sizes[[31m'train'[0m] = [36mlen[0m(dataloaders[[31m'train'[0m])
+dataset_sizes[[31m'val'[0m] = [36mlen[0m(dataloaders[[31m'val'[0m])
+
+device = torch.device([31m"cuda:0"[0m [38;5;130mif[0m torch.cuda.is_available() [38;5;130melse[0m [31m"cpu"[0m)[62;187H[K[62;187H26,1[10C13%[2;1HO[?12l[?25h[35mi[0m[23;1HOt[44;1HO [?25l[1;61r[1;1H[4M[1;62r[58;17Hoptimizer.zero_grad()[60;17H[34m# forward[61;17H# track history if only in train[0m[62;187H[K[62;187H89,1[10C15%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[21M[1;62r[41;17H[38;5;130mwith[0m torch.set_grad_enabled(phase == [31m'train'[0m):[42;21Houtputs = model(inputs)[43;21H_, preds = torch.max(outputs, [31m1[0m)[44;21Hloss = criterion(outputs, labels)[46;21H[34m# backward + optimize only if in training phase[0m[47;21H[38;5;130mif[0m phase == [31m'train'[0m:[48;25Hloss.backward()[49;25Hoptimizer.step()[50;25Htrain_losses.append(loss)[51;21H[38;5;130melif[0m phase == [31m'val'[0m:[52;25Hval_losses.append(loss)[54;17H[34m# statistics[0m[55;17Hrunning_loss += loss.item() * inputs.size([31m0[0m)[56;17Hbatch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy(), average = [31m'binary'[0m)[57;17Hbatch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())[58;17H[38;5;130mif[0m phase == [31m'train'[0m:[59;21Htrain_epoch_accuracies.append(batch_accuracy)[60;21Htrain_epoch_precisions.append(batch_precision)[61;21Htrain_epoch_recalls.append(batch_recall)[62;187H[K[62;187H110,1[9C27%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[21M[1;62r[41;17H[38;5;130melif[0m phase == [31m'val'[0m:[42;21Hval_epoch_accuracies.append(batch_accuracy)[43;21Hval_epoch_precisions.append(batch_precision)[44;21Hval_epoch_recalls.append(batch_recall)[46;13Hepoch_loss = running_loss / dataset_sizes[phase][48;13H[38;5;130mif[0m phase == [31m'train'[0m:[49;17Hepoch_acc = np.mean(train_epoch_accuracies)[50;17Hepoch_precision, epoch_recall = np.mean(train_epoch_precisions), np.mean(train_epoch_recalls)[51;17Htrain_accuracies.append(epoch_acc)[52;17Htrain_precisions.append(epoch_precision)[53;17Htrain_recalls.append(epoch_recall)[54;13H[38;5;130melif[0m phase == [31m'val'[0m:[55;17Hepoch_acc = np.mean(val_epoch_accuracies)[56;17Hepoch_precision, epoch_recall = np.mean(val_epoch_precisions), np.mean(val_epoch_recalls)[57;17Hval_accuracies.append(epoch_acc)[58;17Hval_precisions.append(epoch_precision)[59;17Hval_recalls.append(epoch_recall)[61;13H[36mprint[0m([31m'{} Loss: {:.4f} Acc: {:.4f}'[0m.format([62;187H[K[62;187H131,1[9C39%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[21M[1;62r[41;17Hphase, epoch_loss, epoch_acc))[42;13H[36mprint[0m([31m'Precision: {:.4f}, Recall: {:.4f}'[0m.format([43;17Hepoch_precision, epoch_recall))[44;13Htime_elapsed = time.time() - since[45;13H[36mprint[0m([31m'Time passes: {:.0f}m {:.0f}s'[0m.format([46;17Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[48;13H[34m# deep copy the model[0m[49;13H[38;5;130mif[0m phase == [31m'val'[0m [38;5;130mand[0m epoch_acc > best_acc:[50;17Hbest_acc = epoch_acc[51;17Hbest_model_wts = copy.deepcopy(model.state_dict())[53;9H[36mprint[0m()[55;5Htime_elapsed = time.time() - since
+    [36mprint[0m([31m'Training complete in {:.0f}m {:.0f}s'[0m.format([57;9Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))
+    [36mprint[0m([31m'Best val Acc: {:4f}'[0m.format(best_acc))[60;5H[34m# load best model weights[0m
+    model.load_state_dict(best_model_wts)[62;187H[K[62;187H152,1[9C51%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[21M[1;62r[41;5H[38;5;130mreturn[0m model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls
+
+[38;5;130mdef[0m [36mvisualize_model[0m(model, num_images=[31m6[0m):
+    was_training = model.training
+    model.eval()
+    images_so_far = [31m0[0m
+    fig = plt.figure()[49;5H[38;5;130mwith[0m torch.no_grad():[50;9H[38;5;130mfor[0m i, (inputs, labels) [38;5;130min[0m [36menumerate[0m(dataloaders[[31m'val'[0m]):[51;13Hinputs = inputs.to(device)[52;13Hlabels = labels.to(device)[54;13Houtputs = model(inputs)[55;13H_, preds = torch.max(outputs, [31m1[0m)[57;13H[38;5;130mfor[0m j [38;5;130min[0m [36mrange[0m(inputs.size()[[31m0[0m]):[58;17Himages_so_far += [31m1[0m[59;17Hax = plt.subplot(num_images//[31m2[0m, [31m2[0m, images_so_far)[60;17Hax.axis([31m'off'[0m)[61;17Hax.set_title([31m'predicted: {}'[0m.format(class_names[preds[j]]))[62;187H[K[62;187H173,1[9C62%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[21M[1;62r[41;17Himshow(inputs.cpu().data[j])[43;17H[38;5;130mif[0m images_so_far == num_images:[44;21Hmodel.train(mode=was_training)[45;21H[38;5;130mreturn[0m[46;9Hmodel.train(mode=was_training)
+
+[34m# Observe that only parameters of final layer are being optimized as
+# opoosed to before.
+# optimizer_conv = optim.Adam(model_conv.parameters(), lr=0.01)
+
+# Decay LR by a factor of 0.1 every 7 epochs
+# exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)
+
+# learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1]
+# learning_rates = [1e-2, 5e-2, 1e-1]
+# learning_rates = [0.0007, 0.0008, 0.00085, 0.00095, 0.1, 0.0015][0m
+learning_rates = [ [31m0.0008[0m ]
+
+[38;5;130mfor[0m learning_rate [38;5;130min[0m learning_rates:
+    [36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H194,1[9C74%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[21M[1;62r[42;5H[34m# Setup the model to resnet 18 (finetune params). [0m
+    model_conv = torchvision.models.resnet18(pretrained=[36mTrue[0m)
+    [34m# for param in model_conv.parameters():
+[0m    [34m#     param.requires_grad = False
+[0m    [34m# Parameters of newly constructed modules have requires_grad=True by default[0m
+    num_ftrs = model_conv.fc.in_features
+    model_conv.fc = nn.Linear(num_ftrs, [31m2[0m)
+    model_conv = model_conv.to(device)
+    required_weights = torch.tensor([[31m1.0[0m, [31m100.0[0m]).device()
+    criterion = nn.CrossEntropyLoss(weight=required_weights)[53;5H[34m# Optimize the model.[0m
+    exp_lr_scheduler = [36mNone[0m
+    optimizer_conv = optim.Adam(model_conv.parameters(), lr=learning_rate)
+    model_conv, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls = train_model(model_conv, criterion, optimizer_conv,[57;30Hexp_lr_scheduler, num_epochs=[31m20[0m)[59;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[61;5Hplt.figure()[62;187H[K[62;187H215,1[9C86%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[21M[1;62r[41;5Hplt.subplot([31m311[0m)
+    plt.title([31m'Training loss'[0m)
+    plt.plot(train_losses, [31m'o'[0m)
+    plt.xlabel([31m'Iteration'[0m)[46;5Hplt.subplot([31m312[0m)
+    plt.title([31m'Validation loss'[0m)
+    plt.plot(val_losses, [31m'o'[0m)
+    plt.xlabel([31m'Iteration'[0m)[51;5Hplt.subplot([31m313[0m)
+    plt.title([31m'Accuracy'[0m)
+    plt.plot(train_accuracies, [31m'-o'[0m, label=[31m'Train Accuracy'[0m)
+    plt.plot(val_accuracies, [31m'-o'[0m, label=[31m'Val Accuracy'[0m)
+    plt.xlabel([31m'Iteration'[0m)
+    plt.legend(loc=[31m'lower center'[0m)[58;5Hplt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pdf'[0m)
+    plt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.eps'[0m)[62;187H[K[62;187H236,1[9C98%[61;1HO[?12l[?25h [?25l[1;61r[1;1H[3M[1;62r[59;5H[38;5;130mwith[0m [36mopen[0m([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pickle'[0m, [31m'wb'[0m) [38;5;130mas[0m [36mfile[0m:[60;9Hpickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv, train_precisions, val_precisions, train_recalls, val_recalls), [36mfile[0m, protocol=pickle.HIGHEST_PROTOCOL)[62;187H[K[62;187H239,1[9CBot[61;1HO[?12l[?25h O O O O O [62;1H[K[?25l[62;187H239,0-1[7CBot[61;1H[?12l[?25h[?25l[62;187H[K[62;1H:wq"transfer_learning.py" 239L, 9318C written
+[?1l>[?12l[?25h[?1049l[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ vim transfer_learning.py [3@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kpython transfer_learning.py [12Pcat screenlog.0[Cls[Kcat screenlog.0 [9@vim transfer_learning.py[C[9Pcat screenlog.0[C[7Pscreen -Lvim transfer_learning.py pytorch_load_data[C[C[C[Cls[Kcd movie-posters/vim transfer_learning.py ls[Kjupyter notebookls[Kcd movie-posters/ls[Kcat screenlog.0 ls[Kscreen -Lvim transfer_learning.py[8Pjupyter notebook_in_use/ls[Kcd movie-posters/ls[Kvim pytorch_load_data.py [8Pcd movie-posters/[1Pat screenlog.0 [7Pscreen -rcat screenlog.0 ls[Kscreen -Lls=ls[1P-rLrcat hardcopy.0 [6Pscreen -rcat hardcopy.0 [6Pscreen -rcat hardcopy.0 [6Pscreen -rcat hardcopy.0 ls[Kscreengit checkout -b run_tl_classes[3Prun_tl_classes[14Pbranch -lls[Kgit pullcheckout master[10Pstashtuscheckout master[3@pull origin[C[C[C[C[C[C[C[3Pcheckout[C[C[C[C[C[C[Cpush origin transfer_learning_debug[12Pcommit -m "add results"add Results/experiment_tl_bs32_drama_results/comedy_results/status[K[4Pscreengit statusls[Kgit diffvim pytorch_load_data.py git vim pytorch_load_data.py[1Pad transfer_learning.pyd pytorch_load_data.pycommit -m "transfer learning small changes"branch -l[Kcd movie-posters/python transfer_learning.py ls[Kvim transfer_learning.py [9Pjupyter notebook[7Pscreen -rpython transfer_learning.py [3Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcat output.txt[C[10@vim transfer_learning.py[C[8Pcd movie-posters/[8Pscreen -r[Kpython transfer_learning.py | tee output.txt[1@&[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[30Pcat output.txt python transfer_learning.py |& tee output.txt[K[3Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcd movie-posters/ls[Kscreen -r[Kjupyter notebookcd ..[K[3Plscd Results/ls[Kcd movie-posters/ls[Kscreen -r 2889[4Plsr 3189[4Pls[1Pr[Kpython transfer_learning.py ls[Kgit pull origin mastersh origin transfer_learning_debug[2Pcommit -m "edited learning rates"[8Padd transfer_learning.py status[Kvim transfer_learning.py ls[Kgit pull origin master[Kvim transfer_learning.py [3@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ppytorch_load_data.pyom pytorch_load_data.py [4@rm .pytorch_load_data.py.swp[Cls -a[K[Kvim pytorch_load_data.py ls[Krm pytorch_load_data.py.swp..pytorch_load_data.py.swp.ls[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pvim pytorch_load_data.py ls[Kcd movie-posters/vim pytorch_load_data.py [3@python transfer_learning[C[C[C[Cclear[Kvim pytorch_load_data.py [3@python transfer_learning[C[C[C[C[11Pcd movie-posters/[1Pjupyter notebookgit push origin transfer_learning_debugcommit -m "transfer learnign should work"status[Kadd transfer_learning.pypytorch_load_data.pyTranfserLearning_resnet101_NB.ipynbstatus[Kcd movie-posters/[7Pgit status[4Pscreen jupyter notebookls[Kmv Reading_in_allPosters_Genres.ipynb not_in_use/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv load_data.py not_in_use/[3@getting[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pkdir not_in_usels[Kmv experiment_results/ experiment_tl_bs1_results/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv 9e-05.pickle experiment_results/ls[Kmv 1.pickle experiment_results/[2@0.9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv 0.09.pickle experiment_results/3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@09[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@03[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv Transfer\ learning9e-05.pdf experiment_results/5[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv Transfer\ learning1.pdf experiment_results/[2@0.9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv Transfer\ learning0.03.pdf experiment_results/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv Transfer\ learning0.009.pdf experiment_results/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv Transfer\ learning0.003.pdf experiment_results/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv Transfer\ learning0.0009.pdf experiment_results/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K experiment_results/[30@mv Transfer\ learning0.0003.pdf [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CTransfer learning0.0003.pdf [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv Transfer learning0.0003.pdf experiment_results/Transfer learning0.0003.pdf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckdir experiment_results[Kls[Kgit branch -lcheckout -b transfer_learning_debugls[Kgit branch -D transfer_learning_experiment pull[Kcheckout master push origin transfer_learning_experimentcommit -m "Added precision and recall. Added transfer learning file."[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kadd transfer_learning.pyTranfserLearning_resnet101_NB.ipynbstatus[Kcd movie-posters/[7Pgit statusjupyter notebookpython transfer_learning.py[2Pvim transfer_learning.py python transfer_learning.py[2Pvim transfer_learning.py ls[Kpython transfer_learning.pyls[Kscreen -rvim transfer_learning.py [9Pjupyter notebookopen learning9e-05.pdfls[Kcd movie-posters/ls[Kscreen -rvim transfer_learning.py [16Pscreen -rlsX -S 2501 quit[8Pr 2891[K[K[4Plscd ..[3Plsmv data_labels_genres_split poster_label_files[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmv posters_final_with_id posters_imagesls[Kcd Data/ls[Kscreengit statuscheckout -b transfer_learning_experimentspull[Kbranch -lfsck --full[3Petch -pfind .git/objects/ -type f -empty | xargs rm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit pull[Kfind .git/objects/ -type f -empty | xargs rm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit fetch -p[Ksck --full[2Pbranch -l[5Ppull^C
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ scre[K[K[K[Kvim transfer_learning
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;62r[?12;25h[?12l[?25h[27m[24m[0m[H[2J[?25l[62;1H"transfer_learning" [New File][2;1H[94m~                                                                                                                                                                                                           [3;1H~                                                                                                                                                                                                           [4;1H~                                                                                                                                                                                                           [5;1H~                                                                                                                                                                                                           [6;1H~                                                                                                                                                                                                           [7;1H~                                                                                                                                                                                                           [8;1H~                                                                                                                                                                                                           [9;1H~                                                                                                                                                                                                           [10;1H~                                                                                                                                                                                                           [11;1H~                                                                                                                                                                                                           [12;1H~                                                                                                                                                                                                           [13;1H~                                                                                                                                                                                                           [14;1H~                                                                                                                                                                                                           [15;1H~                                                                                                                                                                                                           [16;1H~                                                                                                                                                                                                           [17;1H~                                                                                                                                                                                                           [18;1H~                                                                                                                                                                                                           [19;1H~                                                                                                                                                                                                           [20;1H~                                                                                                                                                                                                           [21;1H~                                                                                                                                                                                                           [22;1H~                                                                                                                                                                                                           [23;1H~                                                                                                                                                                                                           [24;1H~                                                                                                                                                                                                           [25;1H~                                                                                                                                                                                                           [26;1H~                                                                                                                                                                                                           [27;1H~                                                                                                                                                                                                           [28;1H~                                                                                                                                                                                                           [29;1H~                                                                                                                                                                                                           [30;1H~                                                                                                                                                                                                           [31;1H~                                                                                                                                                                                                           [32;1H~                                                                                                                                                                                                           [33;1H~                                                                                                                                                                                                           [34;1H~                                                                                                                                                                                                           [35;1H~                                                                                                                                                                                                           [36;1H~                                                                                                                                                                                                           [37;1H~                                                                                                                                                                                                           [38;1H~                                                                                                                                                                                                           [39;1H~                                                                                                                                                                                                           [40;1H~                                                                                                                                                                                                           [41;1H~                                                                                                                                                                                                           [42;1H~                                                                                                                                                                                                           [43;1H~                                                                                                                                                                                                           [44;1H~                                                                                                                                                                                                           [45;1H~                                                                                                                                                                                                           [46;1H~                                                                                                                                                                                                           [47;1H~                                                                                                                                                                                                           [48;1H~                                                                                                                                                                                                           [49;1H~                                                                                                                                                                                                           [50;1H~                                                                                                                                                                                                           [51;1H~                                                                                                                                                                                                           [52;1H~                                                                                                                                                                                                           [53;1H~                                                                                                                                                                                                           [54;1H~                                                                                                                                                                                                           [55;1H~                                                                                                                                                                                                           [56;1H~                                                                                                                                                                                                           [57;1H~                                                                                                                                                                                                           [58;1H~                                                                                                                                                                                                           [59;1H~                                                                                                                                                                                                           [60;1H~                                                                                                                                                                                                           [61;1H~                                                                                                                                                                                                           [0m[62;187H0,0-1[9CAll[1;1H[?12l[?25h[?25l[62;1H[K[62;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[62;1H[K[62;1H[?1l>[?12l[?25h[?1049l[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ vim transfer_learning.py 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;62r[?12;25h[?12l[?25h[27m[24m[0m[H[2J[?25l[62;1H"transfer_learning.py" 239L, 9318C[1;1H[34m# License: BSD
+# Author: Sasank Chilamkurthy[0m
+
+[35mfrom[0m __future__ [35mimport[0m print_function, division
+
+[35mimport[0m torch
+[35mimport[0m torchvision
+[35mimport[0m torch.nn [38;5;130mas[0m nn
+[35mimport[0m torch.nn.functional [38;5;130mas[0m F
+[35mimport[0m torch.optim [38;5;130mas[0m optim
+[35mfrom[0m torch.optim [35mimport[0m lr_scheduler
+[35mfrom[0m torchvision [35mimport[0m models, transforms
+[35mimport[0m torchvision.datasets [38;5;130mas[0m dset
+[35mimport[0m torchvision.transforms [38;5;130mas[0m T
+
+[35mfrom[0m torch.utils.data [35mimport[0m DataLoader
+[35mfrom[0m torch.utils.data [35mimport[0m sampler
+[35mfrom[0m torch.utils.data [35mimport[0m Dataset
+
+[35mimport[0m numpy [38;5;130mas[0m np
+[35mimport[0m matplotlib.pyplot [38;5;130mas[0m plt
+plt.switch_backend([31m'agg'[0m)
+
+[35mimport[0m time
+[35mimport[0m os
+[35mimport[0m copy
+[35mimport[0m glob
+[35mimport[0m os.path [38;5;130mas[0m osp
+[35mfrom[0m PIL [35mimport[0m Image
+[35mimport[0m pickle
+
+[35mfrom[0m pytorch_load_data [35mimport[0m load_data
+[35mfrom[0m sklearn.metrics [35mimport[0m precision_recall_fscore_support [38;5;130mas[0m score
+[35mfrom[0m sklearn.metrics [35mimport[0m accuracy_score
+
+batchsize=[31m64[0m
+genreIdx=[31m3[0m
+
+dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=genreIdx)
+dataset_sizes = {}
+dataset_sizes[[31m'train'[0m] = [36mlen[0m(dataloaders[[31m'train'[0m])
+dataset_sizes[[31m'val'[0m] = [36mlen[0m(dataloaders[[31m'val'[0m])
+
+device = torch.device([31m"cuda:0"[0m [38;5;130mif[0m torch.cuda.is_available() [38;5;130melse[0m [31m"cpu"[0m)
+
+train_positives_count = [31m1601.0[0m
+train_negatives_count = [31m1744.0[0m
+val_positives_count = [31m461.0[0m
+val_negatives_count = [31m493.0[0m
+
+[38;5;130mdef[0m [36mtrain_model[0m(model, criterion, optimizer, scheduler, num_epochs=[31m25[0m):
+    train_losses, val_losses = [], []
+    train_accuracies, val_accuracies = [], []
+    train_precisions, val_precisions = [], []
+    train_recalls, val_recalls = [], []
+    since = time.time()[58;5Hbest_model_wts = copy.deepcopy(model.state_dict())
+    best_acc = [31m0.0[0m[61;5H[38;5;130mfor[0m epoch [38;5;130min[0m [36mrange[0m(num_epochs):[62;187H1,1[11CTop[1;1H[?12l[?25h[?25l[62;187H2[2;1H[?12l[?25h[?25l[62;187H3,0-1[3;1H[?12l[?25h[?25l[62;187H4,1  [4;1H[?12l[?25h[?25l[62;187H5,0-1[5;1H[?12l[?25h[?25l[62;187H6,1  [6;1H[?12l[?25h[?25l[62;187H7[7;1H[?12l[?25h[?25l[62;187H8[8;1H[?12l[?25h[?25l[62;187H9[9;1H[?12l[?25h[?25l[62;187H10,1[10;1H[?12l[?25h[?25l[62;188H1[11;1H[?12l[?25h[?25l[62;188H2[12;1H[?12l[?25h[?25l[62;188H3[13;1H[?12l[?25h[?25l[62;188H4[14;1H[?12l[?25h[?25l[62;188H5,0-1[15;1H[?12l[?25h[?25l[62;188H6,1  [16;1H[?12l[?25h[?25l[62;188H7[17;1H[?12l[?25h[?25l[62;188H8[18;1H[?12l[?25h[?25l[62;188H9,0-1[19;1H[?12l[?25h[?25l[62;187H20,1  [20;1H[?12l[?25h[?25l[62;188H1[21;1H[?12l[?25h[?25l[62;188H2[22;1H[?12l[?25h[?25l[62;188H3,0-1[23;1H[?12l[?25h[?25l[62;188H4,1  [24;1H[?12l[?25h[?25l[62;188H5[25;1H[?12l[?25h[?25l[62;188H6[26;1H[?12l[?25h[?25l[62;188H7[27;1H[?12l[?25h[?25l[62;188H8[28;1H[?12l[?25h[?25l[62;188H9[29;1H[?12l[?25h[?25l[62;187H30[30;1H[?12l[?25h[?25l[62;188H1,0-1[31;1H[?12l[?25h[?25l[62;188H2,1  [32;1H[?12l[?25h[?25l[62;188H3[33;1H[?12l[?25h[?25l[62;188H4[34;1H[?12l[?25h[?25l[62;188H5,0-1[35;1H[?12l[?25h[?25l[62;188H6,1  [36;1H[?12l[?25h[?25l[62;188H7[37;1H[?12l[?25h[?25l[62;188H8,0-1[38;1H[?12l[?25h[?25l[62;188H9,1  [39;1H[?12l[?25h[?25l[62;187H40[40;1H[?12l[?25h[?25l[62;188H1[41;1H[?12l[?25h[?25l[62;188H2[42;1H[?12l[?25h[?25l[62;188H3,0-1[43;1H[?12l[?25h[?25l[62;188H4,1  [44;1H[?12l[?25h[?25l[62;188H5,0-1[45;1H[?12l[?25h[?25l[62;188H6,1  [46;1H[?12l[?25h[?25l[62;188H7[47;1H[?12l[?25h[?25l[62;188H8[48;1H[?12l[?25h[?25l[62;188H9[49;1H[?12l[?25h[?25l[62;187H50,0-1[50;1H[?12l[?25h[?25l[62;188H1,1  [51;1H[?12l[?25h[?25l[62;188H2[52;1H[?12l[?25h[?25l[62;188H3[53;1H[?12l[?25h[?25l[62;188H4[54;1H[?12l[?25h[?25l[62;188H5[55;1H[?12l[?25h[?25l[62;188H6[56;1H[?12l[?25h[?25l[62;188H7,0-1[57;1H[?12l[?25h[?25l[62;188H8,1  [58;1H[?12l[?25h[?25l[62;188H9[59;1H[?12l[?25h[?25l[62;187H60,0-1[60;1H[?12l[?25h[?25l[62;188H1,1  [61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m([31m'Epoch {}/{}'[0m.format(epoch, num_epochs - [31m1[0m))[62;1H[K[62;187H62,1[11C0%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m([31m'-'[0m * [31m10[0m)[62;187H[K[62;187H63,1[11C1%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_accuracies, val_epoch_accuracies = [], [][62;187H[K[62;187H64,1[11C1%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_precisions, val_epoch_precisions = [], [][62;187H[K[62;187H65,1[11C2%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_recalls, val_epoch_recalls = [], [][62;187H[K[62;187H66,1[11C2%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[34m# Each epoch has a training and validation phase[0m[62;187H[K[62;187H67,1[11C3%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[38;5;130mfor[0m phase [38;5;130min[0m [[31m'train'[0m, [31m'val'[0m]:[62;187H[K[62;187H68,1[11C3%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H69,1[11C4%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m#                 scheduler.step()    # Update learning rate (decay)[0m[62;187H[K[62;187H70,1[11C5%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hmodel.train()  [34m# Set model to training mode[0m[62;187H[K[62;187H71,1[11C5%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130melse[0m:[62;187H[K[62;187H72,1[11C6%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hmodel.eval()   [34m# Set model to evaluate mode[0m[62;187H[K[62;187H73,1[11C6%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H74,0-1[9C7%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_loss = [31m0.0[0m[62;187H[K[62;187H75,1[11C7%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_corrects = [31m0[0m[62;187H[K[62;187H76,1[11C8%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_corrects_positives = [31m0[0m[62;187H[K[62;187H77,1[11C8%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_pred_positives = [31m0[0m[62;187H[K[62;187H78,1[11C9%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H79,0-1[8C10%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[34m# Iterate over batches.[0m[62;187H[K[62;187H80,1[10C10%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m inputs, labels [38;5;130min[0m dataloaders[phase]:[62;187H[K[62;187H81,1[10C11%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hinputs = inputs.to(device)[62;187H[K[62;187H82,1[10C11%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hlabels = labels.to(device)[62;187H[K[62;187H83,1[10C12%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H84,0-1[8C12%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# zero the parameter gradients[0m[62;187H[K[62;187H85,1[10C13%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hoptimizer.zero_grad()[62;187H[K[62;187H86,1[10C14%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H87,0-1[8C14%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# forward[0m[62;187H[K[62;187H88,1[10C15%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# track history if only in train[0m[62;187H[K[62;187H89,1[10C15%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mwith[0m torch.set_grad_enabled(phase == [31m'train'[0m):[62;187H[K[62;187H90,1[10C16%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Houtputs = model(inputs)[62;187H[K[62;187H91,1[10C16%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H92,1[10C17%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hloss = criterion(outputs, labels)[62;187H[K[62;187H93,1[10C17%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H94,0-1[8C18%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[34m# backward + optimize only if in training phase[0m[62;187H[K[62;187H95,1[10C19%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H96,1[10C19%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hloss.backward()[62;187H[K[62;187H97,1[10C20%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hoptimizer.step()[62;187H[K[62;187H98,1[10C20%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Htrain_losses.append(loss)[62;187H[K[62;187H99,1[10C21%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H100,1[9C21%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;25Hval_losses.append(loss)[62;187H[K[62;187H101,1[9C22%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H102,0-1[7C23%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[34m# statistics[0m[62;187H[K[62;187H103,1[9C23%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hrunning_loss += loss.item() * inputs.size([31m0[0m)[62;187H[K[62;187H104,1[9C24%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbatch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy(), average = [31m'binary'[0m)[62;187H[K[62;187H105,1[9C24%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbatch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())[62;187H[K[62;187H106,1[9C25%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H107,1[9C25%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_accuracies.append(batch_accuracy)[62;187H[K[62;187H108,1[9C26%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_precisions.append(batch_precision)[62;187H[K[62;187H109,1[9C26%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Htrain_epoch_recalls.append(batch_recall)[62;187H[K[62;187H110,1[9C27%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H111,1[9C28%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_accuracies.append(batch_accuracy)[62;187H[K[62;187H112,1[9C28%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_precisions.append(batch_precision)[62;187H[K[62;187H113,1[9C29%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hval_epoch_recalls.append(batch_recall)[62;187H[K[62;187H114,1[9C29%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H115,1[9C30%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hepoch_loss = running_loss / dataset_sizes[phase][62;187H[K[62;187H116,1[9C30%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H117,1[9C31%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H118,1[9C32%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_acc = np.mean(train_epoch_accuracies)[62;187H[K[62;187H119,1[9C32%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall = np.mean(train_epoch_precisions), np.mean(train_epoch_recalls)[62;187H[K[62;187H120,1[9C33%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_accuracies.append(epoch_acc)[62;187H[K[62;187H121,1[9C33%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_precisions.append(epoch_precision)[62;187H[K[62;187H122,1[9C34%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htrain_recalls.append(epoch_recall)[62;187H[K[62;187H123,1[9C34%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H124,1[9C35%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_acc = np.mean(val_epoch_accuracies)[62;187H[K[62;187H125,1[9C35%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall = np.mean(val_epoch_precisions), np.mean(val_epoch_recalls)[62;187H[K[62;187H126,1[9C36%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_accuracies.append(epoch_acc)[62;187H[K[62;187H127,1[9C37%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_precisions.append(epoch_precision)[62;187H[K[62;187H128,1[9C37%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hval_recalls.append(epoch_recall)[62;187H[K[62;187H129,1[9C38%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H130,0-1[7C38%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'{} Loss: {:.4f} Acc: {:.4f}'[0m.format([62;187H[K[62;187H131,1[9C39%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hphase, epoch_loss, epoch_acc))[62;187H[K[62;187H132,1[9C39%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'Precision: {:.4f}, Recall: {:.4f}'[0m.format([62;187H[K[62;187H133,1[9C40%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hepoch_precision, epoch_recall))[62;187H[K[62;187H134,1[9C41%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Htime_elapsed = time.time() - since[62;187H[K[62;187H135,1[9C41%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[36mprint[0m([31m'Time passes: {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H136,1[9C42%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H137,1[9C42%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H138,0-1[7C43%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[34m# deep copy the model[0m[62;187H[K[62;187H139,1[9C43%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'val'[0m [38;5;130mand[0m epoch_acc > best_acc:[62;187H[K[62;187H140,1[9C44%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbest_acc = epoch_acc[62;187H[K[62;187H141,1[9C44%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbest_model_wts = copy.deepcopy(model.state_dict())[62;187H[K[62;187H142,1[9C45%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H143,0-1[7C46%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m()[62;187H[K[62;187H144,1[9C46%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H145,0-1[7C47%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Htime_elapsed = time.time() - since[62;187H[K[62;187H146,1[9C47%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m'Training complete in {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H147,1[9C48%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H148,1[9C48%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m'Best val Acc: {:4f}'[0m.format(best_acc))[62;187H[K[62;187H149,1[9C49%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H150,0-1[7C50%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# load best model weights[0m[62;187H[K[62;187H151,1[9C50%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel.load_state_dict(best_model_wts)[62;187H[K[62;187H152,1[9C51%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mreturn[0m model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls[62;187H[K[62;187H153,1[9C51%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H154,0-1[7C52%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[38;5;130mdef[0m [36mvisualize_model[0m(model, num_images=[31m6[0m):[62;187H[K[62;187H155,1[9C52%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hwas_training = model.training[62;187H[K[62;187H156,1[9C53%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel.eval()[62;187H[K[62;187H157,1[9C53%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Himages_so_far = [31m0[0m[62;187H[K[62;187H158,1[9C54%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hfig = plt.figure()[62;187H[K[62;187H159,1[9C55%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H160,0-1[7C55%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mwith[0m torch.no_grad():[62;187H[K[62;187H161,1[9C56%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[38;5;130mfor[0m i, (inputs, labels) [38;5;130min[0m [36menumerate[0m(dataloaders[[31m'val'[0m]):[62;187H[K[62;187H162,1[9C56%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hinputs = inputs.to(device)[62;187H[K[62;187H163,1[9C57%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hlabels = labels.to(device)[62;187H[K[62;187H164,1[9C57%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H165,0-1[7C58%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Houtputs = model(inputs)[62;187H[K[62;187H166,1[9C58%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H167,1[9C59%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H168,0-1[7C60%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m j [38;5;130min[0m [36mrange[0m(inputs.size()[[31m0[0m]):[62;187H[K[62;187H169,1[9C60%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Himages_so_far += [31m1[0m[62;187H[K[62;187H170,1[9C61%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax = plt.subplot(num_images//[31m2[0m, [31m2[0m, images_so_far)[62;187H[K[62;187H171,1[9C61%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax.axis([31m'off'[0m)[62;187H[K[62;187H172,1[9C62%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hax.set_title([31m'predicted: {}'[0m.format(class_names[preds[j]]))[62;187H[K[62;187H173,1[9C62%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Himshow(inputs.cpu().data[j])[62;187H[K[62;187H174,1[9C63%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H175,0-1[7C64%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17H[38;5;130mif[0m images_so_far == num_images:[62;187H[K[62;187H176,1[9C64%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21Hmodel.train(mode=was_training)[62;187H[K[62;187H177,1[9C65%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;21H[38;5;130mreturn[0m[62;187H[K[62;187H178,1[9C65%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Hmodel.train(mode=was_training)[62;187H[K[62;187H179,1[9C66%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H180,1[9C66%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# Observe that only parameters of final layer are being optimized as[0m[62;187H[K[62;187H181,1[9C67%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# opoosed to before.[0m[62;187H[K[62;187H182,1[9C67%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# optimizer_conv = optim.Adam(model_conv.parameters(), lr=0.01)[0m[62;187H[K[62;187H183,1[9C68%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H184,0-1[7C69%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# Decay LR by a factor of 0.1 every 7 epochs[0m[62;187H[K[62;187H185,1[9C69%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)[0m[62;187H[K[62;187H186,1[9C70%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H187,0-1[7C70%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1][0m[62;187H[K[62;187H188,1[9C71%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [1e-2, 5e-2, 1e-1][0m[62;187H[K[62;187H189,1[9C71%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[34m# learning_rates = [0.0007, 0.0008, 0.00085, 0.00095, 0.1, 0.0015][0m[62;187H[K[62;187H190,1[9C72%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1Hlearning_rates = [ [31m0.0008[0m ][62;187H[K[62;187H191,1[9C73%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H192,0-1[7C73%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1H[38;5;130mfor[0m learning_rate [38;5;130min[0m learning_rates:[62;187H[K[62;187H193,1[9C74%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H194,1[9C74%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H195,1[9C75%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Setup the model to resnet 18 (finetune params). [0m[62;187H[K[62;187H196,1[9C75%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv = torchvision.models.resnet18(pretrained=[36mTrue[0m)[62;187H[K[62;187H197,1[9C76%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# for param in model_conv.parameters():[0m[62;187H[K[62;187H198,1[9C76%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m#     param.requires_grad = False[0m[62;187H[K[62;187H199,1[9C77%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Parameters of newly constructed modules have requires_grad=True by default[0m[62;187H[K[62;187H200,1[9C78%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hnum_ftrs = model_conv.fc.in_features[62;187H[K[62;187H201,1[9C78%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv.fc = nn.Linear(num_ftrs, [31m2[0m)[62;187H[K[62;187H202,1[9C79%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv = model_conv.to(device)[62;187H[K[62;187H203,1[9C79%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hrequired_weights = torch.tensor([[31m1.0[0m, [31m100.0[0m]).device()[62;187H[K[62;187H204,1[9C80%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hcriterion = nn.CrossEntropyLoss(weight=required_weights)[62;187H[K[62;187H205,1[9C80%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H206,0-1[7C81%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[34m# Optimize the model.[0m[62;187H[K[62;187H207,1[9C82%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hexp_lr_scheduler = [36mNone[0m[62;187H[K[62;187H208,1[9C82%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hoptimizer_conv = optim.Adam(model_conv.parameters(), lr=learning_rate)[62;187H[K[62;187H209,1[9C83%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls = train_model(model_conv, criterion, optimizer_conv,[62;187H[K[62;187H210,1[9C83%[61;1H[?12l[?25h[?25l[62;188H09[60;1H[?12l[?25h[?25l[62;189H8[59;1H[?12l[?25h[?25l[62;189H9[60;1H[?12l[?25h[?25l[62;188H10[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;30Hexp_lr_scheduler, num_epochs=[31m20[0m)[62;187H[K[62;187H211,1[9C84%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H212,1[9C84%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H213,1[9C85%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H214,1[9C85%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.figure()[62;187H[K[62;187H215,1[9C86%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m311[0m)[62;187H[K[62;187H216,1[9C87%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.title([31m'Training loss'[0m)[62;187H[K[62;187H217,1[9C87%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(train_losses, [31m'o'[0m)[62;187H[K[62;187H218,1[9C88%[61;1H[?12l[?25h[?25l[62;189H7[60;1H[?12l[?25h[?25l[62;189H6[59;1H[?12l[?25h[?25l[62;189H5[58;1H[?12l[?25h[?25l[62;189H4[57;1H[?12l[?25h[?25l[62;189H3[56;1H[?12l[?25h[?25l[62;189H2[55;1H[?12l[?25h[?25l[62;189H1[54;1H[?12l[?25h[?25l[62;189H0[53;1H[?12l[?25h[?25l[62;188H09[52;1H[?12l[?25h[?25l[62;189H8[51;1H[?12l[?25h[?25l[62;189H7[50;1H[?12l[?25h[?25l[62;189H6,0-1[49;1H[?12l[?25h[?25l[62;189H5,1  [48;1H[?12l[?25h[?25l[62;189H4[47;1H[?12l[?25h[?25l[62;191H2[47;2H[?12l[?25h[?25l[55C[106m()[0m[62;191H58[47;58H[?12l[?25h[?25l[62;1H[1m-- INSERT --[0m[62;187H[K[62;187H204,58[8C88%[47;58H[?12l[?25h[?25l[106m) [0m)[47;58H[K[62;192H7[47;57H[?12l[?25h[?25l[62;192H8[47;58H[?12l[?25h[?25l[47;57H[K[62;192H7[47;57H[?12l[?25h[?25l[47;56H[K[62;192H6[47;56H[?12l[?25h[?25l[47;55H[K[62;192H5[47;55H[?12l[?25h[?25l[47;54H[K[62;192H4[47;54H[?12l[?25h[?25l[47;53H[K[62;192H3[47;53H[?12l[?25h[?25l[47;52H[K[62;192H2[47;52H[?12l[?25h[?25l[47;51H[K[62;192H1[47;51H[?12l[?25h[?25lt[62;192H2[47;52H[?12l[?25h[?25lo[62;192H3[47;53H[?12l[?25h[?25l([62;192H4[47;54H[?12l[?25h[?25ld[62;192H5[47;55H[?12l[?25h[?25le[62;192H6[47;56H[?12l[?25h[?25lv[62;192H7[47;57H[?12l[?25h[?25li[62;192H8[47;58H[?12l[?25h[?25lc[62;192H9[47;59H[?12l[?25h[?25le[62;191H60[47;60H[?12l[?25h[?25l)[47;53H[106m([0mdevice[106m)[0m[62;192H1[47;61H[?12l[?25h[62;1H[K[47;60H[?25l[62;187H204,60[8C88%[47;60H[?12l[?25h[?25l[62;187H[K[62;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"transfer_learning.py" 239L, 9320C written
+[?1l>[?12l[?25h[?1049l[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ vim transfer_learning.py [Kpython transfer_learning.py 
+learning_rate: 0.0008
+Epoch 0/19
+----------
+/home/shared/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 due to no true samples.
+  'recall', 'true', average, warn_for)
+train Loss: 35.5147 Acc: 0.4410
+Precision: 0.0908, Recall: 0.8841
+Time passes: 3m 8s
+val Loss: 24.1335 Acc: 0.6238
+Precision: 0.0902, Recall: 0.8756
+Time passes: 3m 56s
+
+Epoch 1/19
+----------
+train Loss: 27.0476 Acc: 0.5192
+Precision: 0.1325, Recall: 0.8839
+Time passes: 7m 7s
+val Loss: 33.9892 Acc: 0.0439
+Precision: 0.0439, Recall: 1.0000
+Time passes: 7m 55s
+
+Epoch 2/19
+----------
+train Loss: 23.9346 Acc: 0.5767
+Precision: 0.1248, Recall: 0.9094
+Time passes: 11m 6s
+val Loss: 35.4551 Acc: 0.2464
+Precision: 0.0523, Recall: 0.9756
+Time passes: 11m 54s
+
+Epoch 3/19
+----------
+train Loss: 14.9374 Acc: 0.7995
+Precision: 0.2384, Recall: 0.9306
+Time passes: 15m 3s
+val Loss: 27.5630 Acc: 0.8614
+Precision: 0.2200, Recall: 0.8178
+Time passes: 15m 53s
+
+Epoch 4/19
+----------
+train Loss: 9.7635 Acc: 0.8653
+Precision: 0.3174, Recall: 0.9513
+Time passes: 19m 3s
+val Loss: 47.2160 Acc: 0.7006
+Precision: 0.1116, Recall: 0.8422
+Time passes: 19m 52s
+
+Epoch 5/19
+----------
+train Loss: 5.8826 Acc: 0.9142
+Precision: 0.4016, Recall: 0.9599
+Time passes: 23m 1s
+val Loss: 33.9152 Acc: 0.7356
+Precision: 0.1235, Recall: 0.8422
+Time passes: 23m 48s
+
+Epoch 6/19
+----------
+train Loss: 3.3425 Acc: 0.9472
+Precision: 0.5191, Recall: 0.9575
+Time passes: 26m 59s
+val Loss: 46.0502 Acc: 0.6918
+Precision: 0.1067, Recall: 0.8533
+Time passes: 27m 47s
+
+Epoch 7/19
+----------
+train Loss: 2.1603 Acc: 0.9652
+Precision: 0.6142, Recall: 0.9623
+Time passes: 31m 0s
+val Loss: 97.9912 Acc: 0.9656
+Precision: 0.6444, Recall: 0.5089
+Time passes: 31m 49s
+
+Epoch 8/19
+----------
+train Loss: 1.0055 Acc: 0.9835
+Precision: 0.7291, Recall: 0.9623
+Time passes: 34m 58s
+/home/shared/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+val Loss: 138.2528 Acc: 0.9656
+Precision: 0.7111, Recall: 0.4289
+Time passes: 35m 46s
+
+Epoch 9/19
+----------
+train Loss: 0.4661 Acc: 0.9947
+Precision: 0.8854, Recall: 0.9623
+Time passes: 38m 58s
+val Loss: 110.2127 Acc: 0.9708
+Precision: 0.8278, Recall: 0.5978
+Time passes: 39m 46s
+
+Epoch 10/19
+----------
+train Loss: 0.3026 Acc: 0.9971
+Precision: 0.9107, Recall: 0.9623
+Time passes: 42m 55s
+val Loss: 110.8194 Acc: 0.9708
+Precision: 0.8167, Recall: 0.5978
+Time passes: 43m 44s
+
+Epoch 11/19
+----------
+train Loss: 0.3266 Acc: 0.9976
+Precision: 0.9202, Recall: 0.9623
+Time passes: 46m 54s
+val Loss: 82.1498 Acc: 0.9433
+Precision: 0.4606, Recall: 0.7333
+Time passes: 47m 42s
+
+Epoch 12/19
+----------
+train Loss: 0.5268 Acc: 0.9932
+Precision: 0.8511, Recall: 0.9596
+Time passes: 50m 50s
+val Loss: 120.5348 Acc: 0.9740
+Precision: 0.8167, Recall: 0.6867
+Time passes: 51m 38s
+
+Epoch 13/19
+----------
+train Loss: 0.2631 Acc: 0.9973
+Precision: 0.9173, Recall: 0.9623
+Time passes: 54m 46s
+val Loss: 223.5224 Acc: 0.9646
+Precision: 0.5333, Recall: 0.3467
+Time passes: 55m 36s
+
+Epoch 14/19
+----------
+train Loss: 0.5216 Acc: 0.9920
+Precision: 0.8415, Recall: 0.9623
+Time passes: 58m 44s
+val Loss: 187.9529 Acc: 0.9561
+Precision: 0.5133, Recall: 0.4156
+Time passes: 59m 30s
+
+Epoch 15/19
+----------
+train Loss: 0.2341 Acc: 0.9971
+Precision: 0.9075, Recall: 0.9623
+Time passes: 62m 40s
+val Loss: 106.3993 Acc: 0.9540
+Precision: 0.5014, Recall: 0.6978
+Time passes: 63m 29s
+
+Epoch 16/19
+----------
+train Loss: 1.4321 Acc: 0.9879
+Precision: 0.7983, Recall: 0.9575
+Time passes: 66m 41s
+val Loss: 105.7366 Acc: 0.8832
+Precision: 0.2159, Recall: 0.5978
+Time passes: 67m 31s
+
+Epoch 17/19
+----------
+train Loss: 32.2268 Acc: 0.4926
+Precision: 0.1861, Recall: 0.8868
+Time passes: 70m 44s
+val Loss: 333.6559 Acc: 0.0439
+Precision: 0.0439, Recall: 1.0000
+Time passes: 71m 35s
+
+Epoch 18/19
+----------
+train Loss: 33.8208 Acc: 0.1120
+Precision: 0.0554, Recall: 0.9491
+Time passes: 74m 49s
+val Loss: 28.6264 Acc: 0.2295
+Precision: 0.0519, Recall: 0.9667
+Time passes: 75m 41s
+
+Epoch 19/19
+----------
+train Loss: 28.9145 Acc: 0.1324
+Precision: 0.0568, Recall: 0.9434
+Time passes: 78m 60s
+val Loss: 31.1929 Acc: 0.0533
+Precision: 0.0442, Recall: 1.0000
+Time passes: 79m 51s
+
+Training complete in 79m 51s
+Best val Acc: 0.973958
+learning_rate: 0.0008
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ 

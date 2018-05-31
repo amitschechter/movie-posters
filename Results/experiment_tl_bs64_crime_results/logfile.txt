@@ -1,0 +1,187 @@
+rning_rate: 0.0008
+Epoch 0/19
+----------
+/home/shared/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+train Loss: 30.6739 Acc: 0.8293
+Precision: 0.0705, Recall: 0.0468
+Time passes: 6m 23s
+val Loss: 25.6816 Acc: 0.8527
+Precision: 0.0000, Recall: 0.0000
+Time passes: 8m 5s
+
+Epoch 1/19
+----------
+train Loss: 24.7031 Acc: 0.8508
+Precision: 0.0189, Recall: 0.0031
+Time passes: 11m 17s
+val Loss: 33.1031 Acc: 0.8548
+Precision: 0.0000, Recall: 0.0000
+Time passes: 12m 6s
+
+Epoch 2/19
+----------
+train Loss: 22.7981 Acc: 0.8532
+Precision: 0.2465, Recall: 0.0592
+Time passes: 15m 15s
+val Loss: 27.7372 Acc: 0.8403
+Precision: 0.3151, Recall: 0.1617
+Time passes: 16m 4s
+
+Epoch 3/19
+----------
+train Loss: 21.4571 Acc: 0.8588
+Precision: 0.5429, Recall: 0.1950
+Time passes: 19m 13s
+val Loss: 42.2939 Acc: 0.7035
+Precision: 0.2193, Recall: 0.4589
+Time passes: 20m 2s
+
+Epoch 4/19
+----------
+train Loss: 19.2962 Acc: 0.8726
+Precision: 0.6434, Recall: 0.3162
+Time passes: 23m 12s
+val Loss: 46.1035 Acc: 0.6200
+Precision: 0.2238, Recall: 0.6751
+Time passes: 24m 2s
+
+Epoch 5/19
+----------
+train Loss: 15.7360 Acc: 0.9006
+Precision: 0.7672, Recall: 0.5144
+Time passes: 27m 12s
+val Loss: 37.6143 Acc: 0.7531
+Precision: 0.2166, Recall: 0.2806
+Time passes: 28m 0s
+
+Epoch 6/19
+----------
+train Loss: 13.3971 Acc: 0.9148
+Precision: 0.7883, Recall: 0.5773
+Time passes: 31m 10s
+val Loss: 71.8557 Acc: 0.4869
+Precision: 0.1663, Recall: 0.6498
+Time passes: 31m 59s
+
+Epoch 7/19
+----------
+train Loss: 10.7201 Acc: 0.9322
+Precision: 0.8115, Recall: 0.6904
+Time passes: 35m 12s
+val Loss: 45.1335 Acc: 0.7579
+Precision: 0.2291, Recall: 0.3103
+Time passes: 36m 0s
+
+Epoch 8/19
+----------
+train Loss: 7.9402 Acc: 0.9567
+Precision: 0.8867, Recall: 0.8217
+Time passes: 39m 7s
+val Loss: 105.2010 Acc: 0.5556
+Precision: 0.1939, Recall: 0.6830
+Time passes: 39m 55s
+
+Epoch 9/19
+----------
+train Loss: 6.6633 Acc: 0.9617
+Precision: 0.8981, Recall: 0.8487
+Time passes: 43m 6s
+val Loss: 48.7918 Acc: 0.8081
+Precision: 0.3024, Recall: 0.2924
+Time passes: 43m 54s
+
+Epoch 10/19
+----------
+train Loss: 6.1174 Acc: 0.9611
+Precision: 0.8834, Recall: 0.8606
+Time passes: 47m 3s
+val Loss: 88.4099 Acc: 0.8496
+Precision: 0.2667, Recall: 0.0456
+Time passes: 47m 51s
+
+Epoch 11/19
+----------
+train Loss: 4.1791 Acc: 0.9761
+Precision: 0.9339, Recall: 0.9059
+Time passes: 51m 3s
+val Loss: 60.8415 Acc: 0.8538
+Precision: 0.2333, Recall: 0.0318
+Time passes: 51m 52s
+
+Epoch 12/19
+----------
+train Loss: 3.3422 Acc: 0.9770
+Precision: 0.9318, Recall: 0.9213
+Time passes: 54m 59s
+val Loss: 51.0766 Acc: 0.8237
+Precision: 0.3397, Recall: 0.1606
+Time passes: 55m 48s
+
+Epoch 13/19
+----------
+train Loss: 1.7987 Acc: 0.9903
+Precision: 0.9697, Recall: 0.9700
+Time passes: 58m 54s
+val Loss: 66.9689 Acc: 0.8308
+Precision: 0.2822, Recall: 0.1177
+Time passes: 59m 42s
+
+Epoch 14/19
+----------
+train Loss: 1.3991 Acc: 0.9923
+Precision: 0.9687, Recall: 0.9810
+Time passes: 62m 50s
+val Loss: 78.5865 Acc: 0.8505
+Precision: 0.3333, Recall: 0.0755
+Time passes: 63m 38s
+
+Epoch 15/19
+----------
+train Loss: 1.6791 Acc: 0.9923
+Precision: 0.9827, Recall: 0.9659
+Time passes: 66m 48s
+val Loss: 53.0639 Acc: 0.8119
+Precision: 0.3096, Recall: 0.2603
+Time passes: 67m 37s
+
+Epoch 16/19
+----------
+train Loss: 2.1737 Acc: 0.9876
+Precision: 0.9647, Recall: 0.9574
+Time passes: 70m 46s
+val Loss: 84.0108 Acc: 0.8131
+Precision: 0.2289, Recall: 0.1406
+Time passes: 71m 35s
+
+Epoch 17/19
+----------
+train Loss: 2.2720 Acc: 0.9870
+Precision: 0.9613, Recall: 0.9547
+Time passes: 74m 38s
+val Loss: 153.9789 Acc: 0.8548
+Precision: 0.2000, Recall: 0.0333
+Time passes: 75m 25s
+
+Epoch 18/19
+----------
+train Loss: 1.2346 Acc: 0.9935
+Precision: 0.9733, Recall: 0.9825
+Time passes: 78m 30s
+val Loss: 73.3921 Acc: 0.8097
+Precision: 0.2702, Recall: 0.2126
+Time passes: 79m 19s
+
+Epoch 19/19
+----------
+train Loss: 2.1044 Acc: 0.9870
+Precision: 0.9553, Recall: 0.9654
+Time passes: 82m 26s
+val Loss: 94.8722 Acc: 0.8506
+Precision: 0.3000, Recall: 0.0382
+Time passes: 83m 16s
+
+Training complete in 83m 16s
+Best val Acc: 0.854849
+learning_rate: 0.0008
+

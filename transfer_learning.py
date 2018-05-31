@@ -34,7 +34,9 @@ from sklearn.metrics import precision_recall_fscore_support as score
 from sklearn.metrics import accuracy_score
 
 batchsize=64
-dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=3)
+genreIdx=3
+
+dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=genreIdx)
 dataset_sizes = {}
 dataset_sizes['train'] = len(dataloaders['train'])
 dataset_sizes['val'] = len(dataloaders['val'])
@@ -199,7 +201,8 @@ for learning_rate in learning_rates:
     num_ftrs = model_conv.fc.in_features
     model_conv.fc = nn.Linear(num_ftrs, 2)
     model_conv = model_conv.to(device)
-    criterion = nn.CrossEntropyLoss()
+    required_weights = torch.tensor([1.0, 100.0]).to(device)
+    criterion = nn.CrossEntropyLoss(weight=required_weights)
 
     # Optimize the model.
     exp_lr_scheduler = None
@@ -227,10 +230,10 @@ for learning_rate in learning_rates:
     plt.xlabel('Iteration')
     plt.legend(loc='lower center')
     
-    plt.savefig('Transfer learning'+str(learning_rate)+'.pdf')
-    plt.savefig('Transfer learning'+str(learning_rate)+'.eps')
+    plt.savefig('transfer_learning_lr_'+str(learning_rate)+'_batchsize_'+str(batchsize)+'_genre_'+str(genreIdx)+'.pdf')
+    plt.savefig('transfer_learning_lr_'+str(learning_rate)+'_batchsize_'+str(batchsize)+'_genre_'+str(genreIdx)+'.eps')
 
     
-    with open(str(learning_rate)+'.pickle', 'wb') as file:
+    with open('transfer_learning_lr_'+str(learning_rate)+'_batchsize_'+str(batchsize)+'_genre_'+str(genreIdx)+'.pickle', 'wb') as file:
         pickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv, train_precisions, val_precisions, train_recalls, val_recalls), file, protocol=pickle.HIGHEST_PROTOCOL)
 
