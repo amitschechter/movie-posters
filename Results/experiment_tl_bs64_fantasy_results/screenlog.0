@@ -1,0 +1,223 @@
+train Loss: 22.4399 Acc: 0.8939
+Precision: 0.0385, Recall: 0.0321
+Time passes: 5m 54s
+val Loss: 27.6555 Acc: 0.8408
+Precision: 0.1404, Recall: 0.1644
+Time passes: 7m 30s
+
+Epoch 1/19
+----------
+train Loss: 16.8108 Acc: 0.9127
+Precision: 0.1667, Recall: 0.0525
+Time passes: 10m 40s
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ :[Kexit
+^CTraceback (most recent call last):
+  File "transfer_learning.py", line 208, in <module>
+    exp_lr_scheduler, num_epochs=20)
+  File "transfer_learning.py", line 79, in train_model
+    for inputs, labels in dataloaders[phase]:
+  File "/home/shared/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 264, in __next__
+    batch = self.collate_fn([self.dataset[i] for i in indices])
+  File "/home/shared/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 264, in <listcomp>
+    batch = self.collate_fn([self.dataset[i] for i in indices])
+  File "/home/amitschechter/movie-posters/pytorch_load_data.py", line 56, in __getitem__
+    image = self.transform(image)
+  File "/home/shared/anaconda3/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/transforms/transforms.py", line 49, in __call__
+  File "/home/shared/anaconda3/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/transforms/transforms.py", line 175, in __call__
+  File "/home/shared/anaconda3/lib/python3.6/site-packages/torchvision-0.2.1-py3.6.egg/torchvision/transforms/functional.py", line 206, in resize
+  File "/home/shared/anaconda3/lib/python3.6/site-packages/PIL/Image.py", line 1745, in resize
+    self.load()
+  File "/home/shared/anaconda3/lib/python3.6/site-packages/PIL/ImageFile.py", line 236, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ exit
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ python transfer_learning.py 
+learning_rate: 0.0008
+Epoch 0/19
+----------
+/home/shared/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+train Loss: 21.9538 Acc: 0.8980
+Precision: 0.1214, Recall: 0.0460
+Time passes: 3m 9s
+val Loss: 19.9715 Acc: 0.9004
+Precision: 0.1333, Recall: 0.0244
+Time passes: 3m 58s
+
+Epoch 1/19
+----------
+train Loss: 16.1848 Acc: 0.9107
+Precision: 0.1918, Recall: 0.0640
+Time passes: 7m 8s
+val Loss: 18.3408 Acc: 0.9161
+Precision: 0.1667, Recall: 0.0311
+Time passes: 7m 57s
+
+Epoch 2/19
+----------
+train Loss: 13.5154 Acc: 0.9207
+Precision: 0.4704, Recall: 0.2433
+Time passes: 11m 7s
+val Loss: 27.4830 Acc: 0.8059
+Precision: 0.1195, Recall: 0.1692
+Time passes: 11m 56s
+
+Epoch 3/19
+----------
+/home/shared/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1137: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 due to no true samples.
+  'recall', 'true', average, warn_for)
+train Loss: 13.3011 Acc: 0.9248
+Precision: 0.6019, Recall: 0.2453
+Time passes: 15m 6s
+val Loss: 24.5197 Acc: 0.8858
+Precision: 0.1167, Recall: 0.0467
+Time passes: 15m 55s
+
+Epoch 4/19
+----------
+train Loss: 9.4574 Acc: 0.9458
+Precision: 0.8035, Recall: 0.5746
+Time passes: 19m 5s
+val Loss: 68.0982 Acc: 0.5316
+Precision: 0.1049, Recall: 0.6067
+Time passes: 19m 54s
+
+Epoch 5/19
+----------
+train Loss: 9.5729 Acc: 0.9393
+Precision: 0.7499, Recall: 0.4951
+Time passes: 23m 3s
+val Loss: 23.2573 Acc: 0.9058
+Precision: 0.4000, Recall: 0.1362
+Time passes: 23m 52s
+
+Epoch 6/19
+----------
+train Loss: 6.1061 Acc: 0.9620
+Precision: 0.8300, Recall: 0.7172
+Time passes: 27m 3s
+val Loss: 68.8722 Acc: 0.7541
+Precision: 0.0933, Recall: 0.2263
+Time passes: 27m 53s
+
+Epoch 7/19
+----------
+train Loss: 5.4757 Acc: 0.9682
+Precision: 0.8578, Recall: 0.7724
+Time passes: 31m 6s
+val Loss: 39.1533 Acc: 0.8474
+Precision: 0.1150, Recall: 0.1263
+Time passes: 31m 56s
+
+Epoch 8/19
+----------
+train Loss: 5.5456 Acc: 0.9661
+Precision: 0.8289, Recall: 0.7828
+Time passes: 35m 9s
+val Loss: 83.8540 Acc: 0.5967
+Precision: 0.1051, Recall: 0.5070
+Time passes: 35m 59s
+
+Epoch 9/19
+----------
+train Loss: 4.1720 Acc: 0.9782
+Precision: 0.8935, Recall: 0.8230
+Time passes: 39m 13s
+val Loss: 50.1559 Acc: 0.8053
+Precision: 0.1710, Recall: 0.3362
+Time passes: 40m 3s
+
+Epoch 10/19
+----------
+train Loss: 1.9674 Acc: 0.9906
+Precision: 0.9516, Recall: 0.9165
+Time passes: 43m 16s
+val Loss: 38.3852 Acc: 0.8576
+Precision: 0.2287, Recall: 0.2956
+Time passes: 44m 6s
+
+Epoch 11/19
+----------
+train Loss: 1.6222 Acc: 0.9923
+Precision: 0.9330, Recall: 0.9470
+Time passes: 47m 19s
+val Loss: 42.5876 Acc: 0.9120
+Precision: 0.2667, Recall: 0.0844
+Time passes: 48m 9s
+
+Epoch 12/19
+----------
+train Loss: 1.0824 Acc: 0.9935
+Precision: 0.9449, Recall: 0.9462
+Time passes: 51m 22s
+val Loss: 40.9270 Acc: 0.8983
+Precision: 0.3144, Recall: 0.2162
+Time passes: 52m 12s
+
+Epoch 13/19
+----------
+train Loss: 0.4748 Acc: 0.9968
+Precision: 0.9658, Recall: 0.9636
+Time passes: 55m 25s
+val Loss: 48.1232 Acc: 0.9046
+Precision: 0.2333, Recall: 0.0711
+Time passes: 56m 15s
+
+Epoch 14/19
+----------
+train Loss: 0.2640 Acc: 0.9982
+Precision: 0.9735, Recall: 0.9721
+Time passes: 59m 28s
+val Loss: 50.4814 Acc: 0.9076
+Precision: 0.2056, Recall: 0.0711
+Time passes: 60m 18s
+
+Epoch 15/19
+----------
+train Loss: 0.1070 Acc: 0.9991
+Precision: 0.9767, Recall: 0.9780
+Time passes: 63m 31s
+val Loss: 50.2523 Acc: 0.9065
+Precision: 0.3056, Recall: 0.0940
+Time passes: 64m 20s
+
+Epoch 16/19
+----------
+train Loss: 0.0602 Acc: 0.9994
+Precision: 0.9788, Recall: 0.9780
+Time passes: 67m 34s
+val Loss: 50.8890 Acc: 0.9086
+Precision: 0.2833, Recall: 0.1067
+Time passes: 68m 24s
+
+Epoch 17/19
+----------
+train Loss: 0.0463 Acc: 0.9997
+Precision: 0.9788, Recall: 0.9811
+Time passes: 71m 37s
+val Loss: 51.6052 Acc: 0.9077
+Precision: 0.2778, Recall: 0.0844
+Time passes: 72m 27s
+
+Epoch 18/19
+----------
+train Loss: 0.0403 Acc: 1.0000
+Precision: 0.9811, Recall: 0.9811
+Time passes: 75m 39s
+val Loss: 52.3372 Acc: 0.9077
+Precision: 0.2778, Recall: 0.0844
+Time passes: 76m 29s
+
+Epoch 19/19
+----------
+train Loss: 0.0354 Acc: 1.0000
+Precision: 0.9811, Recall: 0.9811
+Time passes: 79m 40s
+val Loss: 53.0510 Acc: 0.9087
+Precision: 0.2778, Recall: 0.0844
+Time passes: 80m 30s
+
+Training complete in 80m 30s
+Best val Acc: 0.916128
+learning_rate: 0.0008
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ 

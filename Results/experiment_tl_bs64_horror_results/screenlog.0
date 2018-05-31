@@ -1,0 +1,306 @@
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ python transfer_learning.py 
+Traceback (most recent call last):
+  File "transfer_learning.py", line 39, in <module>
+    dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=genreIdx)
+NameError: name 'genreIdx' is not defined
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ python transfer_learning.py [12Pcat screenlog.0[C[12@python transfer_learning.py[C[Kpython transfer_learning.py [12Pcat screenlog.0[C[7Pscreen -rcat screenlog.0 ls[Kscreen -Lls[Kcat screenlog.0 [7Pscreen -rcat screenlog.0 [12@python transfer_learning.py[C[Kvim transfer_learning.py 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;62r[?12;25h[?12l[?25h[27m[24m[0m[H[2J[?25l[62;1H"transfer_learning.py" 238L, 9236C[1;1H[34m# License: BSD
+# Author: Sasank Chilamkurthy[0m
+
+[35mfrom[0m __future__ [35mimport[0m print_function, division
+
+[35mimport[0m torch
+[35mimport[0m torchvision
+[35mimport[0m torch.nn [38;5;130mas[0m nn
+[35mimport[0m torch.nn.functional [38;5;130mas[0m F
+[35mimport[0m torch.optim [38;5;130mas[0m optim
+[35mfrom[0m torch.optim [35mimport[0m lr_scheduler
+[35mfrom[0m torchvision [35mimport[0m models, transforms
+[35mimport[0m torchvision.datasets [38;5;130mas[0m dset
+[35mimport[0m torchvision.transforms [38;5;130mas[0m T
+
+[35mfrom[0m torch.utils.data [35mimport[0m DataLoader
+[35mfrom[0m torch.utils.data [35mimport[0m sampler
+[35mfrom[0m torch.utils.data [35mimport[0m Dataset
+
+[35mimport[0m numpy [38;5;130mas[0m np
+[35mimport[0m matplotlib.pyplot [38;5;130mas[0m plt
+plt.switch_backend([31m'agg'[0m)
+
+[35mimport[0m time
+[35mimport[0m os
+[35mimport[0m copy
+[35mimport[0m glob
+[35mimport[0m os.path [38;5;130mas[0m osp
+[35mfrom[0m PIL [35mimport[0m Image
+[35mimport[0m pickle
+
+[35mfrom[0m pytorch_load_data [35mimport[0m load_data
+[35mfrom[0m sklearn.metrics [35mimport[0m precision_recall_fscore_support [38;5;130mas[0m score
+[35mfrom[0m sklearn.metrics [35mimport[0m accuracy_score
+
+batchsize=[31m64[0m
+genreIds=[31m8[0m
+
+dataloaders, poster_train, poster_val, poster_test = load_data(batchsize=batchsize, genreIdx=genreIdx)
+dataset_sizes = {}
+dataset_sizes[[31m'train'[0m] = [36mlen[0m(dataloaders[[31m'train'[0m])
+dataset_sizes[[31m'val'[0m] = [36mlen[0m(dataloaders[[31m'val'[0m])
+
+device = torch.device([31m"cuda:0"[0m [38;5;130mif[0m torch.cuda.is_available() [38;5;130melse[0m [31m"cpu"[0m)
+
+train_positives_count = [31m1601.0[0m
+train_negatives_count = [31m1744.0[0m
+val_positives_count = [31m461.0[0m
+val_negatives_count = [31m493.0[0m
+
+[38;5;130mdef[0m [36mtrain_model[0m(model, criterion, optimizer, scheduler, num_epochs=[31m25[0m):
+    train_losses, val_losses = [], []
+    train_accuracies, val_accuracies = [], []
+    train_precisions, val_precisions = [], []
+    train_recalls, val_recalls = [], []
+    since = time.time()[58;5Hbest_model_wts = copy.deepcopy(model.state_dict())
+    best_acc = [31m0.0[0m[61;5H[38;5;130mfor[0m epoch [38;5;130min[0m [36mrange[0m(num_epochs):[62;187H1,1[11CTop[1;1H[?12l[?25h[?25l[62;187H2[2;1H[?12l[?25h[?25l[62;187H3,0-1[3;1H[?12l[?25h[?25l[62;187H4,1  [4;1H[?12l[?25h[?25l[62;187H5,0-1[5;1H[?12l[?25h[?25l[62;187H6,1  [6;1H[?12l[?25h[?25l[62;187H7[7;1H[?12l[?25h[?25l[62;187H8[8;1H[?12l[?25h[?25l[62;187H9[9;1H[?12l[?25h[?25l[62;187H10,1[10;1H[?12l[?25h[?25l[62;188H1[11;1H[?12l[?25h[?25l[62;188H2[12;1H[?12l[?25h[?25l[62;188H3[13;1H[?12l[?25h[?25l[62;188H4[14;1H[?12l[?25h[?25l[62;188H5,0-1[15;1H[?12l[?25h[?25l[62;188H6,1  [16;1H[?12l[?25h[?25l[62;188H7[17;1H[?12l[?25h[?25l[62;188H8[18;1H[?12l[?25h[?25l[62;188H9,0-1[19;1H[?12l[?25h[?25l[62;187H20,1  [20;1H[?12l[?25h[?25l[62;188H1[21;1H[?12l[?25h[?25l[62;188H2[22;1H[?12l[?25h[?25l[62;188H3,0-1[23;1H[?12l[?25h[?25l[62;188H4,1  [24;1H[?12l[?25h[?25l[62;188H5[25;1H[?12l[?25h[?25l[62;188H6[26;1H[?12l[?25h[?25l[62;188H7[27;1H[?12l[?25h[?25l[62;188H8[28;1H[?12l[?25h[?25l[62;188H9[29;1H[?12l[?25h[?25l[62;187H30[30;1H[?12l[?25h[?25l[62;188H1,0-1[31;1H[?12l[?25h[?25l[62;188H2,1  [32;1H[?12l[?25h[?25l[62;188H3[33;1H[?12l[?25h[?25l[62;188H4[34;1H[?12l[?25h[?25l[62;188H5,0-1[35;1H[?12l[?25h[?25l[62;188H6,1  [36;1H[?12l[?25h[?25l[62;188H7[37;1H[?12l[?25h[?25l[62;190H2[37;2H[?12l[?25h[?25l[62;190H3[37;3H[?12l[?25h[?25l[62;190H4[37;4H[?12l[?25h[?25l[62;190H5[37;5H[?12l[?25h[?25l[62;190H6[37;6H[?12l[?25h[?25l[62;190H7[37;7H[?12l[?25h[?25l[62;190H8[37;8H[?12l[?25h[?25l[62;190H9[37;9H[?12l[?25h[?25l[62;1H[1m-- INSERT --[0m[62;13H[K[62;187H37,9[10CTop[37;9H[?12l[?25h[?25l=[31m8[0m[37;10H[K[62;190H8[37;8H[?12l[?25h[?25lx=[31m8[0m[62;190H9[37;9H[?12l[?25h[?25l[62;188H8,1[38;1H[?12l[?25h[?25l[62;188H9,9[39;9H[?12l[?25h[?25l[62;187H40[40;9H[?12l[?25h[?25l[62;188H1[41;9H[?12l[?25h[?25l[62;188H2[42;9H[?12l[?25h[?25l[62;188H3,1[43;1H[?12l[?25h[?25l[62;188H4,9[44;9H[?12l[?25h[?25l[62;188H5,1[45;1H[?12l[?25h[?25l[62;188H6,9[46;9H[?12l[?25h[?25l[62;188H7[47;9H[?12l[?25h[?25l[62;188H9[49;9H[?12l[?25h[?25l[62;187H50,1[50;1H[?12l[?25h[?25l[62;188H1,9[51;9H[?12l[?25h[?25l[62;188H2[52;9H[?12l[?25h[?25l[62;188H3[53;9H[?12l[?25h[?25l[62;188H4[54;9H[?12l[?25h[?25l[62;188H6[56;9H[?12l[?25h[?25l[62;188H8[58;9H[?12l[?25h[?25l[62;187H60,1[60;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m([31m'Epoch {}/{}'[0m.format(epoch, num_epochs - [31m1[0m))[62;187H[K[62;187H62,9[11C0%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9H[36mprint[0m([31m'-'[0m * [31m10[0m)[62;187H[K[62;187H63,9[11C1%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_accuracies, val_epoch_accuracies = [], [][62;187H[K[62;187H64,9[11C1%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;9Htrain_epoch_precisions, val_epoch_precisions = [], [][62;187H[K[62;187H65,9[11C2%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;9Htrain_epoch_recalls, val_epoch_recalls = [], [][61;9H[34m# Each epoch has a training and validation phase[0m[62;187H[K[62;187H67,9[11C3%[61;9H[?12l[?25h[?25l[1;61r[1;1H[6M[1;62r[56;9H[38;5;130mfor[0m phase [38;5;130min[0m [[31m'train'[0m, [31m'val'[0m]:[57;13H[38;5;130mif[0m phase == [31m'train'[0m:
+[34m#                 scheduler.step()    # Update learning rate (decay)[0m[59;17Hmodel.train()  [34m# Set model to training mode[0m[60;13H[38;5;130melse[0m:[61;17Hmodel.eval()   [34m# Set model to evaluate mode[0m[62;187H[K[62;187H73,9[11C6%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[61;13Hrunning_loss = [31m0.0[0m[62;187H[K[62;187H75,9[11C7%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13Hrunning_corrects = [31m0[0m[62;187H[K[62;187H76,9[11C8%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;13Hrunning_corrects_positives = [31m0[0m[61;13Hrunning_pred_positives = [31m0[0m[62;187H[K[62;187H78,9[11C9%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[61;13H[34m# Iterate over batches.[0m[62;187H[K[62;187H80,9[10C10%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m inputs, labels [38;5;130min[0m dataloaders[phase]:[62;187H[K[62;187H81,9[10C11%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;17Hinputs = inputs.to(device)[61;17Hlabels = labels.to(device)[62;187H[K[62;187H83,9[10C12%[61;9H[1;61r[1;1H[8M[1;62r[55;17H[34m# zero the parameter gradients[0m[56;17Hoptimizer.zero_grad()[58;17H[34m# forward[59;17H# track history if only in train[0m[60;17H[38;5;130mwith[0m torch.set_grad_enabled(phase == [31m'train'[0m):[61;21Houtputs = model(inputs)[62;187H[K[62;187H91,9[10C16%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;21H_, preds = torch.max(outputs, [31m1[0m)[61;21Hloss = criterion(outputs, labels)[62;187H[K[62;187H93,9[10C18%[61;9H[1;61r[1;1H[3M[1;62r[60;21H[34m# backward + optimize only if in training phase[0m[61;21H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H96,9[10C19%[61;9H[1;61r[1;1H[2M[1;62r[60;25Hloss.backward()[61;25Hoptimizer.step()[62;187H[K[62;187H98,9[10C20%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;25Htrain_losses.append(loss)[61;21H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H100,9[9C22%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;25Hval_losses.append(loss)[62;187H[K[62;187H102,1[9C23%[61;1H[1;61r[1;1H[2M[1;62r[60;17H[34m# statistics[0m[61;17Hrunning_loss += loss.item() * inputs.size([31m0[0m)[62;187H[K[62;187H104,9[9C24%[61;9H[1;61r[61;1H
+[1;62r[61;17Hbatch_precision, batch_recall, batch_fscore, support = score(labels.data.cpu().numpy(), preds.data.cpu().numpy(), average = [31m'binary'[0m)[62;187H[K[62;187H105,9[9C24%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;17Hbatch_accuracy = accuracy_score(labels.data.cpu().numpy(), preds.data.cpu().numpy())[61;17H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H107,9[9C25%[61;9H[1;61r[1;1H[5M[1;62r[57;21Htrain_epoch_accuracies.append(batch_accuracy)[58;21Htrain_epoch_precisions.append(batch_precision)[59;21Htrain_epoch_recalls.append(batch_recall)[60;17H[38;5;130melif[0m phase == [31m'val'[0m:[61;21Hval_epoch_accuracies.append(batch_accuracy)[62;187H[K[62;187H112,9[9C28%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;21Hval_epoch_precisions.append(batch_precision)[61;21Hval_epoch_recalls.append(batch_recall)[62;187H[K[62;187H114,9[9C29%[61;9H[1;61r[1;1H[2M[1;62r[61;13Hepoch_loss = running_loss / dataset_sizes[phase][62;187H[K[62;187H116,9[9C31%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[61;13H[38;5;130mif[0m phase == [31m'train'[0m:[62;187H[K[62;187H118,9[9C32%[61;9H[?12l[?25h[?25l[1;61r[1;1H[4M[1;62r[58;17Hepoch_acc = np.mean(train_epoch_accuracies)[59;17Hepoch_precision, epoch_recall = np.mean(train_epoch_precisions), np.mean(train_epoch_recalls)[60;17Htrain_accuracies.append(epoch_acc)[61;17Htrain_precisions.append(epoch_precision)[62;187H[K[62;187H122,9[9C34%[61;9H[1;61r[1;1H[2M[1;62r[60;17Htrain_recalls.append(epoch_recall)[61;13H[38;5;130melif[0m phase == [31m'val'[0m:[62;187H[K[62;187H124,9[9C35%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;17Hepoch_acc = np.mean(val_epoch_accuracies)[61;17Hepoch_precision, epoch_recall = np.mean(val_epoch_precisions), np.mean(val_epoch_recalls)[62;187H[K[62;187H126,9[9C36%[61;9H[1;61r[1;1H[4M[1;62r[58;17Hval_accuracies.append(epoch_acc)[59;17Hval_precisions.append(epoch_precision)[60;17Hval_recalls.append(epoch_recall)[62;187H[K[62;187H130,1[9C38%[61;1H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;13H[36mprint[0m([31m'{} Loss: {:.4f} Acc: {:.4f}'[0m.format([61;17Hphase, epoch_loss, epoch_acc))[62;187H[K[62;187H132,9[9C40%[61;9H[1;61r[1;1H[2M[1;62r[60;13H[36mprint[0m([31m'Precision: {:.4f}, Recall: {:.4f}'[0m.format([61;17Hepoch_precision, epoch_recall))[62;187H[K[62;187H134,9[9C41%[61;9H[1;61r[1;1H[2M[1;62r[60;13Htime_elapsed = time.time() - since[61;13H[36mprint[0m([31m'Time passes: {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H136,9[9C42%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;17Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))[62;187H[K[62;187H138,1[9C43%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[34m# deep copy the model[0m[62;187H[K[62;187H139,9[9C44%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mif[0m phase == [31m'val'[0m [38;5;130mand[0m epoch_acc > best_acc:[62;187H[K[62;187H140,9[9C44%[61;9H[1;61r[61;1H
+[1;62r[61;17Hbest_acc = epoch_acc[62;187H[K[62;187H141,9[9C45%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Hbest_model_wts = copy.deepcopy(model.state_dict())[62;187H[K[62;187H142,9[9C45%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[61;9H[36mprint[0m()[62;187H[K[62;187H144,9[9C46%[61;9H[?12l[?25h[?25l[1;61r[1;1H[3M[1;62r[60;5Htime_elapsed = time.time() - since
+    [36mprint[0m([31m'Training complete in {:.0f}m {:.0f}s'[0m.format([62;187H[K[62;187H147,9[9C48%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;9Htime_elapsed // [31m60[0m, time_elapsed % [31m60[0m))
+    [36mprint[0m([31m'Best val Acc: {:4f}'[0m.format(best_acc))[62;187H[K[62;187H149,9[9C49%[61;9H[1;61r[1;1H[2M[1;62r[61;5H[34m# load best model weights[0m[62;187H[K[62;187H151,9[9C50%[61;9H[1;61r[61;1H
+[1;62r[61;5Hmodel.load_state_dict(best_model_wts)[62;187H[K[62;187H152,9[9C51%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5H[38;5;130mreturn[0m model, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls[62;187H[K[62;187H154,1[9C52%[61;1H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;1H[38;5;130mdef[0m [36mvisualize_model[0m(model, num_images=[31m6[0m):
+    was_training = model.training[62;187H[K[62;187H156,9[9C53%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5Hmodel.eval()
+    images_so_far = [31m0[0m[62;187H[K[62;187H158,9[9C54%[61;9H[1;61r[1;1H[2M[1;62r[60;5Hfig = plt.figure()[62;187H[K[62;187H160,1[9C55%[61;1H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5H[38;5;130mwith[0m torch.no_grad():[61;9H[38;5;130mfor[0m i, (inputs, labels) [38;5;130min[0m [36menumerate[0m(dataloaders[[31m'val'[0m]):[62;187H[K[62;187H162,9[9C57%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;13Hinputs = inputs.to(device)[61;13Hlabels = labels.to(device)[62;187H[K[62;187H164,9[9C58%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[61;13Houtputs = model(inputs)[62;187H[K[62;187H166,9[9C59%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;13H_, preds = torch.max(outputs, [31m1[0m)[62;187H[K[62;187H168,1[9C60%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;13H[38;5;130mfor[0m j [38;5;130min[0m [36mrange[0m(inputs.size()[[31m0[0m]):[62;187H[K[62;187H169,9[9C61%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;17Himages_so_far += [31m1[0m[62;187H[K[62;187H170,9[9C61%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;17Hax = plt.subplot(num_images//[31m2[0m, [31m2[0m, images_so_far)[61;17Hax.axis([31m'off'[0m)[62;187H[K[62;187H172,9[9C62%[61;9H[1;61r[1;1H[2M[1;62r[60;17Hax.set_title([31m'predicted: {}'[0m.format(class_names[preds[j]]))[61;17Himshow(inputs.cpu().data[j])[62;187H[K[62;187H174,9[9C63%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[61;17H[38;5;130mif[0m images_so_far == num_images:[62;187H[K[62;187H176,9[9C64%[61;9H[?12l[?25h[?25l[1;61r[1;1H[3M[1;62r[59;21Hmodel.train(mode=was_training)[60;21H[38;5;130mreturn[0m[61;9Hmodel.train(mode=was_training)[62;187H[K[62;187H179,9[9C66%[61;9H[1;61r[1;1H[6M[1;62r[57;1H[34m# Observe that only parameters of final layer are being optimized as
+# opoosed to before.
+# optimizer_conv = optim.Adam(model_conv.parameters(), lr=0.01)
+
+# Decay LR by a factor of 0.1 every 7 epochs[0m[62;187H[K[62;187H185,9[9C70%[61;9H[1;61r[1;1H[3M[1;62r[59;1H[34m# exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)
+
+# learning_rates = [3e-4, 9e-4, 1e-3, 5e-3, 1e-2, 5e-2, 1e-1][0m[62;187H[K[62;187H188,9[9C71%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;1H[34m# learning_rates = [1e-2, 5e-2, 1e-1]
+# learning_rates = [0.0007, 0.0008, 0.00085, 0.00095, 0.1, 0.0015][0m[62;187H[K[62;187H190,9[9C72%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;1Hlearning_rates = [ [31m0.0008[0m ][62;187H[K[62;187H191,9[9C73%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[61;1H[38;5;130mfor[0m learning_rate [38;5;130min[0m learning_rates:[62;187H[K[62;187H193,9[9C74%[61;9H[?12l[?25h[?25l[1;61r[1;1H[6M[1;62r[56;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[58;5H[34m# Setup the model to resnet 18 (finetune params). [0m
+    model_conv = torchvision.models.resnet18(pretrained=[36mTrue[0m)
+    [34m# for param in model_conv.parameters():
+[0m    [34m#     param.requires_grad = False[0m[62;187H[K[62;187H199,9[9C77%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5H[34m# Parameters of newly constructed modules have requires_grad=True by default[0m
+    num_ftrs = model_conv.fc.in_features[62;187H[K[62;187H201,9[9C79%[61;9H[1;61r[1;1H[2M[1;62r[60;5Hmodel_conv.fc = nn.Linear(num_ftrs, [31m2[0m)
+    model_conv = model_conv.to(device)[62;187H[K[62;187H203,9[9C80%[61;9H[?12l[?25h[?25l[1;61r[1;1H[3M[1;62r[59;5Hcriterion = nn.CrossEntropyLoss()[61;5H[34m# Optimize the model.[0m[62;187H[K[62;187H206,9[9C81%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hexp_lr_scheduler = [36mNone[0m[62;187H[K[62;187H207,9[9C82%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hoptimizer_conv = optim.Adam(model_conv.parameters(), lr=learning_rate)[62;187H[K[62;187H208,9[9C83%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hmodel_conv, train_losses, val_losses, train_accuracies, val_accuracies, train_precisions, val_precisions, train_recalls, val_recalls = train_model(model_conv, criterion, optimizer_conv,[62;187H[K[62;187H209,9[9C83%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;30Hexp_lr_scheduler, num_epochs=[31m20[0m)[62;187H[K[62;187H210,9[9C84%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H211,5[9C84%[61;5H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[36mprint[0m([31m"learning_rate: {}"[0m.format(learning_rate))[62;187H[K[62;187H212,9[9C85%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H213,5[9C85%[61;5H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.figure()[62;187H[K[62;187H214,9[9C86%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5Hplt.subplot([31m311[0m)
+    plt.title([31m'Training loss'[0m)[62;187H[K[62;187H216,9[9C87%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.plot(train_losses, [31m'o'[0m)[62;187H[K[62;187H217,9[9C88%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H218,9[9C88%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H219,1[9C89%[61;1H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m312[0m)[62;187H[K[62;187H220,9[9C89%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5Hplt.title([31m'Validation loss'[0m)
+    plt.plot(val_losses, [31m'o'[0m)[62;187H[K[62;187H222,9[9C90%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H224,5[9C92%[61;5H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.subplot([31m313[0m)[62;187H[K[62;187H225,9[9C92%[61;9H[?12l[?25h[?25l[1;61r[1;1H[3M[1;62r[59;5Hplt.title([31m'Accuracy'[0m)
+    plt.plot(train_accuracies, [31m'-o'[0m, label=[31m'Train Accuracy'[0m)
+    plt.plot(val_accuracies, [31m'-o'[0m, label=[31m'Val Accuracy'[0m)[62;187H[K[62;187H228,9[9C94%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.xlabel([31m'Iteration'[0m)[62;187H[K[62;187H229,9[9C94%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.legend(loc=[31m'lower center'[0m)[62;187H[K[62;187H230,9[9C95%[61;9H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[62;187H[K[62;187H231,5[9C96%[61;5H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5Hplt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pdf'[0m)[62;187H[K[62;187H232,9[9C96%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;5Hplt.savefig([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.eps'[0m)[62;187H[K[62;187H234,1[9C97%[61;1H[1;61r[61;1H
+[1;62r[62;187H[K[62;187H235,5[9C98%[61;5H[?12l[?25h[?25l[1;61r[61;1H
+[1;62r[61;5H[38;5;130mwith[0m [36mopen[0m([31m'transfer_learning_lr_'[0m+[36mstr[0m(learning_rate)+[31m'_batchsize_'[0m+[36mstr[0m(batchsize)+[31m'_genre_'[0m+[36mstr[0m(genreIdx)+[31m'.pickle'[0m, [31m'wb'[0m) [38;5;130mas[0m [36mfile[0m:[62;187H[K[62;187H236,9[9C98%[61;9H[?12l[?25h[?25l[1;61r[1;1H[2M[1;62r[60;9Hpickle.dump((train_losses, val_losses, train_accuracies, val_accuracies, model_conv, train_precisions, val_precisions, train_recalls, val_recalls), [36mfile[0m, protocol=pickle.HIGHEST_PROTOCOL)[62;187H[K[62;187H238,1[9CBot[61;1H[?12l[?25h[62;1H[K[61;1H[?25l[62;187H238,0-1[7CBot[61;1H[?12l[?25h[?25l[62;187H[K[62;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"transfer_learning.py" 238L, 9236C written
+[?1l>[?12l[?25h[?1049l[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ vim transfer_learning.py [3@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pcat screenlog.0[C[12@python transfer_learning.py[C
+learning_rate: 0.0008
+Epoch 0/19
+----------
+/home/shared/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+train Loss: 24.1112 Acc: 0.8653
+Precision: 0.0780, Recall: 0.0631
+Time passes: 5m 60s
+val Loss: 22.6712 Acc: 0.8621
+Precision: 0.2598, Recall: 0.2254
+Time passes: 7m 36s
+
+Epoch 1/19
+----------
+train Loss: 18.7875 Acc: 0.8892
+Precision: 0.3695, Recall: 0.1045
+Time passes: 10m 57s
+val Loss: 24.8062 Acc: 0.8232
+Precision: 0.2613, Recall: 0.4149
+Time passes: 11m 49s
+
+Epoch 2/19
+----------
+train Loss: 17.0054 Acc: 0.8915
+Precision: 0.4235, Recall: 0.1682
+Time passes: 15m 8s
+val Loss: 31.0300 Acc: 0.7716
+Precision: 0.1902, Recall: 0.3826
+Time passes: 15m 58s
+
+Epoch 3/19
+----------
+train Loss: 14.6407 Acc: 0.9015
+Precision: 0.5712, Recall: 0.3404
+Time passes: 19m 18s
+val Loss: 25.4219 Acc: 0.8245
+Precision: 0.2133, Recall: 0.3018
+Time passes: 20m 10s
+
+Epoch 4/19
+----------
+train Loss: 14.1113 Acc: 0.9074
+Precision: 0.6758, Recall: 0.3944
+Time passes: 23m 29s
+val Loss: 104.9529 Acc: 0.1656
+Precision: 0.1048, Recall: 0.9690
+Time passes: 24m 21s
+
+Epoch 5/19
+----------
+train Loss: 10.3385 Acc: 0.9348
+Precision: 0.7774, Recall: 0.6343
+Time passes: 27m 39s
+val Loss: 64.0503 Acc: 0.8342
+Precision: 0.2295, Recall: 0.2721
+Time passes: 28m 31s
+
+Epoch 6/19
+----------
+train Loss: 9.3591 Acc: 0.9416
+Precision: 0.7903, Recall: 0.6669
+Time passes: 31m 47s
+val Loss: 50.3912 Acc: 0.6122
+Precision: 0.1508, Recall: 0.6347
+Time passes: 32m 38s
+
+Epoch 7/19
+----------
+train Loss: 8.5894 Acc: 0.9496
+Precision: 0.8193, Recall: 0.7512
+Time passes: 35m 55s
+val Loss: 117.9100 Acc: 0.4798
+Precision: 0.1253, Recall: 0.7444
+Time passes: 36m 46s
+
+Epoch 8/19
+----------
+train Loss: 5.5760 Acc: 0.9664
+Precision: 0.8664, Recall: 0.8370
+Time passes: 40m 4s
+val Loss: 33.8522 Acc: 0.8571
+Precision: 0.2989, Recall: 0.3161
+Time passes: 40m 56s
+
+Epoch 9/19
+----------
+train Loss: 4.6678 Acc: 0.9726
+Precision: 0.8931, Recall: 0.8774
+Time passes: 44m 13s
+val Loss: 33.6405 Acc: 0.8349
+Precision: 0.2973, Recall: 0.4140
+Time passes: 45m 4s
+
+Epoch 10/19
+----------
+train Loss: 4.7493 Acc: 0.9714
+Precision: 0.8826, Recall: 0.8738
+Time passes: 48m 23s
+val Loss: 43.1311 Acc: 0.8909
+Precision: 0.5111, Recall: 0.2010
+Time passes: 49m 14s
+
+Epoch 11/19
+----------
+train Loss: 2.9990 Acc: 0.9802
+Precision: 0.9273, Recall: 0.9009
+Time passes: 52m 28s
+val Loss: 57.6429 Acc: 0.8058
+Precision: 0.2659, Recall: 0.5183
+Time passes: 53m 19s
+
+Epoch 12/19
+----------
+train Loss: 2.8153 Acc: 0.9841
+Precision: 0.9376, Recall: 0.9268
+Time passes: 56m 33s
+val Loss: 59.0712 Acc: 0.8769
+Precision: 0.3344, Recall: 0.1599
+Time passes: 57m 24s
+
+Epoch 13/19
+----------
+train Loss: 1.7582 Acc: 0.9906
+Precision: 0.9569, Recall: 0.9664
+Time passes: 60m 38s
+val Loss: 44.6046 Acc: 0.8604
+Precision: 0.2746, Recall: 0.2357
+Time passes: 61m 28s
+
+Epoch 14/19
+----------
+train Loss: 0.9853 Acc: 0.9947
+Precision: 0.9756, Recall: 0.9830
+Time passes: 64m 43s
+val Loss: 47.6334 Acc: 0.8823
+Precision: 0.4030, Recall: 0.2193
+Time passes: 65m 33s
+
+Epoch 15/19
+----------
+train Loss: 0.3684 Acc: 0.9985
+Precision: 0.9945, Recall: 0.9937
+Time passes: 68m 47s
+val Loss: 52.5791 Acc: 0.8749
+Precision: 0.3289, Recall: 0.2429
+Time passes: 69m 37s
+
+Epoch 16/19
+----------
+train Loss: 0.5047 Acc: 0.9965
+Precision: 0.9834, Recall: 0.9831
+Time passes: 72m 52s
+val Loss: 56.7378 Acc: 0.8864
+Precision: 0.3678, Recall: 0.1987
+Time passes: 73m 43s
+
+Epoch 17/19
+----------
+train Loss: 1.2532 Acc: 0.9920
+Precision: 0.9614, Recall: 0.9674
+Time passes: 76m 58s
+val Loss: 68.0183 Acc: 0.8950
+Precision: 0.3333, Recall: 0.0694
+Time passes: 77m 49s
+
+Epoch 18/19
+----------
+train Loss: 3.0725 Acc: 0.9864
+Precision: 0.9489, Recall: 0.9316
+Time passes: 81m 5s
+val Loss: 41.8501 Acc: 0.8406
+Precision: 0.2613, Recall: 0.2792
+Time passes: 81m 56s
+
+Epoch 19/19
+----------
+train Loss: 1.7961 Acc: 0.9894
+Precision: 0.9596, Recall: 0.9579
+Time passes: 85m 11s
+val Loss: 52.2131 Acc: 0.8236
+Precision: 0.2591, Recall: 0.3433
+Time passes: 86m 1s
+
+Training complete in 86m 1s
+Best val Acc: 0.894971
+learning_rate: 0.0008
+[01;32mamitschechter@instance-2[00m:[01;34m~/movie-posters[00m$ 
